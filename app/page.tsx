@@ -1,7 +1,13 @@
+import HeroSection from "@/components/HeroSection"
+import AboutSection from "@/components/AboutSection"
+import ProjectsSection from "@/components/ProjectsSection"
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-2xl">Hello World</h1>
+    <main className="mx-auto max-w3xl px-4 sm:px-6 md:max-w-5xl">
+      <HeroSection />
+      <AboutSection />
+      <ProjectsSection />
     </main>
   )
 }
