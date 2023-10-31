@@ -15,7 +15,7 @@ const HeroSection = () => {
                 <h1 className="font-bold text-4xl mt-6 md:text-7xl md:mt-0">Hi, I&#39;m Fikry!</h1>
                 <p className="text-lg mt-4 mb-6 md:text-2xl">I&#39;m a{" "}<span className='font-semibold text-teal-600'>Realtor{" "}</span>
                 based in Cyberjaya. Happy to serve you!</p>
-                <Link<LinkProps>
+                <Link
                 to="projects"
                 className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
                 activeClass="active"
