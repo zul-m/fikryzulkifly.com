@@ -1,13 +1,13 @@
-"use client";
-import React from 'react';
-import Image from 'next/image';
-import { Link } from "react-scroll/modules";
-import { HiArrowDown } from "react-icons/hi";
+"use client"
+import React from "react"
+import Image from "next/image"
+import { Link } from "react-scroll/modules"
+import { HiArrowDown } from "react-icons/hi"
 
 const HeroSection = () => {
   return (
     <section id="home">
-        <div className="flex flex-col text-center items-center justify-center my-10 py-16 sm:py-32 md:flex-row md:space-x-4 md:text-left md:py-52">
+        <div className="flex flex-col text-center items-center justify-center my-10 py-16 sm: py-32 md:flex-row md:space-x-4 md:text-left md:py-52">
             <div className="md:w-1/2 md:mt-2">
                 <Image className="rounded-full shadow-2xl" src="/headshot.png" alt="" width={300} height={300}/>
             </div>
@@ -17,7 +17,7 @@ const HeroSection = () => {
                 based in Cyberjaya. Happy to serve you!</p>
                 <Link
                 to="projects"
-                className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover-bg-teal-700"
+                className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
                 activeClass="active"
                 spy={true}
                 smooth={true}
@@ -28,19 +28,18 @@ const HeroSection = () => {
             </div>
         </div>
         <div className="flex flex-row items-center text-center justify-center ">
-          <Link
-            to="about"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            <HiArrowDown size={35} className="animate-bounce" />
-          </Link>
-        </div>
+        <Link
+        to="about"
+        activeClass="active"
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={500}>
+        <HiArrowDown size={35} className="animate-bounce" />
+        </Link>
+      </div>
     </section>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection
