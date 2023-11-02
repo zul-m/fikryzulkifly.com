@@ -6,27 +6,27 @@ import SlideUp from './SlideUp'
 
 const projects = [
     {
-      name: "Thankful Thoughts",
+      name: "PRIHATIN Putrajaya Sentral",
       description:
-        "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
+        "Projek Rumah Mampu Milik ini bakal dibina di Presint 7, Putrajaya dirasmikan sendiri oleh Perdana Menteri kita, Dato Seri Anwar Ibrahhim pada tanggal 17/8/2023. Terletak di Putrajaya Sentral menjadikan Projek ini sangat sesuai untuk golongan berkerja di Kuala Lumpur.",
       image: "/thankfulthoughts.png",
-      github: "https://github.com/hqasmei/thankful-thoughts",
-      link: "https://thankfulthoughts.io/",
+      github: "https://github.com/zul-m",
+      link: "https://prihatinputrajayasentral.com/",
     },
     {
-      name: "PlatoIO",
-      description: "PlatoIO is a to do list app that built using the PERN stack.",
+      name: "RUMAWIP Putrajaya Sentral",
+      description: "Projek RUMAWIP Putrajaya Sentral ini terletak di kawasan strategik Putrajaya, Presint 7. Projek ini bakal dibangunkan berdekatan dengan Stesen MRT Putrajaya Sentral, sekaligus memberikan akses mudah kepada bakal pemilik. Ia juga berhampiran perkhidmatan kesihatan, pusat beli belah, dan pengangkutan awam yang lain.",
       image: "/platoio.png",
-      github: "https://github.com/hqasmei/platoio",
-      link: "https://platoio.com/register",
+      github: "https://github.com/zul-m",
+      link: "https://prihatinputrajayasentral.com/rumah-mampu-milik-putrajaya-rm300000/",
     },
     {
-      name: "Kator Family Photos",
+      name: "RUMAWIP Setapak",
       description:
-        "Kator Family Photos is a photos and video digitization service in the LA area.",
+        "MAX II RUMAWIP is an affordable housing project initiated by the Malaysian government through the Residensi Wilayah (RUMAWIP) program. Developed by Prominent Maxim Sdn Berhad, a well-known property developer in Kuala Lumpur, this property is located in SETAPAK, Kuala Lumpur.",
       image: "/familyphotos.png",
-      github: "https://github.com/hqasmei/katorfamilyphotos",
-      link: "https://katorfamilyphotos.com/",
+      github: "https://github.com/zul-m",
+      link: "https://prihatinputrajayasentral.com/rumawip-setapak/",
     },
 ]
 
