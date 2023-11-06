@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 import SlideUp from "./SlideUp";
 
 const projects = [
@@ -38,7 +37,7 @@ const ProjectsSection = () => {
         Projects
         <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
       </h1>
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-20 space-y-14 text-center md:text-left">
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
@@ -56,24 +55,14 @@ const ProjectsSection = () => {
                     </Link>
                   </div>
                   <div className="my-8 md:w-1/2">
-                    <h1 className="text-3xl font-bold mb-6">{project.name}</h1>
-                    <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+                    <Link href={project.link} target="_blank">
+                      <h1 className="text-2xl font-bold mb-6 hover:text-teal-500">
+                        {project.name}
+                      </h1>
+                    </Link>
+                    <p className="text-l leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.description}
                     </p>
-                    <div className="flex flex-row align-bottom space-x-4">
-                      <Link href={project.github} target="_blank">
-                        <BsGithub
-                          size={30}
-                          className="hover:translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
-                      <Link href={project.link} target="_blank">
-                        <BsArrowUpRightSquare
-                          size={30}
-                          className="hover:translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
-                    </div>
                   </div>
                 </div>
               </SlideUp>
