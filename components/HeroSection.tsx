@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Link } from "react-scroll/modules";
 import { HiArrowDown } from "react-icons/hi";
+import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
@@ -18,12 +19,28 @@ const HeroSection = () => {
           />
         </div>
         <div className="my-auto md:w-3/5">
-          <h1 className="font-bold text-4xl mt-10 md:text-5xl md:mt-0">
-            SELAMAT DATANG
+          <h1 className="font-bold text-4xl leading-normal md:leading-normal my-10 md:text-6xl md:mt-0">
+            <span>Konsultasi berkaitan</span>
+            <br></br>
+            <TypeAnimation
+              sequence={[
+                "SUBSALE",
+                1000,
+                "PROJEK BARU",
+                1000,
+                "SEWAAN",
+                1000,
+              ]}
+              wrapper="span"
+              speed={{ type: "keyStrokeDelayInMs", value: 250 }}
+              style={{
+                color: "#0d9488",
+                display: "inline-block",
+              }}
+              repeat={Infinity}
+            />
           </h1>
-          <p className="text-lg mt-5 mb-8 md:text-2xl">
-          Perlukan khidmat konsultasi berkaitan hartanah?
-          </p>
+          <p className="text-lg mt-5 mb-8 md:text-2xl"></p>
           <Link
             to="projects"
             className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
