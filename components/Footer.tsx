@@ -1,6 +1,9 @@
-import React from "react";
-import { RiTwitterXLine, RiTiktokLine } from "react-icons/ri";
-import { AiOutlineFacebook, AiOutlineInstagram } from "react-icons/ai";
+import {
+  AiOutlineFacebook,
+  AiOutlineInstagram,
+  AiOutlineWhatsApp,
+} from "react-icons/ai";
+import { RiTiktokLine } from "react-icons/ri";
 
 const Footer = () => {
   return (
@@ -11,28 +14,40 @@ const Footer = () => {
           © 2023 Fikry Zulkifly
         </div>
         <div className="flex flex-row items-center justify-center space-x-2">
-          <a href="https://github.com/zul-m" rel="noreferrer" target="_blank">
+          <a
+            href="https://www.facebook.com/FikryZulkiflyProperty"
+            rel="noreferrer"
+            target="_blank"
+          >
             <AiOutlineFacebook
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
               size={30}
             />
           </a>
-          <a href="https://twitter.com/" rel="noreferrer" target="_blank">
+          <a
+            href="https://instagram.com/fikryzulkiflyproperty"
+            rel="noreferrer"
+            target="_blank"
+          >
             <AiOutlineInstagram
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={28}
+              size={30}
             />
           </a>
-          <a href="https://www.linkedin.com/" rel="noreferrer" target="_blank">
+          <a
+            href="https://www.tiktok.com/@fikryzulkiflyproperty"
+            rel="noreferrer"
+            target="_blank"
+          >
             <RiTiktokLine
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
               size={30}
             />
           </a>
-          <a href="https://www.youtube.com/" rel="noreferrer" target="_blank">
-            <RiTwitterXLine
+          <a href="https://api.whatsapp.com/send?phone=60176515784" rel="noreferrer" target="_blank">
+            <AiOutlineWhatsApp
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={28}
+              size={30}
             />
           </a>
         </div>

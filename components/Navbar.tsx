@@ -1,9 +1,9 @@
 "use client"; // this is a client component
-import React, { useState } from "react";
-import { Link } from "react-scroll/modules";
 import { useTheme } from "next-themes";
+import { useState } from "react";
+import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
-import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { Link } from "react-scroll/modules";
 
 interface NavItem {
   label: string;
@@ -20,7 +20,7 @@ const NAV_ITEMS: Array<NavItem> = [
     page: "about",
   },
   {
-    label: "Projects",
+    label: "Projek",
     page: "projects",
   },
 ];
