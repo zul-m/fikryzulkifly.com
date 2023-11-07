@@ -8,7 +8,7 @@ const projects = [
     name: "PRIHATIN Putrajaya Sentral",
     description:
       "Projek Rumah Mampu Milik ini bakal dibina di Presint 7, Putrajaya dirasmikan sendiri oleh Perdana Menteri kita, Dato Seri Anwar Ibrahim pada tanggal 17/8/2023. Terletak di Putrajaya Sentral menjadikan Projek ini sangat sesuai untuk golongan berkerja di Kuala Lumpur.",
-    image: "/thankfulthoughts.png",
+    image: "/prihatin-putrajaya.png",
     github: "https://github.com/zul-m",
     link: "https://prihatinputrajayasentral.com/",
   },
@@ -16,7 +16,7 @@ const projects = [
     name: "RUMAWIP Putrajaya Sentral",
     description:
       "Projek RUMAWIP Putrajaya Sentral ini terletak di kawasan strategik Putrajaya, Presint 7. Projek ini bakal dibangunkan berdekatan dengan Stesen MRT Putrajaya Sentral, sekaligus memberikan akses mudah kepada bakal pemilik. Ia juga berhampiran perkhidmatan kesihatan, pusat beli belah, dan pengangkutan awam yang lain.",
-    image: "/platoio.png",
+    image: "/rumawip-putrajaya.png",
     github: "https://github.com/zul-m",
     link: "https://prihatinputrajayasentral.com/rumah-mampu-milik-putrajaya-rm300000/",
   },
@@ -24,7 +24,7 @@ const projects = [
     name: "RUMAWIP Setapak",
     description:
       "MAX II RUMAWIP is an affordable housing project initiated by the Malaysian government through the Residensi Wilayah (RUMAWIP) program. Developed by Prominent Maxim Sdn Berhad, a well-known property developer in Kuala Lumpur, this property is located in SETAPAK, Kuala Lumpur.",
-    image: "/familyphotos.png",
+    image: "/rumawip-setapak.png",
     github: "https://github.com/zul-m",
     link: "https://prihatinputrajayasentral.com/rumawip-setapak/",
   },
@@ -33,11 +33,11 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <section id="projects">
-      <h1 className="text-center font-bold text-4xl">
-        Projects
+      <h1 className="mt-12 text-center font-bold text-4xl">
+        Projek
         <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
       </h1>
-      <div className="flex flex-col mt-20 space-y-14 text-center md:text-left">
+      <div className="flex flex-col mx-5 mt-16 space-y-14 text-center md:text-left md:mx-0">
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
@@ -46,7 +46,7 @@ const ProjectsSection = () => {
                   <div className="my-auto md:w-1/2">
                     <Link href={project.link} target="_blank">
                       <Image
-                        className="rounded-xl shadow-xl hover:opacity-70"
+                        className="rounded-xl shadow-2xl hover:opacity-70"
                         src={project.image}
                         alt=""
                         width={1000}
