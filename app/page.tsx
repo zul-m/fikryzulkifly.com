@@ -1,11 +1,13 @@
 import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import ViewingSection from "@/components/ViewingSection";
 
 export default function Home() {
   return (
-    <main className="mx-auto px-4 max-w-5xl">
+    <main>
       <HeroSection />
       <ProjectsSection />
+      <ViewingSection />
     </main>
   );
 }

@@ -1,5 +1,5 @@
 "use client"; // this is a client component
-import React, { useEffect, useRef, ReactNode } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 
 interface Props {
   offset?: string;

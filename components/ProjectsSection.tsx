@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SlideUp from "./SlideUp";
@@ -37,7 +36,7 @@ const ProjectsSection = () => {
         Projek
         <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
       </h1>
-      <div className="flex flex-col mx-5 mt-16 space-y-14 text-center md:text-left md:mx-0">
+      <div className="mx-5 px-4 flex flex-col mt-16 space-y-14 text-center md:text-left md:max-w-5xl md:mx-auto">
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
