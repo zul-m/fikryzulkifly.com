@@ -1,14 +1,13 @@
 "use client";
-import React from "react";
 import Image from "next/image";
-import { Link } from "react-scroll/modules";
 import { HiArrowDown } from "react-icons/hi";
+import { Link } from "react-scroll/modules";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
     <section id="home">
-      <div className="flex flex-col text-center items-center justify-center mt-10 py-16 sm:py-32 md:flex-row md:space-x-4 md:text-left md:py-52">
+      <div className="mx-auto max-w-5xl flex flex-col text-center items-center justify-center mt-10 py-16 sm:py-32 md:flex-row md:space-x-4 md:text-left md:py-52">
         <div className="md:w-2/5">
           <Image
             className="rounded-full shadow-2xl"
@@ -23,14 +22,7 @@ const HeroSection = () => {
             <span>Konsultasi berkaitan</span>
             <br></br>
             <TypeAnimation
-              sequence={[
-                "SUBSALE",
-                1000,
-                "PROJEK BARU",
-                1000,
-                "SEWAAN",
-                1000,
-              ]}
+              sequence={["SUBSALE", 1000, "PROJEK BARU", 1000, "SEWAAN", 1000]}
               wrapper="span"
               speed={{ type: "keyStrokeDelayInMs", value: 250 }}
               style={{

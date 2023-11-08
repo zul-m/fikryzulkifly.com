@@ -44,7 +44,11 @@ const Footer = () => {
               size={30}
             />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=60176515784" rel="noreferrer" target="_blank">
+          <a
+            href="https://api.whatsapp.com/send?phone=60176515784"
+            rel="noreferrer"
+            target="_blank"
+          >
             <AiOutlineWhatsApp
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
               size={30}
