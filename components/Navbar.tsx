@@ -16,12 +16,12 @@ const NAV_ITEMS: Array<NavItem> = [
     page: "home",
   },
   {
-    label: "About",
-    page: "about",
+    label: "Projek Baru",
+    page: "projects",
   },
   {
-    label: "Projek",
-    page: "projects",
+    label: "Lawatan Maya",
+    page: "viewing",
   },
 ];
 
