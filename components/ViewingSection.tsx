@@ -2,19 +2,21 @@ import SlideUp from "./SlideUp";
 
 const ViewingSection = () => {
   return (
-    
-      <section
-        id="viewing"
-        className="bg-zinc-400 mt-32 rounded-xl mx-auto max-w-7xl"
-      >
-        <h1 className="pt-14 text-center font-bold text-4xl">
-          Virtual Viewing
-        </h1>
-        <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
-        <SlideUp offset="-300px 0px -300px 0px">
-        <div className="pb-28 flex flex-col space-y-10 items-center justify-evenly mt-16 md:flex-row md:space-y-0">
+    <section id="viewing" className="mx-auto max-w-6xl mt-32 text-center">
+      <h1 className="md:pt-14 font-bold text-4xl md:text-5xl">LAWATAN MAYA</h1>
+      <SlideUp offset="-300px 0px -300px 0px">
+        <p className="mx-5 animate-slideUpCubiBezier animation-delay-2 pt-12 text-l md:text-xl text-neutral-600 dark:text-neutral-400">
+          Kami bawakan kepada anda galeri pameran hartanah, pada bila-bila masa
+          dan di mana sahaja.
+        </p>
+        <br />
+        <span className="font-bold text-3xl md:text-4xl text-teal-600">
+          {"Dari sudut yang baru!"}
+        </span>
+        <div className="py-14 md:py-28 flex flex-col space-y-10 items-center justify-around md:flex-row md:space-y-0">
           <video
-            className="rounded-xl shadow-2xl animate-slideUpCubiBezier animation-delay-2"
+            className="rounded-xl shadow-2xl"
+            autoPlay
             muted
             width={250}
             height={250}
@@ -22,7 +24,8 @@ const ViewingSection = () => {
             src="/videos/231108.mp4"
           ></video>
           <video
-            className="rounded-xl shadow-2xl animate-slideUpCubiBezier animation-delay-2"
+            className="rounded-xl shadow-2xl"
+            autoPlay
             muted
             width={250}
             height={250}
@@ -30,7 +33,8 @@ const ViewingSection = () => {
             src="/videos/231108.mp4"
           ></video>
           <video
-            className="rounded-xl shadow-2xl animate-slideUpCubiBezier animation-delay-2"
+            className="rounded-xl shadow-2xl"
+            autoPlay
             muted
             width={250}
             height={250}
@@ -38,8 +42,8 @@ const ViewingSection = () => {
             src="/videos/231108.mp4"
           ></video>
         </div>
-        </SlideUp>
-      </section>
+      </SlideUp>
+    </section>
   );
 };
 
