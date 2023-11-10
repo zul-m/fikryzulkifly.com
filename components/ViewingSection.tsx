@@ -5,7 +5,7 @@ const ViewingSection = () => {
     <section id="viewing" className="mx-auto max-w-6xl mt-32 text-center">
       <h1 className="md:pt-14 font-bold text-4xl md:text-5xl">LAWATAN MAYA</h1>
       <SlideUp offset="-300px 0px -300px 0px">
-        <p className="mx-5 animate-slideUpCubiBezier animation-delay-2 pt-12 text-l md:text-xl text-neutral-600 dark:text-neutral-400">
+        <p className="mx-5 animate-slideUpCubiBezier animation-delay-2 pt-12 text-l md:text-xl">
           Kami bawakan kepada anda galeri pameran hartanah, pada bila-bila masa
           dan di mana sahaja.
         </p>
@@ -21,7 +21,7 @@ const ViewingSection = () => {
             width={250}
             height={250}
             controls
-            src="/videos/231108.mp4"
+            src="/videos/0E26360A.mp4"
           ></video>
           <video
             className="rounded-xl shadow-2xl"
@@ -30,7 +30,7 @@ const ViewingSection = () => {
             width={250}
             height={250}
             controls
-            src="/videos/231108.mp4"
+            src="/videos/7B4D87B0.mp4"
           ></video>
           <video
             className="rounded-xl shadow-2xl"
