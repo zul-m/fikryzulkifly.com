@@ -8,25 +8,59 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="mx-auto max-w-6xl text-center items-center justify-center md:py-20"
+      className="px-6 max-w-7xl mx-auto text-center items-center justify-center md:py-20"
     >
-      <h1 className="py-20 md:py-14 px-4 font-bold text-2xl mt-10 md:text-5xl space-y-5">
-        <span>Anda perlukan khidmat konsultasi berkaitan</span>
-        <br></br>
-        <TypeAnimation
-          sequence={["HARTANAH?", 1000, "SUBSALE?", 1000, "SEWAAN?", 1000]}
-          wrapper="span"
-          speed={40}
-          style={{
-            color: "#0d9488",
-            display: "inline-block",
-            fontSize: "1.5em",
-          }}
-          repeat={Infinity}
-        />
-      </h1>
-      <div className="bg-gray-300 text-neutral-900 md:rounded-2xl shadow-2xl flex flex-col px-16 py-20 md:flex-row md:text-left">
-        <div className="mx-auto md:w-2/5">
+      <div className="flex flex-col py-32 md:flex-row md:text-left">
+        <div className="my-auto md:w-3/5">
+          <h1 className="md:py-14 font-bold text-3xl space-y-3 md:text-6xl md:space-y-5">
+            <span className="leading-tight">
+              Anda perlukan khidmat konsultasi berkaitan
+            </span>
+            <br></br>
+            <TypeAnimation
+              sequence={["HARTANAH?", 1000, "SUBSALE?", 1000, "SEWAAN?", 1000]}
+              wrapper="span"
+              speed={40}
+              style={{
+                color: "#0d9488",
+                display: "inline-block",
+                fontSize: "1.5em",
+              }}
+              repeat={Infinity}
+            />
+          </h1>
+          <p className="text-lg mt-7 md:mt-0 mb-8 md:text-justify md:text-xl">
+            Hi, saya{" "}
+            <span className="font-semibold text-teal-600">Fikry{""}</span>.
+            Hubungi saya untuk khidmat ejen hartanah di Kuala Lumpur dan
+            Selangor atau ikuti panduan jual beli hartanah.
+          </p>
+          <div className="space-y-3 md:space-y-0 md:space-x-5 flex flex-col md:flex-row">
+            <Link
+              to="projects"
+              className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Hubungi saya
+            </Link>
+            <Link
+              to="projects"
+              className="font-semibold px-6 py-3 border-2 border-teal-600 rounded shadow hover:bg-teal-700 hover:text-neutral-100"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Panduan jual beli hartanah
+            </Link>
+          </div>
+        </div>
+        <div className="mt-10 md:my-auto md:w-2/5 flex flex-column justify-center md:justify-end">
           <Image
             className="rounded-full shadow-2xl"
             src="/headshot.png"
@@ -35,32 +69,8 @@ const HeroSection = () => {
             height={300}
           />
         </div>
-        <div className="my-auto md:w-3/5">
-          <h1 className="font-bold text-3xl leading-normal my-6 md:text-6xl md:mt-0">
-            Hi, saya Fikry.
-          </h1>
-          <p className="text-lg mt-5 mb-8 md:text-justify md:text-xl">
-            Saya seorang{" "}
-            <span className="font-semibold text-teal-700">
-              perunding hartanah{""}
-            </span>
-            . Ikuti panduan jual beli hartanah atau hubungi saya untuk khidmat
-            ejen hartanah di Kuala Lumpur dan Selangor.
-          </p>
-          <Link
-            to="projects"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            Hubungi saya
-          </Link>
-        </div>
       </div>
-      <div className="mt-16 flex flex-row items-center text-center justify-center ">
+      <div className="mt-4 md:mt-16 flex flex-row items-center text-center justify-center">
         <Link
           to="projects"
           activeClass="active"

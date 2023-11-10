@@ -32,7 +32,7 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <section id="projects">
-      <h1 className="mt-12 text-center font-bold text-4xl md:text-5xl">PROJEK BARU</h1>
+      <h1 className="mt-12 pt-16 text-center font-bold text-4xl md:text-5xl">PROJEK BARU</h1>
       <div className="mx-5 px-4 flex flex-col mt-16 space-y-14 text-center md:text-left md:max-w-5xl md:mx-auto">
         {projects.map((project, idx) => {
           return (
@@ -56,7 +56,7 @@ const ProjectsSection = () => {
                         {project.name}
                       </h1>
                     </Link>
-                    <p className="text-l leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+                    <p className="text-l leading-7 mb-4 text-neutral-600 dark:text-neutral-200">
                       {project.description}
                     </p>
                   </div>
