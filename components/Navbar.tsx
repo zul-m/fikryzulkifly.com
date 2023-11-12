@@ -20,7 +20,7 @@ const NAV_ITEMS: Array<NavItem> = [
     page: "projects",
   },
   {
-    label: "Lawatan Maya",
+    label: "Virtual Viewing",
     page: "viewing",
   },
 ];
