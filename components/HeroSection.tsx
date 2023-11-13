@@ -10,7 +10,7 @@ const HeroSection = () => {
       id="home"
       className="px-6 max-w-7xl mx-auto text-center items-center justify-center md:py-20"
     >
-      <div className="flex flex-col py-32 md:flex-row md:text-left">
+      <div className="flex flex-col pt-32 pb-16 md:py-32 md:flex-row md:text-left">
         <div className="my-auto md:w-3/5">
           <h1 className="md:py-14 font-bold text-3xl space-y-3 md:text-6xl md:space-y-5">
             <span className="leading-tight">
@@ -37,7 +37,7 @@ const HeroSection = () => {
           </p>
           <div className="space-y-3 md:space-y-0 md:space-x-5 flex flex-col md:flex-row">
             <Link
-              to="projects"
+              to="contact"
               className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
               activeClass="active"
               spy={true}
@@ -70,7 +70,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="mt-4 md:mt-16 flex flex-row items-center text-center justify-center">
+      <div className="md:mt-16 flex flex-row items-center text-center justify-center">
         <Link
           to="projects"
           activeClass="active"

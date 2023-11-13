@@ -12,16 +12,16 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Home",
-    page: "home",
-  },
-  {
     label: "Projek Baru",
     page: "projects",
   },
   {
     label: "Virtual Viewing",
     page: "viewing",
+  },
+  {
+    label: "Hubungi Saya",
+    page: "contact",
   },
 ];
 
