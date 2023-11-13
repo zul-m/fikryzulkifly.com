@@ -50,11 +50,11 @@ export default function () {
             Hubungi saya jika anda mempunyai sebarang pertanyaan, cadangan, atau
             sebarang maklum balas. Terima kasih.
           </p>
-          <div className="items-center justify-center space-x-3 flex flex-row">
+          <div className="md:items-start md:justify-start items-center justify-center space-x-3 flex flex-row">
             <HiPhone size={30} />
             <p>+60 17-651 5784</p>
           </div>
-          <div className="items-center justify-center space-x-3 flex flex-row">
+          <div className="md:items-start md:justify-start items-center justify-center space-x-3 flex flex-row">
             <HiMail size={30} />
             <p>fikryzulkiflyproperty@gmail.com</p>
           </div>
