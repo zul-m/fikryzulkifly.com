@@ -1,9 +1,10 @@
 import {
-  AiOutlineFacebook,
-  AiOutlineInstagram,
-  AiOutlineWhatsApp,
-} from "react-icons/ai";
-import { RiTiktokLine } from "react-icons/ri";
+  RiFacebookBoxLine,
+  RiInstagramLine,
+  RiTelegramLine,
+  RiTiktokLine,
+  RiWhatsappLine,
+} from "react-icons/ri";
 
 const Footer = () => {
   return (
@@ -19,7 +20,7 @@ const Footer = () => {
             rel="noreferrer"
             target="_blank"
           >
-            <AiOutlineFacebook
+            <RiFacebookBoxLine
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
               size={30}
             />
@@ -29,7 +30,17 @@ const Footer = () => {
             rel="noreferrer"
             target="_blank"
           >
-            <AiOutlineInstagram
+            <RiInstagramLine
+              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
+              size={30}
+            />
+          </a>
+          <a
+            href="https://t.me/fzpropertylisting"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <RiTelegramLine
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
               size={30}
             />
@@ -49,7 +60,7 @@ const Footer = () => {
             rel="noreferrer"
             target="_blank"
           >
-            <AiOutlineWhatsApp
+            <RiWhatsappLine
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
               size={30}
             />
