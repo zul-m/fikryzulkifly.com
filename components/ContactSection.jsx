@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { HiPhone, HiMail } from "react-icons/hi";
+import { FaEnvelope, FaPhoneAlt, FaTelegram } from "react-icons/fa";
 
 export default function () {
   const [fullname, setFullname] = useState("");
@@ -48,18 +48,24 @@ export default function () {
         <div className="space-y-10 my-auto md:w-1/2">
           <p className="mx-1 text-center md:text-left text-l md:text-xl">
             Hubungi saya jika anda mempunyai sebarang pertanyaan, cadangan, atau
-            sebarang maklum balas. Terima kasih.
+            sebarang maklum balas. Ikuti "listing" di saluran{" "}
+            <span className="font-semibold text-teal-600">Telegram </span>
+            kami yang dikemaskini setiap hari.
           </p>
           <div className="md:items-start md:justify-start items-center justify-center space-x-3 flex flex-row">
-            <HiPhone size={30} />
+            <FaPhoneAlt size={30} />
             <p>+60 17-651 5784</p>
           </div>
           <div className="md:items-start md:justify-start items-center justify-center space-x-3 flex flex-row">
-            <HiMail size={30} />
+            <FaEnvelope size={30} />
             <p>fikryzulkiflyproperty@gmail.com</p>
           </div>
+          <div className="md:items-start md:justify-start items-center justify-center space-x-3 flex flex-row">
+            <FaTelegram size={30} />
+            <p>fzpropertylisting</p>
+          </div>
         </div>
-        <div className="md:w-1/2">
+        <div className="my-auto md:w-1/2">
           <form
             onSubmit={handleSubmit}
             className="py-4 mt-10 border rounded flex flex-col gap-5"

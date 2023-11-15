@@ -1,9 +1,9 @@
 "use client";
-import "../styles/globals.css";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ThemeProvider } from "next-themes";
+import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "next-themes";
+import "../styles/globals.css";
 
 export default function RootLayout({
   children,

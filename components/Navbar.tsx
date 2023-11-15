@@ -16,7 +16,7 @@ const NAV_ITEMS: Array<NavItem> = [
     page: "projects",
   },
   {
-    label: "Virtual Viewing",
+    label: "Lawatan Maya",
     page: "viewing",
   },
   {
