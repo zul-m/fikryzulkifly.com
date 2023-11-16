@@ -14,7 +14,7 @@ const HeroSection = () => {
         <div className="my-auto md:w-3/5">
           <h1 className="md:py-14 font-bold text-3xl space-y-3 md:text-6xl md:space-y-5">
             <span className="leading-tight">
-              Anda perlukan khidmat konsultasi berkaitan
+              Kamu perlukan khidmat konsultasi berkaitan
             </span>
             <br></br>
             <TypeAnimation
