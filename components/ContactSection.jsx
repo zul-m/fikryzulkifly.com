@@ -49,8 +49,15 @@ export default function () {
           <p className="mx-1 text-center md:text-left text-l md:text-xl">
             Hubungi saya jika anda mempunyai sebarang pertanyaan, cadangan, atau
             sebarang maklum balas. Ikuti "listing" di saluran{" "}
-            <span className="font-semibold text-teal-600">Telegram </span>
-            kami yang dikemaskini setiap hari.
+            <a
+              href="https://t.me/fzpropertylisting"
+              rel="noreferrer"
+              target="_blank"
+              className="font-semibold text-teal-600 hover:text-teal-700"
+            >
+              Telegram
+            </a>{" "}
+            yang dikemaskini setiap hari.
           </p>
           <div className="md:items-start md:justify-start items-center justify-center space-x-3 flex flex-row">
             <FaPhoneAlt size={30} />
