@@ -3,41 +3,32 @@ import { useTheme } from "next-themes";
 import { useState } from "react";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
-import { Link } from "react-scroll/modules";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-interface NavItem {
-  label: string;
-  page: string;
-}
-
-const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: "Projek Baru",
-    page: "projects",
-  },
-  {
-    label: "Lawatan Maya",
-    page: "viewing",
-  },
-  {
-    label: "Hubungi Saya",
-    page: "contact",
-  },
+const links = [
+  /*   { name: "Beli", href: "/beli" },
+  { name: "Sewa", href: "/sewa" }, */
+  { name: "Projek Baru", href: "/baru" },
+  { name: "Projek Lalu", href: "/lalu" },
 ];
 
 export default function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const [navbar, setNavbar] = useState(false);
+  const pathname = usePathname();
 
   return (
-    <header className="w-full mx-auto px-4 bg-white shadow fixed top-0 z-50 sm:px-20 dark:bg-stone-900 dark:border-b dark:border-stone-600">
-      <div className="justify-between md:items-center md:flex">
+    <header className="w-full mx-auto px-5 bg-white shadow fixed top-0 z-50 sm:px-20 dark:bg-stone-900 dark:border-b dark:border-stone-600">
+      <div className="text-center md:space-x-6 md:items-center justify-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <Link to="home">
+            <Link href="/">
               <div className="container flex items-center space-x-2">
-                <h2 className="text-2xl font-bold">Fikry Zulkifly</h2>
+                <h2 className="text-2xl font-bold">
+                  Fikry<span className="text-teal-600">Zulkifly</span>{" "}
+                </h2>
               </div>
             </Link>
             <div className="md:hidden">
@@ -56,26 +47,26 @@ export default function Navbar() {
               navbar ? "block" : "hidden"
             }`}
           >
-            <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              {NAV_ITEMS.map((item, idx) => {
-                return (
-                  <Link
-                    key={idx}
-                    to={item.page}
-                    className={
-                      "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100"
-                    }
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => setNavbar(!navbar)}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
+            <nav className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+              {links.map((link, idx) => (
+                <div key={idx}>
+                  {pathname === link.href ? (
+                    <Link
+                      className="text-lg font-semibold text-teal-600 hover:text-teal-700"
+                      href={link.href}
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-lg font-semibold transition duration-100 hover:text-teal-600"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
               {currentTheme === "dark" ? (
                 <button
                   onClick={() => setTheme("light")}
@@ -91,7 +82,7 @@ export default function Navbar() {
                   <RiMoonFill size={25} />
                 </button>
               )}
-            </div>
+            </nav>
           </div>
         </div>
       </div>
