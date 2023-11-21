@@ -1,43 +1,39 @@
-import { simplifiedProject } from "@/app/interface";
-import { client } from "@/app/lib/sanity";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { simplifiedProject } from "../interface";
+import { client } from "../lib/sanity";
 
-async function getData() {
-  const query = `*[_type == 'project'][0..3] | order(_createdAt desc) {
-    _id,
-      price,
-      name,
-      "slug": slug.current,
-      "categoryName": category->name,
-      "imageUrl": images[0].asset->url
-  }`;
+async function getData(category: string) {
+  const query = `*[_type == "project" && category->name == "${category}"] | order(_createdAt desc) {
+        _id,
+          "imageUrl": images[0].asset->url,
+          price,
+          name,
+          "slug": slug.current,
+          "categoryName": category->name
+      }`;
 
   const data = await client.fetch(query);
 
   return data;
 }
 
-export default async function ProjectsSection() {
-  const data: simplifiedProject = await getData();
+// Opt out of caching for all data requests in the route segment
+export const dynamic = "force-dynamic";
 
+export default async function Category({
+  params,
+}: {
+  params: { category: string };
+}) {
+  const data: simplifiedProject[] = await getData(params.category);
   return (
-    <section id="projects">
-      <div className="pt-32 mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div className="flex flex-col items-center">
-          <h1 className="font-bold mx-auto text-4xl md:text-5xl">
-            PROJEK TERKINI
+    <div>
+      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <div className="pt-10 flex justify-between items-center">
+          <h1 className="font-bold tracking-tight uppercase mx-auto text-4xl md:text-5xl">
+            Projek {params.category}
           </h1>
-          <Link
-            className="text-center items-center flex flex-col md:flex-row gap-x-1 gap-y-2 mx-5 pt-12 text-l md:text-xl"
-            href="/projek"
-          >
-            Cari rumah idaman anda, terokai projek baru yang akan datang{" "}
-            <span>
-              <ArrowRight className="w-5 h-5" />
-            </span>
-          </Link>
         </div>
         <div className="mt-12 md:mt-20 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {data.map((project) => (
@@ -58,9 +54,9 @@ export default async function ProjectsSection() {
                 <div className="my-4 mx-4 flex flex-col text-center gap-y-1">
                   <div>
                     <h2 className="md:text-sm">{project.name}</h2>
-                    <span className="absolute left-0 top-3 rounded-r-lg bg-teal-700 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
+                    {/* <span className="absolute left-0 top-3 rounded-r-lg bg-teal-700 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
                       Projek {project.categoryName}
-                    </span>
+                    </span> */}
                   </div>
                   <p className="md:text-sm font-medium">RM{project.price}</p>
                 </div>
@@ -69,6 +65,6 @@ export default async function ProjectsSection() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
