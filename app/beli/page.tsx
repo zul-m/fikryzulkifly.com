@@ -29,7 +29,7 @@ export default async function Category({
   const data: simplifiedProject[] = await getData();
   return (
     <div>
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-6 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <div className="pt-10 flex justify-between items-center">
           <h1 className="font-bold tracking-tight uppercase mx-auto text-4xl md:text-5xl">
             Beli

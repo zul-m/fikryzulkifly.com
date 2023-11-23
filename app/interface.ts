@@ -17,4 +17,5 @@ export interface fullProject {
   name: string;
   content: any;
   link: string;
+  listing: string;
 }
