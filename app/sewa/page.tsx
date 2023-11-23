@@ -41,7 +41,7 @@ export default async function Category({
             className="group relative border rounded-md shadow-lg hover:shadow-2xl"
           >
             <Link href={`/sewa/${project.slug}`}>
-              <div className="aspect-square w-full overflow-hidden rounded-t-md lg:h-80">
+              <div className="aspect-square w-72 h-72 overflow-hidden rounded-t-md">
                 <Image
                   src={project.imageUrl}
                   alt=""

@@ -24,7 +24,7 @@ export default async function ProjectsSection() {
 
   return (
     <section id="projects">
-      <div className="pt-32 mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="pt-32 mx-auto max-w-max">
         <div className="flex flex-col items-center">
           <h1 className="font-bold mx-auto text-4xl md:text-5xl">BELI</h1>
           <Link
@@ -37,14 +37,14 @@ export default async function ProjectsSection() {
             </span>
           </Link>
         </div>
-        <div className="mt-12 md:mt-20 grid gap-x-6 gap-y-10 grid-cols-4 xl:gap-x-8">
+        <div className="mt-12 md:mt-20 pb-14 px-5 justify-between overflow-x-auto flex flex-row gap-x-6 gap-y-10 xl:gap-x-8">
           {data.map((project) => (
             <div
               key={project._id}
-              className="group relative border rounded-md shadow-lg hover:shadow-2xl"
+              className="flex-shrink-0 group relative border rounded-md shadow-lg hover:shadow-2xl"
             >
               <Link href={`/beli/${project.slug}`}>
-                <div className="aspect-square w-full overflow-hidden rounded-t-md lg:h-80">
+                <div className="aspect-square w-72 h-72 overflow-hidden rounded-t-md">
                   <Image
                     src={project.imageUrl}
                     alt=""
