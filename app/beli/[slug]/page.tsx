@@ -5,7 +5,7 @@ import { client } from "@/app/lib/sanity";
 import { PortableText } from "@portabletext/react";
 import { Calculator } from "lucide-react";
 import Link from "next/link";
-import { FaList, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 async function getData(slug: string) {
   const query = `*[_type == "project" && slug.current == "${slug}"][0] {
@@ -16,6 +16,7 @@ async function getData(slug: string) {
           name,
           content,
           link,
+          listing,
           "slug": slug.current,
           "categoryName": category->name,
       }`;
@@ -73,19 +74,16 @@ export default async function Project({
           <div className="flex flex-col md:flex-row gap-2.5">
             <Link
               href={data.link}
-              className="flex items-center justify-center gap-1 border-2 border-teal-600 text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow-md hover:bg-teal-700"
+              className="flex items-center justify-center gap-1 border-2 border-teal-600 text-neutral-100 font-medium px-6 py-3 bg-teal-600 rounded-md shadow-md hover:bg-teal-700"
             >
               <FaWhatsapp className="w-5 h-5" />
-              Ketahui lebih lanjut
+              Hubungi saya
             </Link>
             <Link
-              href={
-                "https://docs.google.com/forms/d/e/1FAIpQLSdm23Nvjv7gibiu9JkuCWaAwaWjohZakDHJLy1HVFsLjDlQ8Q/viewform"
-              }
-              className="flex items-center justify-center gap-1.5 border-2 border-teal-600 font-semibold px-6 py-3 rounded shadow-md hover:bg-teal-700 hover:text-neutral-100"
+              href={data.listing}
+              className="flex items-center justify-center border-2 border-teal-600 font-medium px-6 py-3 rounded-md shadow-md hover:bg-teal-700 hover:text-neutral-100"
             >
-              <FaList className="w-4 h-4" />
-              Semak kelayakan
+              Ketahui lebih lanjut
             </Link>
             {/* <button
               className="flex flex-row border-2 border-teal-600 hover:bg-teal-700 hover:text-neutral-100 rounded shadow-md gap-x-2 p-3"

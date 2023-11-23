@@ -67,5 +67,10 @@ export default {
       type: "url",
       title: "Pautan ke Whatsapp",
     },
+    {
+      name: "listing",
+      type: "url",
+      title: "Pautan ke 'listing' di Telegram",
+    },
   ],
 };

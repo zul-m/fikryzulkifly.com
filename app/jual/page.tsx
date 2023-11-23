@@ -28,42 +28,40 @@ export default async function Category({
 }) {
   const data: simplifiedProject[] = await getData();
   return (
-    <div>
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <div className="pt-10 flex justify-between items-center">
-          <h1 className="font-bold tracking-tight uppercase mx-auto text-4xl md:text-5xl">
-            Jual
-          </h1>
-        </div>
-        <div className="mt-12 md:mt-20 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {data.map((project) => (
-            <div
-              key={project._id}
-              className="group relative border rounded-md shadow-lg hover:shadow-2xl"
-            >
-              <Link href={`/jual/${project.slug}`}>
-                <div className="aspect-square w-full overflow-hidden rounded-t-md lg:h-80">
-                  <Image
-                    src={project.imageUrl}
-                    alt=""
-                    className="w-full h-full object-cover object-center lg:h-full lg:w-full"
-                    width={300}
-                    height={300}
-                  />
+    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <div className="pt-10 flex justify-between items-center">
+        <h1 className="font-bold tracking-tight uppercase mx-auto text-4xl md:text-5xl">
+          Jual
+        </h1>
+      </div>
+      <div className="mt-12 md:mt-20 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        {data.map((project) => (
+          <div
+            key={project._id}
+            className="group relative border rounded-md shadow-lg hover:shadow-2xl"
+          >
+            <Link href={`/jual/${project.slug}`}>
+              <div className="aspect-square w-full overflow-hidden rounded-t-md lg:h-80">
+                <Image
+                  src={project.imageUrl}
+                  alt=""
+                  className="w-full h-full object-cover object-center lg:h-full lg:w-full"
+                  width={300}
+                  height={300}
+                />
+              </div>
+              <div className="my-4 mx-4 flex flex-col text-center gap-y-1">
+                <div>
+                  <h2 className="md:text-sm">{project.name}</h2>
+                  <span className="absolute left-0 top-3 rounded-r-lg bg-teal-700 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
+                    {project.categoryName}
+                  </span>
                 </div>
-                <div className="my-4 mx-4 flex flex-col text-center gap-y-1">
-                  <div>
-                    <h2 className="md:text-sm">{project.name}</h2>
-                    <span className="absolute left-0 top-3 rounded-r-lg bg-teal-700 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
-                      {project.categoryName}
-                    </span>
-                  </div>
-                  <p className="md:text-sm font-medium">RM{project.price}</p>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
+                <p className="md:text-sm font-medium">RM{project.price}</p>
+              </div>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );

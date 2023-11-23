@@ -29,7 +29,7 @@ export default async function ProjectsSection() {
           <h1 className="font-bold mx-auto text-4xl md:text-5xl">BELI</h1>
           <Link
             className="text-center items-center flex flex-col md:flex-row gap-x-1 gap-y-2 mx-5 pt-12 text-l md:text-xl"
-            href="/projek"
+            href="/beli"
           >
             Cari rumah idaman anda, terokai projek baru yang akan datang{" "}
             <span>
@@ -37,7 +37,7 @@ export default async function ProjectsSection() {
             </span>
           </Link>
         </div>
-        <div className="mt-12 md:mt-20 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        <div className="mt-12 md:mt-20 grid gap-x-6 gap-y-10 grid-cols-4 xl:gap-x-8">
           {data.map((project) => (
             <div
               key={project._id}
