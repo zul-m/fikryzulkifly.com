@@ -7,10 +7,9 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const links = [
-  /*   { name: "Beli", href: "/beli" },
-  { name: "Sewa", href: "/sewa" }, */
-  { name: "Projek Baru", href: "/baru" },
-  { name: "Projek Lalu", href: "/lalu" },
+  { name: "Beli", href: "/beli" },
+  { name: "Sewa", href: "/sewa" },
+  { name: "Jual", href: "/jual" },
 ];
 
 export default function Navbar() {

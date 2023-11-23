@@ -43,7 +43,7 @@ export default async function Project({
         <div className="md:py-28">
           <div className="md:text-start text-center mb-2 md:mb-3">
             <span className="mb-0.5 inline-block uppercase">
-              Projek {data.categoryName}
+              {data.categoryName}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold">{data.name}</h2>
           </div>
