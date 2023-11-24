@@ -2,10 +2,7 @@ import SlideUp from "./SlideUp";
 
 const ViewingSection = () => {
   return (
-    <section
-      id="viewing"
-      className="mx-auto max-w-6xl mt-10 md:mt-36 text-center"
-    >
+    <section id="viewing" className="mx-auto max-w-6xl mt-10 text-center">
       <h1 className="pt-6 md:pt-14 font-bold text-4xl md:text-5xl">VIDEO</h1>
       <SlideUp offset="-300px 0px -300px 0px">
         <p className="mx-5 animate-slideUpCubiBezier animation-delay-2 pt-12 text-l md:text-xl">

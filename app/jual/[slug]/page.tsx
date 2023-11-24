@@ -28,11 +28,7 @@ async function getData(slug: string) {
 // Opt out of caching for all data requests in the route segment
 export const dynamic = "force-dynamic";
 
-export default async function Project({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function Sell({ params }: { params: { slug: string } }) {
   const data: fullProject = await getData(params.slug);
   return (
     <div className="mx-auto max-w-screen-xl px-4 md:px-8">
