@@ -21,7 +21,7 @@ async function getData() {
 // Opt out of caching for all data requests in the route segment
 export const dynamic = "force-dynamic";
 
-export default async function Category({
+export default async function SellList({
   params,
 }: {
   params: { category: string };

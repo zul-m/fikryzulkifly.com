@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { HiArrowDown } from "react-icons/hi";
 import { Link } from "react-scroll/modules";
 import { TypeAnimation } from "react-type-animation";
 
@@ -8,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="px-6 max-w-7xl mx-auto text-center items-center justify-center md:py-20"
+      className="px-6 max-w-7xl mx-auto text-center items-center justify-center md:py-10"
     >
       <div className="flex flex-col pt-32 pb-16 md:py-32 md:flex-row md:text-left">
         <div className="my-auto md:w-3/5">
@@ -70,7 +69,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="md:mt-16 flex flex-row items-center text-center justify-center">
+      {/* <div className="md:mt-16 flex flex-row items-center text-center justify-center">
         <Link
           to="projects"
           activeClass="active"
@@ -81,7 +80,7 @@ const HeroSection = () => {
         >
           <HiArrowDown size={35} className="animate-bounce" />
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -1,7 +1,7 @@
 export default {
-  name: "project",
+  name: "rental",
   type: "document",
-  title: "Projek",
+  title: "Sewa",
   fields: [
     {
       name: "name",
@@ -53,24 +53,9 @@ export default {
       },
     },
     {
-      name: "price",
-      type: "number",
-      title: "Harga",
-    },
-    {
       name: "installment",
       type: "number",
-      title: "Anggaran bayaran bulanan",
-    },
-    {
-      name: "category",
-      title: "Kategori",
-      type: "reference",
-      to: [
-        {
-          type: "category",
-        },
-      ],
+      title: "Bayaran bulanan",
     },
     {
       name: "link",
