@@ -5,6 +5,10 @@ export interface simplifiedProject {
   slug: string;
   categoryName: string;
   name: string;
+  bedroom: number;
+  bathroom: number;
+  parking: number;
+  size: number;
 }
 
 export interface simplifiedRental {
@@ -14,6 +18,10 @@ export interface simplifiedRental {
   slug: string;
   name: string;
   location: string;
+  bedroom: number;
+  bathroom: number;
+  parking: number;
+  size: number;
 }
 
 export interface fullProject {
@@ -24,9 +32,14 @@ export interface fullProject {
   slug: string;
   categoryName: string;
   name: string;
+  location: string;
   content: any;
   link: string;
   listing: string;
+  bedroom: number;
+  bathroom: number;
+  parking: number;
+  size: number;
 }
 
 export interface fullRental {
@@ -39,4 +52,8 @@ export interface fullRental {
   content: any;
   link: string;
   listing: string;
+  bedroom: number;
+  bathroom: number;
+  parking: number;
+  size: number;
 }

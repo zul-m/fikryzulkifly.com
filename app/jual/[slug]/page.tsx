@@ -56,7 +56,7 @@ export default async function Sell({ params }: { params: { slug: string } }) {
           <div className="md:text-start text-center mb-4">
             <span className="text-sm">Harga bermula dari</span>
             <div className="text-xl font-bold md:text-2xl">
-              RM{data.price}
+              RM {data.price}
               {/* <span className="mb-0.5 line-through">RM{data.price + 3000}</span> */}
             </div>
           </div>

@@ -58,7 +58,7 @@ export default async function SellList({
                       {project.categoryName}
                     </span>
                   </div>
-                  <p className="md:text-sm font-medium">RM{project.price}</p>
+                  <p className="md:text-sm font-medium">RM {project.price}</p>
                 </div>
               </Link>
             </div>

@@ -58,7 +58,7 @@ export default async function RentList({
                   </span>
                 </div>
                 <p className="md:text-sm font-medium">
-                  RM{rental.installment}/bulan
+                  RM {rental.installment}/bulan
                 </p>
               </div>
             </Link>

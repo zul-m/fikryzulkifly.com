@@ -57,7 +57,7 @@ export default async function BuyList({
                     {project.categoryName}
                   </span>
                 </div>
-                <p className="md:text-sm font-medium">RM{project.price}</p>
+                <p className="md:text-sm font-medium">RM {project.price}</p>
               </div>
             </Link>
           </div>
