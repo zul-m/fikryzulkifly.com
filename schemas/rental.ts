@@ -58,6 +58,26 @@ export default {
       title: "Bayaran bulanan",
     },
     {
+      name: "bedroom",
+      type: "number",
+      title: "Jumlah bilik tidur",
+    },
+    {
+      name: "bathroom",
+      type: "number",
+      title: "Jumlah bilik air",
+    },
+    {
+      name: "parking",
+      type: "number",
+      title: "Jumlah parkir",
+    },
+    {
+      name: "size",
+      type: "number",
+      title: "Keluasan (sqft)",
+    },
+    {
       name: "link",
       type: "url",
       title: "Pautan ke Whatsapp",
