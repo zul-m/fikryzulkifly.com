@@ -30,7 +30,7 @@ export default async function ProjectsSection() {
           </h3>
           <Link
             className="flex items-center font-medium gap-x-1 text-l md:text-xl text-teal-600 hover:text-teal-700"
-            href="/sewa"
+            href="/beli"
           >
             Lihat semua &gt;
           </Link>
