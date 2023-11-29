@@ -4,7 +4,7 @@ import { simplifiedRental } from "../interface";
 import { client } from "../lib/sanity";
 
 async function getData() {
-  const query = `*[_type == "rental"][0..3] | order(_createdAt desc) {
+  const query = `*[_type == "rental"] | order(_createdAt desc) {
     _id,
       installment,
       name,
