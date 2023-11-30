@@ -1,5 +1,6 @@
 import { simplifiedRental } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
+import { formatCurrency } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -59,7 +60,7 @@ export default async function RentalSection() {
                     </span>
                   </div>
                   <p className="md:text-sm font-medium">
-                    RM{rental.installment}/bulan
+                    {formatCurrency(rental.installment)}/bulan
                   </p>
                 </div>
               </Link>

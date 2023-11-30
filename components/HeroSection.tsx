@@ -29,9 +29,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-lg mt-7 md:mt-0 mb-8 md:text-justify md:text-xl">
-            Hi, saya{" "}
-            <span className="font-semibold text-teal-600">Fikry{""}</span>.
-            Hubungi saya untuk khidmat ejen hartanah di Kuala Lumpur dan
+            Hubungi kami untuk khidmat ejen hartanah di Kuala Lumpur dan
             Selangor atau ikuti panduan jual beli hartanah.
           </p>
           <div className="space-y-3 md:space-y-0 md:space-x-5 flex flex-col md:flex-row">
@@ -44,10 +42,10 @@ const HeroSection = () => {
               offset={-100}
               duration={500}
             >
-              Hubungi saya
+              Hubungi kami
             </Link>
             <Link
-              to="projects"
+              to="loan-calculator"
               className="font-semibold px-6 py-3 border-2 border-teal-600 rounded shadow hover:bg-teal-700 hover:text-neutral-100"
               activeClass="active"
               spy={true}

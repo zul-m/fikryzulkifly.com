@@ -12,7 +12,6 @@ export const dynamic = "force-dynamic";
 
 export default function ImageGallery({ images }: iAppProps) {
   const [bigImage, setBigImage] = useState(images[0]);
-
   const handleSmallImageClick = (image: any) => {
     setBigImage(image);
   };

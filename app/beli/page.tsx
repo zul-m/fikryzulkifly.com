@@ -1,3 +1,4 @@
+import { formatCurrency } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { simplifiedProject } from "../interface";
@@ -57,7 +58,9 @@ export default async function BuyList({
                     {project.categoryName}
                   </span>
                 </div>
-                <p className="md:text-sm font-medium">RM {project.price}</p>
+                <p className="md:text-sm font-medium">
+                  {formatCurrency(project.price)}
+                </p>
               </div>
             </Link>
           </div>

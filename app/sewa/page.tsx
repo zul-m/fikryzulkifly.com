@@ -1,3 +1,4 @@
+import { formatCurrency } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { simplifiedRental } from "../interface";
@@ -58,7 +59,7 @@ export default async function RentList({
                   </span>
                 </div>
                 <p className="md:text-sm font-medium">
-                  RM {rental.installment}/bulan
+                  {formatCurrency(rental.installment)}/bulan
                 </p>
               </div>
             </Link>

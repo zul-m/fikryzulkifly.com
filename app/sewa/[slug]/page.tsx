@@ -2,6 +2,7 @@ import ImageGallery from "@/app/components/ImageGallery";
 import { RichText } from "@/app/components/RichText";
 import { fullRental } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
+import { formatCurrency } from "@/utils";
 import { PortableText } from "@portabletext/react";
 import {
   Bath,
@@ -69,7 +70,7 @@ export default async function Rent({ params }: { params: { slug: string } }) {
           <div className="flex flex-col sm:flex-row">
             <div className="text-center sm:text-start sm:pr-10 border-r-hidden sm:border-r-2 mt-2 mb-6">
               <div className="text-xl font-bold sm:text-2xl">
-                RM {data.installment}
+                {formatCurrency(data.installment)}
                 {/* <span className="mb-0.5 line-through">RM{data.price + 3000}</span> */}
               </div>
               <span className="text-sm">/ bulan</span>
@@ -99,7 +100,7 @@ export default async function Rent({ params }: { params: { slug: string } }) {
               className="flex items-center justify-center gap-1 border-2 border-teal-600 text-neutral-100 font-medium px-6 py-3 bg-teal-600 rounded-md shadow-md hover:bg-teal-700"
             >
               <FaWhatsapp className="w-5 h-5" />
-              Hubungi saya
+              Hubungi kami
             </Link>
             <Link
               href={data.listing}

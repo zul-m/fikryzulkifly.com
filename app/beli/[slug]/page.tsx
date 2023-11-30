@@ -2,6 +2,7 @@ import ImageGallery from "@/app/components/ImageGallery";
 import { RichText } from "@/app/components/RichText";
 import { fullProject } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
+import { formatCurrency } from "@/utils";
 import { PortableText } from "@portabletext/react";
 import {
   Bath,
@@ -74,13 +75,13 @@ export default async function Buy({ params }: { params: { slug: string } }) {
             <div className="text-center sm:text-start sm:pr-5 border-r-hidden sm:border-r-2 mt-2 mb-6">
               <span className="text-sm">Harga bermula dari</span>
               <div className="text-xl font-bold sm:text-2xl">
-                RM {data.price}
+                {formatCurrency(data.price)}
                 {/* <span className="mb-0.5 line-through">RM{data.price + 3000}</span> */}
               </div>
               <div className="flex items-center justify-center sm:justify-start pt-1 gap-2">
                 <Calculator className="w-5 h-5" />
                 <span className="text-sm">
-                  Anggaran bayaran RM{data.installment}/bulan
+                  Anggaran bayaran {formatCurrency(data.installment)}/bulan
                 </span>
               </div>
             </div>
@@ -109,7 +110,7 @@ export default async function Buy({ params }: { params: { slug: string } }) {
               className="flex items-center justify-center gap-1 border-2 border-teal-600 text-neutral-100 font-medium px-6 py-3 bg-teal-600 rounded-md shadow-md hover:bg-teal-700"
             >
               <FaWhatsapp className="w-5 h-5" />
-              Hubungi saya
+              Hubungi kami
             </Link>
             <Link
               href={data.listing}
