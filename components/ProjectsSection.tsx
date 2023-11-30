@@ -1,5 +1,6 @@
 import { simplifiedProject } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
+import { formatCurrency } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -58,7 +59,9 @@ export default async function ProjectsSection() {
                       {project.categoryName}
                     </span>
                   </div>
-                  <p className="md:text-sm font-medium">RM{project.price}</p>
+                  <p className="md:text-sm font-medium">
+                    {formatCurrency(project.price)}
+                  </p>
                 </div>
               </Link>
             </div>

@@ -42,13 +42,13 @@ export default function () {
   return (
     <section id="contact" className="p-4 max-w-5xl mx-auto">
       <h1 className="font-bold text-center text-4xl items-center md:text-5xl">
-        HUBUNGI SAYA
+        HUBUNGI KAMI
       </h1>
-      <div className="py-10 flex flex-col md:flex-row">
+      <div className="py-10 flex flex-col md:flex-row lg:justify-between">
         <div className="space-y-10 my-auto md:w-1/2">
           <p className="mx-1 text-center md:text-left text-l md:text-xl">
-            Hubungi saya jika anda mempunyai sebarang pertanyaan, cadangan, atau
-            sebarang maklum balas. Ikuti "listing" di saluran{" "}
+            Hubungi kami jika anda mempunyai sebarang pertanyaan, cadangan, atau
+            maklum balas. Ikuti "listing" di saluran{" "}
             <a
               href="https://t.me/fzpropertylisting"
               rel="noreferrer"
