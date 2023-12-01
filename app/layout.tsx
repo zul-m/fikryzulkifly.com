@@ -2,7 +2,6 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
-import { ThemeProvider } from "next-themes";
 import "../styles/globals.css";
 
 export default function RootLayout({
@@ -17,12 +16,13 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="dark:bg-stone-900">
-        <ThemeProvider enableSystem={true} attribute="class">
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeProvider>
+      {/* <body className="dark:bg-stone-900"> */}
+      <body>
+        {/* <ThemeProvider enableSystem={true} attribute="class"> */}
+        <Navbar />
+        {children}
+        <Footer />
+        {/* </ThemeProvider> */}
         <Analytics />
       </body>
     </html>
