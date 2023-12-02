@@ -44,7 +44,7 @@ export default function EasyCalculator() {
       <SlideUp offset="-300px 0px -300px 0px">
         <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 lg:flex-row mx-auto gap-8">
           {/* Left Section */}
-          <div className="my-auto border lg:w-2/5 rounded-md py-8 px-8 sm:px-6 shadow-lg">
+          <div className="mb-auto border lg:w-2/5 rounded-md py-8 px-8 sm:px-6 shadow-lg">
             <div className="mb-6">
               <TextField
                 name="netSalary"

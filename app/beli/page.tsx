@@ -31,9 +31,19 @@ export default async function BuyList({
   return (
     <div className="mx-auto max-w-2xl px-6 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <div className="pt-10 flex justify-between items-center">
-        <h1 className="font-bold tracking-tight uppercase mx-auto text-4xl md:text-5xl">
-          Beli
-        </h1>
+        <div className="flex-col mx-auto text-center px-2">
+          <h1 className="mb-4 font-bold tracking-tight uppercase text-4xl md:text-5xl">
+            Beli
+          </h1>
+          <a
+            href="https://api.whatsapp.com/send?phone=60176515784"
+            rel="noreferrer"
+            target="_blank"
+            className="text-base md:text-lg hover:font-medium"
+          >
+            Hubungi kami jika anda ingin menjual hartanah anda &gt;
+          </a>
+        </div>
       </div>
       <div className="mt-12 md:mt-20 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {data.map((project) => (

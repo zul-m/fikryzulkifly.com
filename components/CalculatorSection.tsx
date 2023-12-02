@@ -36,7 +36,7 @@ export default function EasyCalculator() {
     setForm(InitialFormState);
   };
   return (
-    <section id="loan-calculator" className="mx-auto max-w-5xl py-14 px-4">
+    <section id="loan-calculator" className="mx-auto max-w-4xl py-14 px-4">
       <h1 className="font-bold text-center text-4xl sm:text-5xl mb-10 lg:mb-20">
         SEMAK KELAYAKAN
       </h1>
