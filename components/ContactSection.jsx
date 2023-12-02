@@ -40,7 +40,7 @@ export default function () {
   };
 
   return (
-    <section id="contact" className="p-4 max-w-6xl mx-auto">
+    <section id="contact" className="p-4 max-w-5xl mx-auto">
       <h1 className="font-bold text-center text-4xl items-center md:text-5xl">
         HUBUNGI KAMI
       </h1>
