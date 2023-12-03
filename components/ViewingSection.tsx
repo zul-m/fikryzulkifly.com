@@ -1,48 +1,59 @@
-import SlideUp from "./SlideUp";
+import { viewing } from "@/app/interface";
+import { client } from "@/app/lib/sanity";
+import Link from "next/link";
 
-const ViewingSection = () => {
+async function getData() {
+  const query = `*[_type == "video"][0..3] | order(_createdAt desc) {
+    _id,
+      name,
+      "videourl": video.asset->url
+  }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}
+
+export default async function ViewingSection() {
+  const data: viewing = await getData();
   return (
-    <section id="viewing" className="mx-auto max-w-6xl mt-10 text-center">
-      <h1 className="pt-6 md:pt-14 font-bold text-4xl md:text-5xl">VIDEO</h1>
-      <SlideUp offset="-300px 0px -300px 0px">
-        <p className="mx-5 animate-slideUpCubiBezier animation-delay-2 pt-12 text-l md:text-xl">
-          Lawat galeri pameran hartanah pada bila-bila masa dan di mana sahaja,{" "}
-          <span className="font-semibold text-teal-600">
-            dari sudut yang baru!
-          </span>
-        </p>
-        <div className="py-14 md:py-32 flex flex-col space-y-10 items-center justify-around md:flex-row md:space-y-0">
-          <video
-            className="rounded-xl shadow-2xl"
-            autoPlay
-            muted
-            width={250}
-            height={250}
-            controls
-            src="/videos/0E26360A.mp4"
-          ></video>
-          <video
-            className="rounded-xl shadow-2xl"
-            autoPlay
-            muted
-            width={250}
-            height={250}
-            controls
-            src="/videos/7B4D87B0.mp4"
-          ></video>
-          <video
-            className="rounded-xl shadow-2xl"
-            autoPlay
-            muted
-            width={250}
-            height={250}
-            controls
-            src="/videos/231108.mp4"
-          ></video>
+    <section id="viewing">
+      <div className="pt-10 mx-auto max-w-max">
+        <div className="flex flex-col justify-center sm:flex-row px-5">
+          <Link className="text-l md:text-xl" href="/360">
+            Lawat galeri pameran hartanah pada bila-bila masa dan di mana
+            sahaja,{" "}
+            <span className="text-teal-600 hover:text-teal-700">
+              dari sudut yang baru &gt;
+            </span>
+          </Link>
         </div>
-      </SlideUp>
+        <div className="mt-8 pb-14 px-5 justify-between overflow-x-auto flex flex-row gap-x-6 gap-y-10 xl:gap-x-8">
+          {data.map((video) => (
+            <div
+              key={video._id}
+              className="flex-shrink-0 group relative border rounded-md shadow-lg hover:shadow-xl"
+            >
+              <div className="w-72 h-96 overflow-hidden rounded-t-md">
+                <video
+                  className="w-full h-full object-cover object-center"
+                  autoPlay
+                  muted
+                  width={300}
+                  height={300}
+                  controls
+                  src={video.videourl}
+                ></video>
+              </div>
+              <div className="my-4 mx-4 flex flex-col text-center gap-y-1">
+                <div>
+                  <h2 className="md:text-sm">{video.name}</h2>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
-};
-
-export default ViewingSection;
+}

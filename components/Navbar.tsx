@@ -7,6 +7,7 @@ import { IoMdClose, IoMdMenu } from "react-icons/io";
 const links = [
   { name: "Beli", href: "/beli" },
   { name: "Sewa", href: "/sewa" },
+  { name: "360", href: "/360" },
   { name: "Semak Kelayakan", href: "/semak-kelayakan" },
 ];
 

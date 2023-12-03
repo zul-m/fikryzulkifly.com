@@ -49,7 +49,7 @@ export default async function BuyList({
         {data.map((project) => (
           <div
             key={project._id}
-            className="group relative border rounded-md shadow-lg hover:shadow-2xl"
+            className="group relative border rounded-md shadow-lg hover:shadow-xl"
           >
             <Link href={`/beli/${project.slug}`}>
               <div className="aspect-square w-full overflow-hidden rounded-t-md lg:h-80">
