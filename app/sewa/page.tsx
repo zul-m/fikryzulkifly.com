@@ -41,7 +41,7 @@ export default async function RentList({
             target="_blank"
             className="text-base md:text-lg hover:font-medium"
           >
-            Hubungi kami jika anda ingin menyewa hartanah anda &gt;
+            Hubungi kami jika anda ingin sewakan hartanah anda &gt;
           </a>
         </div>
       </div>
@@ -49,7 +49,7 @@ export default async function RentList({
         {data.map((rental) => (
           <div
             key={rental._id}
-            className="group relative border rounded-md shadow-lg hover:shadow-2xl"
+            className="group relative border rounded-md shadow-lg hover:shadow-xl"
           >
             <Link href={`/sewa/${rental.slug}`}>
               <div className="aspect-square w-full overflow-hidden rounded-t-md lg:h-80">

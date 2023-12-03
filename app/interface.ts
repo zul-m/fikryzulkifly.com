@@ -57,3 +57,9 @@ export interface fullRental {
   parking: number;
   size: number;
 }
+
+export interface viewing {
+  _id: string;
+  name: string;
+  file: string;
+}

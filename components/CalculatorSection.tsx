@@ -41,7 +41,7 @@ export default function EasyCalculator() {
         SEMAK KELAYAKAN
       </h1>
       <SlideUp offset="-300px 0px -300px 0px">
-        <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 border shadow-md rounded-md lg:flex-row mx-auto">
+        <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 bg-neutral-100 border shadow-md rounded-md lg:flex-row mx-auto">
           {/* Left Section */}
           <div className="g:w-2/5 rounded-md py-6 px-6">
             <div className="mb-4">
