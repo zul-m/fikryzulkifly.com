@@ -12,7 +12,7 @@ export default function TextField({
 }: TextfieldProps) {
   return (
     <>
-      <label className="font-medium">{label}</label>
+      <label className="font-inter font-medium">{label}</label>
       <input
         type={type || "text"}
         name={name}
@@ -22,7 +22,7 @@ export default function TextField({
         onBlur={onBlur}
         className="w-full rounded-md border py-3 mt-2 px-[14px] text-base outline-none focus-visible:shadow-none"
       />
-      <p className="pt-1.5 ms-2 text-xs">{legend}</p>
+      <p className="font-inter pt-1.5 ms-2 text-xs">{legend}</p>
     </>
   );
 }

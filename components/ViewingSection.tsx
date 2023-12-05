@@ -20,7 +20,7 @@ export default async function ViewingSection() {
     <section id="viewing">
       <div className="pt-10 mx-auto max-w-max">
         <div className="flex flex-col justify-center sm:flex-row px-5">
-          <Link className="text-l md:text-xl" href="/360">
+          <Link className="font-inter text-l md:text-xl" href="/360">
             Lawat galeri pameran hartanah pada bila-bila masa dan di mana
             sahaja,{" "}
             <span className="text-teal-600 hover:text-teal-700">
@@ -45,7 +45,7 @@ export default async function ViewingSection() {
                   src={video.videourl}
                 ></video>
               </div>
-              <div className="my-4 mx-4 flex flex-col text-center gap-y-1">
+              <div className="font-inter my-4 mx-4 flex flex-col text-center gap-y-1">
                 <div>
                   <h2 className="md:text-sm">{video.name}</h2>
                 </div>

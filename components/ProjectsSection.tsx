@@ -26,11 +26,11 @@ export default async function ProjectsSection() {
     <section id="projects" className="bg-neutral-100">
       <div className="pt-10 mx-auto max-w-max">
         <div className="flex flex-col space-y-1 sm:flex-row justify-between px-5">
-          <h3 className="font-bold text-3xl md:text-4xl">
+          <h3 className="font-playfair font-bold text-3xl md:text-4xl">
             Miliki Rumah Impian.
           </h3>
           <Link
-            className="flex items-center font-medium gap-x-1 text-l md:text-xl text-teal-600 hover:text-teal-700"
+            className="font-inter flex items-center font-medium gap-x-1 text-l md:text-xl text-teal-600 hover:text-teal-700"
             href="/beli"
           >
             Lihat semua &gt;
@@ -52,7 +52,7 @@ export default async function ProjectsSection() {
                     height={300}
                   />
                 </div>
-                <div className="my-4 mx-4 flex flex-col text-center gap-y-1">
+                <div className="font-inter my-4 mx-4 flex flex-col text-center gap-y-1">
                   <div>
                     <h2 className="md:text-sm">{project.name}</h2>
                     <span className="absolute left-0 top-3 rounded-r-lg bg-teal-700 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">

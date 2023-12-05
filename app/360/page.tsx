@@ -22,14 +22,14 @@ export default async function ViewingList() {
     <div className="mx-auto max-w-2xl px-6 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <div className="pt-10 flex justify-between items-center">
         <div className="flex-col mx-auto text-center px-2">
-          <h1 className="mb-4 font-bold tracking-tight uppercase text-4xl md:text-5xl">
+          <h1 className="font-playfair mb-4 font-bold uppercase text-4xl md:text-5xl">
             Video 360
           </h1>
           {/* <a
             href="https://api.whatsapp.com/send?phone=60176515784"
             rel="noreferrer"
             target="_blank"
-            className="text-base md:text-lg hover:font-medium"
+            className="font-inter text-base md:text-lg hover:font-medium"
           >
             Hubungi kami jika anda ingin sewakan hartanah anda &gt;
           </a> */}
@@ -53,7 +53,7 @@ export default async function ViewingList() {
               ></video>
             </div>
             <div className="my-4 mx-4 flex flex-col text-center gap-y-1">
-              <div>
+              <div className="font-inter">
                 <h2 className="md:text-sm">{video.name}</h2>
               </div>
             </div>

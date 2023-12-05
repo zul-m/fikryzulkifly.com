@@ -37,7 +37,7 @@ export default function EasyCalculator() {
   };
   return (
     <section id="loan-calculator" className="mx-auto max-w-4xl py-14 px-4">
-      <h1 className="font-bold text-center text-4xl sm:text-5xl mb-10 lg:mb-20">
+      <h1 className="font-playfair font-bold text-center text-4xl sm:text-5xl mb-10 lg:mb-20">
         SEMAK KELAYAKAN
       </h1>
       <SlideUp offset="-300px 0px -300px 0px">
@@ -66,14 +66,14 @@ export default function EasyCalculator() {
             </div>
             <div className="space-y-2">
               <ButtonCalculator
-                className="text-neutral-100 bg-teal-600 hover:bg-teal-700"
+                className="font-inter tracking-wide text-neutral-100 bg-teal-600 hover:bg-teal-700"
                 onClick={onCalculate}
               >
                 Semak Kelayakan
               </ButtonCalculator>
               {cpmRate && (
                 <ButtonCalculator
-                  className="text-neutral-100 bg-neutral-600 hover:bg-neutral-700"
+                  className="font-inter tracking-wide text-neutral-100 bg-neutral-600 hover:bg-neutral-700"
                   onClick={onReset}
                 >
                   Kira Semula
@@ -82,7 +82,7 @@ export default function EasyCalculator() {
             </div>
             {cpmRate && (
               <div className="mt-5 p-4 rounded-md bg-teal-800 text-center">
-                <h2 className="text-xl lg:text-2xl font-extrabold text-neutral-100">
+                <h2 className="font-inter text-xl lg:text-2xl font-extrabold text-neutral-100">
                   Harga rumah layak dibeli:{" "}
                   <span className="text-yellow-500">
                     {formatCurrency(cpmRate)}
@@ -92,7 +92,7 @@ export default function EasyCalculator() {
             )}
           </div>
           {/* Right Section */}
-          <div className="my-auto lg:w-3/5 px-4 leading-relaxed">
+          <div className="font-inter my-auto lg:w-3/5 px-4 leading-relaxed">
             <p className="mb-4 text-base">
               Semak harga rumah yang layak dibeli dengan mengisi pendapatan
               bersih dan jumlah bayaran hutang bulanan anda.
