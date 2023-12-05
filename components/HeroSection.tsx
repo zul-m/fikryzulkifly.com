@@ -11,7 +11,7 @@ const HeroSection = () => {
     >
       <div className="flex flex-col pt-32 pb-16 md:py-32 md:flex-row md:text-left">
         <div className="my-auto md:w-3/5">
-          <h1 className="md:py-14 font-bold text-3xl space-y-3 md:text-6xl md:space-y-5">
+          <h1 className="font-playfair md:py-14 font-bold text-3xl space-y-3 md:text-6xl md:space-y-5">
             <span className="leading-tight">
               Anda perlukan khidmat konsultasi berkaitan
             </span>
@@ -28,14 +28,14 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-lg mt-7 md:mt-0 mb-8 md:text-justify md:text-xl">
+          <p className="font-inter text-lg mt-7 md:mt-0 mb-8 md:text-justify md:text-xl">
             Hubungi kami untuk khidmat ejen hartanah di Kuala Lumpur dan
-            Selangor atau ikuti panduan jual beli hartanah.
+            Selangor atau ikuti panduan jual rumah.
           </p>
           <div className="space-y-3 md:space-y-0 md:space-x-5 flex flex-col md:flex-row">
             <Link
               to="contact"
-              className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+              className="font-inter tracking-wider text-neutral-100 font-semibold px-10 py-5 bg-teal-600 rounded-full shadow hover:bg-teal-700"
               activeClass="active"
               spy={true}
               smooth={true}
@@ -43,17 +43,6 @@ const HeroSection = () => {
               duration={500}
             >
               Hubungi kami
-            </Link>
-            <Link
-              to="loan-calculator"
-              className="font-semibold px-6 py-3 border-2 border-teal-600 rounded shadow hover:bg-teal-700 hover:text-neutral-100"
-              activeClass="active"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
-              Panduan jual beli hartanah
             </Link>
           </div>
         </div>

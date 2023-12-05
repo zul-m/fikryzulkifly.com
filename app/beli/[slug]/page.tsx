@@ -50,7 +50,7 @@ export default async function Buy({ params }: { params: { slug: string } }) {
         <div className="">
           <ImageGallery images={data.images} />
         </div>
-        <div className="md:py-28">
+        <div className="font-inter md:py-28">
           <div className="md:text-start text-center mb-2 md:mb-3">
             <span className="mb-0.5 inline-block uppercase">
               {data.categoryName}

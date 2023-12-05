@@ -41,11 +41,11 @@ export default function () {
 
   return (
     <section id="contact" className="p-4 max-w-5xl mx-auto">
-      <h1 className="font-bold text-center text-4xl items-center md:text-5xl">
+      <h1 className="font-playfair font-bold text-center text-4xl items-center md:text-5xl">
         HUBUNGI KAMI
       </h1>
       <div className="py-10 flex flex-col md:flex-row lg:justify-between">
-        <div className="space-y-10 my-auto md:w-1/2">
+        <div className="font-inter space-y-10 my-auto md:w-1/2">
           <p className="mx-1 text-center md:text-left text-l md:text-xl">
             Hubungi kami jika anda mempunyai sebarang pertanyaan, cadangan, atau
             maklum balas. Ikuti "listing" di saluran{" "}
@@ -75,7 +75,7 @@ export default function () {
         <div className="my-auto md:w-1/2">
           <form
             onSubmit={handleSubmit}
-            className="py-4 mt-10 border rounded flex flex-col gap-5"
+            className="font-inter pt-4 mt-10 border rounded flex flex-col gap-5"
           >
             <div>
               <label htmlFor="fullname">
