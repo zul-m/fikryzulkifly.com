@@ -1,4 +1,4 @@
-import { TextfieldProps } from "../types";
+import { TextfieldProps } from "@/types";
 
 export default function TextField({
   label,
