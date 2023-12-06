@@ -1,5 +1,5 @@
-import { viewing } from "../interface";
-import { client } from "../lib/sanity";
+import { viewing } from "@/app/interface";
+import { client } from "@/app/lib/sanity";
 
 async function getData() {
   const query = `*[_type == "video"] | order(_createdAt desc) {

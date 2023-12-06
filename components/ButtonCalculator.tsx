@@ -1,4 +1,4 @@
-import { ButtonProps } from "../types";
+import { ButtonProps } from "@/types";
 
 export default function ButtonCalculator({
   children,

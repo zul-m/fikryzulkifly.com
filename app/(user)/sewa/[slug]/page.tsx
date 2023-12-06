@@ -4,14 +4,7 @@ import { fullRental } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
 import { formatCurrency } from "@/utils";
 import { PortableText } from "@portabletext/react";
-import {
-  Bath,
-  BedDouble,
-  Calculator,
-  CarFront,
-  MapPin,
-  Scaling,
-} from "lucide-react";
+import { Bath, BedDouble, CarFront, MapPin, Scaling } from "lucide-react";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 
