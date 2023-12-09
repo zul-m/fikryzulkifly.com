@@ -44,7 +44,6 @@ export default async function ViewingList() {
             <div className="w-auto h-96 overflow-hidden rounded-t-md">
               <video
                 className="w-full h-full object-cover object-center"
-                autoPlay
                 muted
                 width={300}
                 height={300}
