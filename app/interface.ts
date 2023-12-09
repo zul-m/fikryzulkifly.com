@@ -56,6 +56,11 @@ export interface fullRental {
   bathroom: number;
   parking: number;
   size: number;
+  facilities: string;
+  propertyType: string;
+  dateIn: string;
+  deposit: string;
+  furnish: string;
 }
 
 export interface viewing {

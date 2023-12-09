@@ -51,7 +51,7 @@ export default async function Buy({ params }: { params: { slug: string } }) {
           <div className="mb-7">
             <ImageGallery images={data.images} />
           </div>
-          <div className="pb-5 mx-5 sm:mx-auto max-w-screen-sm border border-neutral-400 shadow-lg rounded-md font-inter text-center">
+          <div className="pb-5 mx-5 sm:mx-auto max-w-screen-sm border shadow-md rounded-md font-inter text-center">
             <h4 className="bg-neutral-200 py-3 rounded-t-md">
               {data.name} - {data.location}
             </h4>

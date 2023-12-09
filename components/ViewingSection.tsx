@@ -37,7 +37,6 @@ export default async function ViewingSection() {
               <div className="w-72 h-96 overflow-hidden rounded-t-md">
                 <video
                   className="w-full h-full object-cover object-center"
-                  autoPlay
                   muted
                   width={300}
                   height={300}

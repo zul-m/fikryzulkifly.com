@@ -23,6 +23,11 @@ async function getData(slug: string) {
           parking,
           size,
           "slug": slug.current,
+          facilities,
+          "propertyType": propertyType->name,
+          "dateIn": dateIn->name,
+          deposit,
+          "furnish": furnish->name,
       }`;
 
   const data = await client.fetch(query);
@@ -42,7 +47,7 @@ export default async function Rent({ params }: { params: { slug: string } }) {
           <div className="mb-7">
             <ImageGallery images={data.images} />
           </div>
-          <div className="pb-5 mx-5 sm:mx-auto max-w-screen-sm border border-neutral-400 shadow-lg rounded-md font-inter text-center">
+          <div className="pb-5 mx-5 sm:mx-auto max-w-screen-sm border shadow-md rounded-md font-inter text-center">
             <h4 className="px-4 sm:px-8 text-sm sm:text-base bg-neutral-200 py-3 rounded-t-md">
               {data.name} - {data.location}
             </h4>
@@ -97,15 +102,65 @@ export default async function Rent({ params }: { params: { slug: string } }) {
             <MapPin className="w-5 h-5" />
             {data.location}
           </div>
-          <div className="mt-2 mb-6">
+          <div className="mt-2">
             <div className="text-xl font-bold sm:text-2xl">
               {formatCurrency(data.installment)} /
               <span className="text-lg"> bulan</span>
               {/* <span className="mb-0.5 line-through">RM{data.price + 3000}</span> */}
             </div>
           </div>
+          <div className="font-inter tracking-wide border shadow-md rounded-md p-4 sm:p-6 my-8">
+            <h3 className="text-lg sm:text-xl font-semibold pb-4 sm:pb-6">
+              Info Lanjut
+            </h3>
+            <hr className="h-1 pb-4 sm:pb-6"></hr>
+            <div className="flex flex-row">
+              <div className="w-1/2">
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="">Jenis hartanah:</h4>
+                  <p className="text-sm text-neutral-600">
+                    {data.propertyType}
+                  </p>
+                </div>
+                <div className="">
+                  <h4 className="">Deposit:</h4>
+                  <p className="text-sm text-neutral-600">{data.deposit}</p>
+                </div>
+              </div>
+              <div className="w-1/2">
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="">Tarikh masuk:</h4>
+                  <p className="text-sm text-neutral-600">{data.dateIn}</p>
+                </div>
+                <div className="">
+                  <h4 className="">Perabot:</h4>
+                  <p className="text-sm text-neutral-600">{data.furnish}</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="mb-10">
             <PortableText value={data.content} components={RichText} />
+          </div>
+          <div className="font-inter tracking-wide pt-4 sm:pt-6 mt-8 justify-center md:justify-start">
+            <h3 className="text-lg sm:text-xl font-semibold pb-4 sm:pb-6 px-4 sm:px-6">
+              Kemudahan
+            </h3>
+            <hr className="h-1 pb-4 sm:pb-6"></hr>
+            <div className="px-4 sm:px-6 text-sm grid grid-cols-1 sm:grid-cols-2 gap-x-2">
+              <p className="mb-4 sm:mb-6">{data.facilities[0]}</p>
+              <p className="mb-4 sm:mb-6">{data.facilities[1]}</p>
+              <p className="mb-4 sm:mb-6">{data.facilities[2]}</p>
+              <p className="mb-4 sm:mb-6">{data.facilities[3]}</p>
+              <p className="mb-4 sm:mb-6">{data.facilities[4]}</p>
+              <p className="mb-4 sm:mb-6">{data.facilities[5]}</p>
+              <p className="mb-4 sm:mb-6">{data.facilities[6]}</p>
+              <p className="mb-4 sm:mb-6">{data.facilities[7]}</p>
+              <p className="mb-4 sm:mb-6">{data.facilities[8]}</p>
+              <p className="mb-4 sm:mb-6">{data.facilities[9]}</p>
+              <p className="mb-4 sm:mb-6">{data.facilities[10]}</p>
+              <p className="mb-4 sm:mb-6">{data.facilities[11]}</p>
+            </div>
           </div>
         </div>
       </div>
