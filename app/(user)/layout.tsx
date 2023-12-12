@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import HeaderMobile from "@/components/HeaderMobile";
+import SideNav from "@/components/SideNav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter, Playfair_Display } from "next/font/google";
@@ -35,10 +36,10 @@ export default function RootLayout({
       {/* <body className="dark:bg-stone-900"> */}
       <body>
         {/* <ThemeProvider enableSystem={true} attribute="class"> */}
-        <Navbar />
+        <SideNav />
+        <HeaderMobile />
         {children}
         <Footer />
-        {/* </ThemeProvider> */}
         <Analytics />
         <SpeedInsights />
       </body>
