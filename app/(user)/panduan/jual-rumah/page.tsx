@@ -5,11 +5,11 @@ import Link from "next/link";
 const page = () => {
   return (
     <main className="pt-16 sm:pt-24">
-      <div className="flex py-10 flex-col leading-tight mx-auto max-w-5xl px-4 sm:px-8 xl:px-0">
-        <h2 className="font-playfair mb-4 font-bold text-3xl sm:text-4xl">
+      <div className="border-l-0 sm:border-l-2 border-neutral-200 flex py-14 sm:py-20 flex-col tracking-wide mx-auto max-w-5xl px-4 sm:px-8">
+        <h2 className="font-playfair mb-4 font-bold text-4xl sm:text-5xl">
           Panduan Jual Rumah
         </h2>
-        <p className="font-inter text-sm sm:text-base mb-6">
+        <p className="font-inter text-lg sm:text-xl mb-6">
           Strategi dan langkah-langkah profesional
         </p>
       </div>
@@ -21,7 +21,7 @@ const page = () => {
                 Tetapkan harga rumah
                 <hr className="w-20 h-1 my-3 bg-teal-500 rounded"></hr>
               </h3>
-              <article className="font-inter text-sm sm:text-base">
+              <article className="font-inter">
                 <p className="my-6">
                   Menjual rumah merupakan suatu langkah besar dalam kehidupan
                   dan memerlukan perancangan yang rapi. Antara langkah pertama
@@ -77,7 +77,7 @@ const page = () => {
                 Rancang jangkamasa jualan
                 <hr className="w-20 h-1 my-3 bg-teal-500 rounded"></hr>
               </h3>
-              <article className="font-inter text-sm sm:text-base">
+              <article className="font-inter">
                 <p className="my-6">
                   Langkah seterusnya dalam menjual rumah adalah merancang
                   jangkamasa proses penjualan. Ini termasuklah:
@@ -110,7 +110,7 @@ const page = () => {
                 Sediakan dokumen
                 <hr className="w-20 h-1 my-3 bg-teal-500 rounded"></hr>
               </h3>
-              <article className="font-inter text-sm sm:text-base">
+              <article className="font-inter">
                 <p className="my-6">
                   Menyediakan dokumen yang betul adalah kunci untuk memudahkan
                   proses jual rumah. Berikut adalah senarai dokumen yang perlu
@@ -158,7 +158,7 @@ const page = () => {
                 Sediakan rumah untuk jualan
                 <hr className="w-20 h-1 my-3 bg-teal-500 rounded"></hr>
               </h3>
-              <article className="font-inter text-sm sm:text-base">
+              <article className="font-inter">
                 <p className="my-6">
                   Sebelum memasarkan rumah anda, pastikan rumah dalam keadaan
                   terbaik. Ini termasuklah membuat perubahan kecil dan
@@ -193,7 +193,7 @@ const page = () => {
                 Lantik perunding hartanah
                 <hr className="w-20 h-1 my-3 bg-teal-500 rounded"></hr>
               </h3>
-              <article className="font-inter text-sm sm:text-base">
+              <article className="font-inter">
                 <p className="my-6">
                   Lantik perunding hartanah untuk memudahkan proses penjualan
                   rumah anda. Langkah-langkah yang perlu diambil:

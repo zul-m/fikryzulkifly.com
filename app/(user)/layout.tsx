@@ -4,7 +4,7 @@ import SideNav from "@/components/SideNav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter, Playfair_Display } from "next/font/google";
-import "../../styles/globals.css";
+import "@/styles/globals.css";
 
 const playfair_display = Playfair_Display({
   subsets: ["latin"],

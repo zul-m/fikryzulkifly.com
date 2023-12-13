@@ -43,13 +43,13 @@ const HeaderMobile = () => {
 
   return (
     <div>
-      <Link href="/">
-        <div className="container flex fixed items-center bg-white pl-4 py-3 z-30 shadow">
+      <div className="w-full bg-white shadow flex fixed items-center pl-5 py-3 z-30">
+        <Link href="/">
           <h2 className="font-inter text-2xl font-bold">
             Fikry<span className="text-teal-600">Zulkifly</span>
           </h2>
-        </div>
-      </Link>
+        </Link>
+      </div>
       <motion.nav
         initial={false}
         animate={isOpen ? "open" : "closed"}
@@ -108,7 +108,7 @@ export default HeaderMobile;
 const MenuToggle = ({ toggle }: { toggle: any }) => (
   <button
     onClick={toggle}
-    className="pointer-events-auto absolute right-4 top-[18px] z-30"
+    className="pointer-events-auto absolute right-5 top-[18px] z-30"
   >
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
