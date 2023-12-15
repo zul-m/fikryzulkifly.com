@@ -22,8 +22,9 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     path: "/panduan",
     submenu: true,
     subMenuItems: [
-      { title: "Jual Rumah", path: "/panduan/jual-rumah" },
       { title: "Sewa Rumah", path: "/panduan/sewa-rumah" },
+      { title: "Jual Rumah", path: "/panduan/jual-rumah" },
+      { title: "Jual Rumah Guna Ejen", path: "/panduan/jual-rumah-guna-ejen" },
     ],
   },
 ];

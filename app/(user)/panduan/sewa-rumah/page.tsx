@@ -13,7 +13,8 @@ const page = () => {
               Panduan Sewa Rumah
             </h2>
             <p className="font-inter text-lg sm:text-xl mb-6">
-              Langkah-langkah dan perkara penting
+              Langkah-langkah utama dalam perjanjian sewaan dan kelebihan
+              menggunakan khidmat ejen hartanah
             </p>
           </div>
         </div>
@@ -22,14 +23,14 @@ const page = () => {
         <SlideUp offset="-300px 0px -300px 0px">
           <Image
             src="/5.png"
-            width={800}
-            height={800}
+            width={1080}
+            height={1080}
             className="aspect-[2/1] w-full h-full object-cover object-center rounded-md"
             alt=""
           />
         </SlideUp>
       </div>
-      <div className="flex flex-col md:flex-row max-w-6xl mx-auto py-20">
+      <div className="flex flex-col md:flex-row max-w-6xl mx-auto py-16 sm:py-20">
         <div className="md:w-3/5">
           <article className="font-inter px-4 sm:px-8 lg:px-12">
             <p className="mb-6">
@@ -65,8 +66,8 @@ const page = () => {
               undang-undang tetapi juga memberikan perlindungan kepada penyewa,
               dengan menetapkan terma dan syarat sewa yang jelas.
             </p>
-            <blockquote className="border-l-teal-600 border-l-4 bg-teal-100 bg-opacity-50 p-5 mb-5">
-              <p className="mb-4">
+            <blockquote className="border-l-teal-600 border-l-4 bg-teal-100 bg-opacity-50 p-6 mb-6">
+              <p className="mb-6">
                 Untuk panduan yang tepat, disarankan untuk berhubung dengan ejen
                 hartanah atau profesional cukai.
               </p>
@@ -100,17 +101,17 @@ const page = () => {
               Deposit utiliti merangkumi deposit bil elektrik, deposit bil air,
               dan deposit Indah Water Konsortium (IWK).
             </p>
-            <ul className="list-decimal list-inside">
-              <li className="mb-6">
+            <ul className="list-decimal">
+              <li className="ml-6 mb-6">
                 Deposit bil elektrik: Disyorkan agar penyewa mendaftar akaun TNB
                 atas nama mereka sendiri menggunakan salinan surat perjanjian
                 sewa
               </li>
-              <li className="mb-6">
+              <li className="ml-6 mb-6">
                 Deposit bil air: Dikenakan oleh tuan rumah sebagai deposit
                 utiliti bil air
               </li>
-              <li className="mb-6">
+              <li className="ml-6 mb-6">
                 Deposit IWK: Perlu diingatkan bahawa IWK adalah utiliti yang
                 dikenakan caj bulanan. Jika rumah yang disewa adalah apartment
                 atau kondo, caj ini dimasukkan dalam caj "maintenance fee".
@@ -192,7 +193,10 @@ const page = () => {
               kecuali bagi kerosakan yang disebabkan oleh kelalaian atau masalah
               struktur rumah.
             </p>
-            <h4 className="mb-6 font-medium text-teal-600 text-xl">
+            <h4
+              id="tanggungjawab-utiliti"
+              className="mb-6 font-medium text-teal-600 text-xl"
+            >
               5. Tanggungjawab utiliti
             </h4>
             <p className="mb-6">
@@ -202,7 +206,10 @@ const page = () => {
               memudahkan pengurusan bil dan deposit utiliti. Deposit utiliti
               biasanya adalah 50% daripada nilai sewa sebulan.
             </p>
-            <h3 className="font-playfair font-semibold text-2xl sm:text-3xl">
+            <h3
+              id="menggunakan-khidmat-ejen-hartanah"
+              className="font-playfair font-semibold text-2xl sm:text-3xl"
+            >
               Menggunakan khidmat ejen hartanah
               <hr className="w-20 h-1 my-3 bg-teal-500 rounded"></hr>
             </h3>
@@ -217,7 +224,10 @@ const page = () => {
               Menggunakan ejen hartanah untuk menyewakan rumah anda memberikan
               kelebihan tertentu:
             </p>
-            <h4 className="mb-6 font-medium text-teal-600 text-xl">
+            <h4
+              id="rangkaian-yang-luas"
+              className="mb-6 font-medium text-teal-600 text-xl"
+            >
               1. Rangkaian yang luas
             </h4>
             <p className="mb-6">
@@ -247,7 +257,10 @@ const page = () => {
               kumpulan sasaran. Ini membantu meningkatkan kebolehcapaian
               hartanah dan peluang untuk menarik penyewa yang sesuai.
             </p>
-            <h4 className="mb-6 font-medium text-teal-600 text-xl">
+            <h4
+              id="keahlian-dan-pengetahuan"
+              className="mb-6 font-medium text-teal-600 text-xl"
+            >
               2. Keahlian dan pengetahuan
             </h4>
             <p className="mb-6">
@@ -259,7 +272,10 @@ const page = () => {
               juga dapat membantu menetapkan harga sewa yang sesuai dengan harga
               pasaran semasa.
             </p>
-            <h4 className="mb-6 font-medium text-teal-600 text-xl">
+            <h4
+              id="penyaringan-penyewa"
+              className="mb-6 font-medium text-teal-600 text-xl"
+            >
               3. Penyaringan penyewa
             </h4>
             <p className="mb-6">
@@ -268,7 +284,10 @@ const page = () => {
               ditetapkan oleh pemilik rumah, termasuk latar belakang, kredit,
               rekod penyewaan terdahulu, dan kebolehcapaian kewangan.
             </p>
-            <h4 className="mb-6 font-medium text-teal-600 text-xl">
+            <h4
+              id="pengurusan-pemasaran-dan-perundingan"
+              className="mb-6 font-medium text-teal-600 text-xl"
+            >
               4. Pengurusan pemasaran dan perundingan
             </h4>
             <p className="mb-6">
@@ -279,7 +298,10 @@ const page = () => {
               sewa untuk mencapai perjanjian yang adil dan memuaskan kedua-dua
               belah pihak.
             </p>
-            <h4 className="mb-6 font-medium text-teal-600 text-xl">
+            <h4
+              id="mengurangkan-beban-anda"
+              className="mb-6 font-medium text-teal-600 text-xl"
+            >
               5. Mengurangkan beban anda
             </h4>
             <p className="mb-6">
@@ -290,7 +312,10 @@ const page = () => {
               memberikan pemilik rumah lebih banyak masa dan ketenangan fikiran
               untuk menangani aspek-aspek lain dalam kehidupan mereka.
             </p>
-            <h4 className="mb-6 font-medium text-teal-600 text-xl">
+            <h4
+              id="memberikan-nasihat-dan-menetapkan-harga-yang-sesuai"
+              className="mb-6 font-medium text-teal-600 text-xl"
+            >
               6. Memberikan nasihat dan menetapkan harga yang sesuai
             </h4>
             <p className="mb-6">
@@ -300,11 +325,11 @@ const page = () => {
               pasaran semasa. Dengan menetapkan harga yang sesuai, ejen dapat
               membantu memastikan hartanah disewakan dengan lebih cepat.
             </p>
-            <blockquote className="border-l-teal-600 border-l-4 bg-teal-100 bg-opacity-50 p-5 mb-5">
-              <h4 className="mb-4 font-medium text-xl text-sky-500 flex items-center gap-0.5">
+            <blockquote className="border-l-teal-600 border-l-4 bg-teal-100 bg-opacity-50 p-6 mb-6">
+              <h4 className="mb-6 font-medium text-xl text-sky-500 flex items-center gap-0.5">
                 <IoMdBulb className="w-5 h-5" /> Yuran komisen ejen sewa
               </h4>
-              <p className="mb-4">
+              <p className="">
                 Bayaran komisen ejen sewa adalah satu bulan sewa untuk sewaan
                 setahun. Jika sewaan melebihi setahun, ejen boleh mengenakan
                 bayaran hingga dua bulan sewa.
@@ -321,103 +346,131 @@ const page = () => {
               <summary className="text-lg font-semibold capitalize cursor-pointer">
                 Isi kandungan
               </summary>
-              <ul className="mt-3 font-inter">
-                <li className="py-1">
-                  <Link
-                    href="/panduan/sewa-rumah/#perkara-utama-dalam-perjanjian-sewaan"
-                    className="py-4 border-t flex items-center justify-start font-medium hover:underline"
-                  >
-                    Perkara utama dalam perjanjian sewaan
-                  </Link>
+              <ul className="mt-4 font-inter">
+                <Link
+                  href="/panduan/sewa-rumah/#perkara-utama-dalam-perjanjian-sewaan"
+                  className="py-4 border-t flex items-center justify-start font-medium hover:underline"
+                >
+                  Perkara utama dalam perjanjian sewaan
+                </Link>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
                     href="/panduan/sewa-rumah/#surat-perjanjian-sewaan-yang-dimatikan-setem-duti"
-                    className="mb-2 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    className="mb-2 flex items-center justify-start hover:underline"
                   >
-                    1. Surat perjanjian sewaan yang dimatikan setem duti
+                    Surat perjanjian sewaan yang dimatikan setem duti
                   </Link>
+                </li>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
                     href="/panduan/sewa-rumah/#deposit-sekuriti-dan-utiliti"
-                    className="mb-4 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    className="mb-4 flex items-center justify-start hover:underline"
                   >
-                    2. Deposit sekuriti dan utiliti
+                    Deposit sekuriti dan utiliti
                   </Link>
-                  <Link
-                    href="/panduan/sewa-rumah/#langkah-langkah-sewa-rumah"
-                    className="py-4 border-t flex items-center justify-start font-medium hover:underline"
-                  >
-                    Langkah-langkah sewa rumah
-                  </Link>
+                </li>
+              </ul>
+              <ul className="mt-4 font-inter">
+                <Link
+                  href="/panduan/sewa-rumah/#langkah-langkah-sewa-rumah"
+                  className="py-4 border-t flex items-center justify-start font-medium hover:underline"
+                >
+                  Langkah-langkah sewa rumah
+                </Link>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
                     href="/panduan/sewa-rumah/#sediakan-maklumat-dan-salinan-mykad-penyewa-dan-saksi"
-                    className="mb-2 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    className="mb-2 flex items-center justify-start hover:underline"
                   >
-                    1. Sediakan maklumat dan salinan Mykad penyewa dan saksi
+                    Sediakan maklumat dan salinan Mykad penyewa dan saksi
                   </Link>
+                </li>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
                     href="/panduan/sewa-rumah/#draf-perjanjian-sewaan"
-                    className="mb-2 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    className="mb-2 flex items-center justify-start hover:underline"
                   >
-                    2. Draf perjanjian sewaan
+                    Draf perjanjian sewaan
                   </Link>
+                </li>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
                     href="/panduan/sewa-rumah/#mematikan-setem-duti"
-                    className="mb-2 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    className="mb-2 flex items-center justify-start hover:underline"
                   >
-                    3. Mematikan setem duti
+                    Mematikan setem duti
                   </Link>
+                </li>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
                     href="/panduan/sewa-rumah/#ambil-kunci-dan-buat-semakan"
-                    className="mb-2 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    className="mb-2 flex items-center justify-start hover:underline"
                   >
-                    4. Ambil kunci dan buat semakan
+                    Ambil kunci dan buat semakan
                   </Link>
+                </li>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#deposit-sekuriti-dan-utiliti"
-                    className="mb-4 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    href="/panduan/sewa-rumah/#tanggungjawab-utiliti"
+                    className="mb-4 flex items-center justify-start hover:underline"
                   >
-                    5. Tanggungjawab utiliti
+                    Tanggungjawab utiliti
                   </Link>
+                </li>
+              </ul>
+              <ul className="mt-4 font-inter">
+                <Link
+                  href="/panduan/sewa-rumah/#menggunakan-khidmat-ejen-hartanah"
+                  className="py-4 border-t flex items-center justify-start font-medium hover:underline"
+                >
+                  Menggunakan khidmat ejen hartanah
+                </Link>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#perkara-utama-dalam-perjanjian-sewaan"
-                    className="py-4 border-t flex items-center justify-start font-medium hover:underline"
+                    href="/panduan/sewa-rumah/#rangkaian-yang-luas"
+                    className="mb-2 flex items-center justify-start hover:underline"
                   >
-                    Menggunakan khidmat ejen hartanah
+                    Rangkaian yang luas
                   </Link>
+                </li>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#surat-perjanjian-sewaan-yang-dimatikan-setem-duti"
-                    className="mb-2 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    href="/panduan/sewa-rumah/#keahlian-dan-pengetahuan"
+                    className="mb-2 flex items-center justify-start hover:underline"
                   >
-                    1. Rangkaian yang luas
+                    Keahlian dan pengetahuan
                   </Link>
+                </li>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#surat-perjanjian-sewaan-yang-dimatikan-setem-duti"
-                    className="mb-2 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    href="/panduan/sewa-rumah/#penyaringan-penyewa"
+                    className="mb-2 flex items-center justify-start hover:underline"
                   >
-                    2. Keahlian dan pengetahuan
+                    Penyaringan penyewa
                   </Link>
+                </li>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#surat-perjanjian-sewaan-yang-dimatikan-setem-duti"
-                    className="mb-2 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    href="/panduan/sewa-rumah/#pengurusan-pemasaran-dan-perundingan"
+                    className="mb-2 flex items-center justify-start hover:underline"
                   >
-                    3. Penyaringan penyewa
+                    Pengurusan pemasaran dan perundingan
                   </Link>
+                </li>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#surat-perjanjian-sewaan-yang-dimatikan-setem-duti"
-                    className="mb-2 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    href="/panduan/sewa-rumah/#mengurangkan-beban-anda"
+                    className="mb-2 flex items-center justify-start hover:underline"
                   >
-                    4. Pengurusan pemasaran dan perundingan
+                    Mengurangkan beban anda
                   </Link>
+                </li>
+                <li className="list-decimal ml-6 text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#surat-perjanjian-sewaan-yang-dimatikan-setem-duti"
-                    className="mb-2 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
+                    href="/panduan/sewa-rumah/#memberikan-nasihat-dan-menetapkan-harga-yang-sesuai"
+                    className="mb-4 flex items-center justify-start hover:underline"
                   >
-                    5. Mengurangkan beban anda
-                  </Link>
-                  <Link
-                    href="/panduan/sewa-rumah/#deposit-sekuriti-dan-utiliti"
-                    className="mb-4 pl-2 flex items-center justify-start text-neutral-600 hover:underline"
-                  >
-                    6. Memberikan nasihat dan menetapkan harga yang sesuai
+                    Memberikan nasihat dan menetapkan harga yang sesuai
                   </Link>
                 </li>
               </ul>
@@ -442,13 +495,12 @@ const page = () => {
           <p className="font-inter font-medium text-base sm:text-lg text-neutral-200">
             Atau{" "}
             <Link
-              href="/semak-kelayakan"
+              href="/panduan/jual-rumah-guna-ejen"
               className="underline hover:no-underline hover:text-sky-600"
             >
-              semak kelayakan
+              lihat info lanjut
             </Link>{" "}
-            untuk memastikan proses jualan rumah anda berjalan dengan lancar dan
-            berkesan.
+            peranan ejen hartanah dalam menguruskan proses penjualan rumah.
           </p>
         </div>
       </div>

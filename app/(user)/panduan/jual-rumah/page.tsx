@@ -10,7 +10,8 @@ const page = () => {
           Panduan Jual Rumah
         </h2>
         <p className="font-inter text-lg sm:text-xl mb-6">
-          Strategi dan langkah-langkah profesional
+          Langkah-langkah profesional dari penetapan harga hingga pelantikan
+          perunding hartanah
         </p>
       </div>
       <div className="bg-neutral-100 py-16 px-4 sm:px-8">
@@ -244,13 +245,12 @@ const page = () => {
           <p className="font-inter font-medium text-base sm:text-lg text-neutral-200">
             Atau{" "}
             <Link
-              href="/semak-kelayakan"
+              href="/panduan/jual-rumah-guna-ejen"
               className="underline hover:no-underline hover:text-sky-600"
             >
-              semak kelayakan
+              lihat info lanjut
             </Link>{" "}
-            untuk memastikan proses jualan rumah anda berjalan dengan lancar dan
-            berkesan.
+            peranan ejen hartanah dalam menguruskan proses penjualan rumah.
           </p>
         </div>
       </div>
