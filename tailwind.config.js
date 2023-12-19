@@ -14,6 +14,7 @@ module.exports = {
       fontFamily: {
         playfair: ["var(--font-playfair-display)"],
         inter: ["var(--font-inter)"],
+        poppins: ["var(--font-poppins)"],
       },
       animation: {
         bounce:

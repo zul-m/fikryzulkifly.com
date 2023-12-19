@@ -34,7 +34,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
 /* HelpSection */
 export const FEATURES = [
   {
-    title: "Semak harga",
+    title: "Semak Harga",
     icon: (
       <Icon
         icon="ic:outline-check-circle"
@@ -44,10 +44,10 @@ export const FEATURES = [
       />
     ),
     description:
-      "Sebelum menjual rumah, pastikan harga yang ditetapkan berpatutan. Kami menyediakan khidmat semakan harga untuk memastikan penyenaraian anda sesuai dengan pasaran semasa.",
+      "Kami menyediakan khidmat semakan harga untuk memastikan penyenaraian anda sesuai dengan pasaran semasa.",
   },
   {
-    title: "Khidmat nasihat",
+    title: "Khidmat Nasihat",
     icon: (
       <Icon
         icon="ic:outline-question-answer"
@@ -57,7 +57,7 @@ export const FEATURES = [
       />
     ),
     description:
-      "Dalam dunia hartanah yang kompleks, kami akan membimbing anda dari awal hingga akhir proses jualan dengan menjawab segala pertanyaan dan menyediakan panduan peribadi.",
+      "Kami akan membimbing anda dari awal hingga akhir proses jualan dengan menjawab segala pertanyaan dan menyediakan panduan peribadi.",
   },
   {
     title: "Pengiklanan",
@@ -65,14 +65,14 @@ export const FEATURES = [
       <Icon icon="ic:outline-public" color="#e5e5e5" width="30" height="30" />
     ),
     description:
-      "Dengan strategi pemasaran yang cekap, kami memastikan rumah anda mendapat perhatian yang mencukupi melalui pengiklanan dalam talian dan media sosial.",
+      "Kami memastikan rumah anda mendapat perhatian yang mencukupi melalui pengiklanan dalam talian dan media sosial.",
   },
   {
-    title: "Proses jualan",
+    title: "Proses Jualan",
     icon: (
       <Icon icon="ic:outline-sell" color="#e5e5e5" width="30" height="30" />
     ),
     description:
-      "Proses jualan rumah melibatkan banyak dokumen dan rundingan. Kami akan bimbing anda dalam rundingan harga, dan bekerjasama dengan pihak-pihak berkaitan bagi melancarkan proses.",
+      "Kami akan bimbing anda dalam rundingan harga, dan bekerjasama dengan pihak-pihak berkaitan bagi melancarkan proses.",
   },
 ];

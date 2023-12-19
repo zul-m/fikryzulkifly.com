@@ -43,9 +43,9 @@ const HeaderMobile = () => {
 
   return (
     <div>
-      <div className="w-full bg-white shadow md:hidden flex fixed items-center pl-5 py-3 z-30">
+      <div className="w-full bg-cyan-900 md:hidden flex fixed items-center pl-5 py-3 z-30">
         <Link href="/">
-          <h2 className="font-inter text-2xl font-bold">
+          <h2 className="font-inter text-2xl font-bold text-neutral-300">
             Fikry<span className="text-teal-600">Zulkifly</span>
           </h2>
         </Link>

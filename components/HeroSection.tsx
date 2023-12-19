@@ -1,74 +1,52 @@
 "use client";
-import Image from "next/image";
-import { Link } from "react-scroll/modules";
-import { TypeAnimation } from "react-type-animation";
+import { FEATURES } from "@/styles/constants";
+import SlideUp from "./SlideUp";
 
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="px-6 max-w-7xl mx-auto text-center items-center justify-center md:py-10"
+      className="w-full text-center items-center justify-center"
     >
-      <div className="flex flex-col pt-32 pb-16 md:py-32 md:flex-row md:text-left">
-        <div className="my-auto md:w-3/5">
-          <h1 className="font-playfair md:py-14 font-bold text-3xl space-y-3 md:text-6xl md:space-y-5">
-            <span className="leading-tight">
-              Anda perlukan khidmat konsultasi berkaitan
-            </span>
-            <br></br>
-            <TypeAnimation
-              sequence={["HARTANAH?", 1000, "SUBSALE?", 1000, "SEWAAN?", 1000]}
-              wrapper="span"
-              speed={40}
-              style={{
-                color: "#0d9488",
-                display: "inline-block",
-                fontSize: "1.5em",
-              }}
-              repeat={Infinity}
-            />
-          </h1>
-          <p className="font-inter text-lg mt-7 md:mt-0 mb-8 md:text-justify md:text-xl">
-            Hubungi kami untuk khidmat ejen hartanah di Kuala Lumpur dan
-            Selangor atau ikuti panduan jual rumah.
-          </p>
-          <div className="space-y-3 md:space-y-0 md:space-x-5 flex flex-col md:flex-row">
-            <Link
-              to="contact"
-              className="font-inter tracking-wider text-neutral-100 font-semibold px-10 py-5 bg-teal-600 rounded-full shadow hover:bg-teal-700"
-              activeClass="active"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
-              Hubungi kami
-            </Link>
-          </div>
-        </div>
-        <div className="mt-10 md:my-auto md:w-2/5 flex flex-column justify-center md:justify-end">
-          <Image
-            className="rounded-full shadow-2xl"
-            src="/headshot.png"
-            alt=""
-            width={300}
-            height={300}
-          />
-        </div>
+      <div className="bg-gradient-to-b from-cyan-900 from-90% w-full px-5 pt-32 md:pt-40 pb-80">
+        <h1 className="max-w-7xl mx-auto text-start font-poppins font-bold text-4xl md:text-7xl">
+          <span className="text-neutral-300 leading-tight">
+            Kami menyediakan khidmat konsultasi berkaitan{" "}
+          </span>
+          <span className="font-playfair text-teal-400 underline underline-offset-[12px]">
+            HARTANAH
+          </span>
+        </h1>
       </div>
-      {/* <div className="md:mt-16 flex flex-row items-center text-center justify-center">
-        <Link
-          to="projects"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-        >
-          <HiArrowDown size={35} className="animate-bounce" />
-        </Link>
-      </div> */}
+      <SlideUp offset="-300px 0px -300px 0px">
+        <ul className="max-w-7xl mx-auto px-8 lg:px-4 xl:px-0 font-inter -mt-56 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {FEATURES.map((feature) => (
+            <FeatureItem
+              key={feature.title}
+              title={feature.title}
+              icon={feature.icon}
+              description={feature.description}
+            />
+          ))}
+        </ul>
+      </SlideUp>
     </section>
+  );
+};
+
+type FeatureItem = {
+  title: string;
+  icon?: JSX.Element;
+  description: string;
+};
+
+const FeatureItem = ({ title, icon, description }: FeatureItem) => {
+  return (
+    <li className="font-poppins tracking-wide rounded-lg w-full flex flex-col bg-teal-700 px-5 py-10">
+      <div className="mx-auto">{icon}</div>
+      <h2 className="text-xl text-yellow-400 mt-5">{title}</h2>
+      <p className="mt-5 text-neutral-200">{description}</p>
+    </li>
   );
 };
 
