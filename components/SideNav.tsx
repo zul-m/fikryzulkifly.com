@@ -8,18 +8,27 @@ import { useState } from "react";
 
 const SideNav = () => {
   return (
-    <div className="w-full bg-white shadow fixed top-0 z-50 hidden md:flex items-center">
-      <div className="py-5 mx-auto flex flex-row space-x-10">
+    <div className="w-full bg-white fixed top-0 z-50">
+      <div className="font-inter tracking-wide w-full justify-around top-0 py-3 items-center hidden md:flex">
         <Link href="/">
-          <div className="container flex items-center">
-            <h2 className="font-inter text-2xl font-bold">
-              Fikry<span className="text-teal-600">Zulkifly</span>
-            </h2>
-          </div>
+          <h2 className="text-xl font-bold">
+            Fikry<span className="text-teal-600">Zulkifly</span>
+          </h2>
         </Link>
-        {SIDENAV_ITEMS.map((item, idx) => {
-          return <MenuItem key={idx} item={item} />;
-        })}
+        <div className="flex flex-row space-x-10">
+          {SIDENAV_ITEMS.map((item, idx) => {
+            return <MenuItem key={idx} item={item} />;
+          })}
+        </div>
+        <div className="lg:flex hidden items-center space-x-5">
+          <p className="font-medium">+60 17-651 5784</p>
+          <Link
+            href="https://api.whatsapp.com/send?phone=60176515784"
+            className="items-center font-semibold text-neutral-200 bg-teal-700 px-6 py-2 rounded-full"
+          >
+            Hubungi kami
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -44,15 +53,16 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
               pathname.includes(item.path) ? "text-teal-600" : ""
             }`}
           >
-            <div className="font-semibold text-xl items-center">
+            <div className="font-semibold items-center tracking-wide">
               {item.title}
             </div>
             <div className={`${subMenuOpen ? "rotate-180" : ""} flex mt-auto`}>
               <Icon icon="lucide:chevron-down" width="24" height="24" />
             </div>
           </button>
+          <div></div>
           {subMenuOpen && (
-            <div className="mt-4 flex flex-col space-y-4">
+            <div className="absolute bg-white shadow rounded-lg p-5 mt-3 flex flex-col space-y-4">
               {item.subMenuItems?.map((subItem, idx) => {
                 return (
                   <Link
@@ -60,8 +70,8 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
                     href={subItem.path}
                     className={`${
                       subItem.path === pathname
-                        ? "text-teal-600"
-                        : "hover:text-teal-700 text-neutral-600 font-medium"
+                        ? "text-teal-600 font-medium"
+                        : "hover:text-teal-700 text-neutral-600 font-medium tracking-wide"
                     }`}
                   >
                     <span>{subItem.title}</span>
@@ -74,7 +84,7 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
       ) : (
         <Link
           href={item.path}
-          className={`font-semibold text-xl items-center hover:text-teal-700 ${
+          className={`font-semibold items-center hover:text-teal-700 ${
             item.path === pathname ? "text-teal-600" : ""
           }`}
         >
