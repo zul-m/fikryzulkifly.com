@@ -8,8 +8,8 @@ import { useState } from "react";
 
 const SideNav = () => {
   return (
-    <div className="w-full bg-white fixed top-0 z-50">
-      <div className="font-inter tracking-wide w-full justify-around top-0 py-3 items-center hidden md:flex">
+    <div className="w-full bg-cyan-900 fixed top-0 z-50">
+      <div className="font-inter text-neutral-300 tracking-wide w-full justify-around top-0 py-3 items-center hidden md:flex">
         <Link href="/">
           <h2 className="text-xl font-bold">
             Fikry<span className="text-teal-600">Zulkifly</span>
@@ -24,7 +24,7 @@ const SideNav = () => {
           <p className="font-medium">+60 17-651 5784</p>
           <Link
             href="https://api.whatsapp.com/send?phone=60176515784"
-            className="items-center font-semibold text-neutral-200 bg-teal-700 px-6 py-2 rounded-full"
+            className="items-center font-semibold bg-gradient-to-r from-sky-700 to-teal-700 hover:from-red-700 hover:to-yellow-700 px-6 py-3 rounded-full"
           >
             Hubungi kami
           </Link>

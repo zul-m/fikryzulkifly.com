@@ -1,10 +1,10 @@
 import Footer from "@/components/Footer";
 import HeaderMobile from "@/components/HeaderMobile";
 import SideNav from "@/components/SideNav";
+import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Inter, Playfair_Display } from "next/font/google";
-import "@/styles/globals.css";
+import { Inter, Playfair_Display, Poppins } from "next/font/google";
 
 const playfair_display = Playfair_Display({
   subsets: ["latin"],
@@ -18,6 +18,13 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: "400",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -26,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair_display.variable} ${inter.variable}`}
+      className={`${playfair_display.variable} ${inter.variable} ${poppins.variable}`}
     >
       {/*
         <head /> will contain the components returned by the nearest parent

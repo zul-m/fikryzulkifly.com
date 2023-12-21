@@ -1,6 +1,5 @@
 import CalculatorSection from "@/components/CalculatorSection";
 import ContactSection from "@/components/ContactSection";
-import HelpSection from "@/components/HelpSection";
 import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import RentalSection from "@/components/RentalSection";
@@ -13,7 +12,6 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <HelpSection />
       <ProjectsSection />
       <RentalSection />
       <ViewingSection />
