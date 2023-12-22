@@ -79,9 +79,9 @@ const WhyUsSection = () => {
                 <hr className="w-20 h-1 my-3 bg-teal-500 rounded"></hr>
               </h3>
               <p className="mt-10">
-                Kami menjalankan hubungan dengan pelbagai pihak, termasuk
-                banker, peguam hartanah, penilai harga, dan pihak-pihak lain
-                yang relevan dalam industri hartanah.
+                Kami menjalankan hubungan dengan pelbagai pihak, termasuk pihak
+                bank, peguam hartanah, penilai harga, dan pihak-pihak lain yang
+                relevan dalam industri hartanah.
               </p>
               <p className="mt-5">
                 Ini membuka pintu kepada pelbagai peluang dan perkhidmatan
