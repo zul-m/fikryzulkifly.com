@@ -40,10 +40,28 @@ const HeaderMobile = () => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const [header, setHeader] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      window.scrollY > 50 ? setHeader(true) : setHeader(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Empty dependency array to run the effect only once when the component mounts
 
   return (
-    <div>
-      <div className="w-full bg-cyan-900 md:hidden flex fixed items-center pl-5 py-3 z-30">
+    <header
+      className={`${
+        header ? "shadow-lg" : ""
+      } w-full bg-cyan-900 fixed top-0 z-30 transition-all`}
+    >
+      <div className="md:hidden flex items-center pl-5 py-3">
         <Link href="/">
           <h2 className="font-inter text-2xl font-bold text-neutral-300">
             Fikry<span className="text-teal-600">Zulkifly</span>
@@ -98,7 +116,7 @@ const HeaderMobile = () => {
         </motion.ul>
         <MenuToggle toggle={toggleOpen} />
       </motion.nav>
-    </div>
+    </header>
   );
 };
 

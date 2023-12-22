@@ -4,11 +4,30 @@ import { SideNavItem } from "@/styles/types";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SideNav = () => {
+  const [header, setHeader] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      window.scrollY > 50 ? setHeader(true) : setHeader(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Empty dependency array to run the effect only once when the component mounts
+
   return (
-    <div className="w-full bg-cyan-900 fixed top-0 z-50">
+    <header
+      className={`${
+        header ? "shadow-lg" : ""
+      } w-full bg-cyan-900 fixed top-0 z-50 transition-all`}
+    >
       <div className="font-inter text-neutral-300 tracking-wide w-full justify-around top-0 py-3 items-center hidden md:flex">
         <Link href="/">
           <h2 className="text-xl font-bold">
@@ -30,7 +49,7 @@ const SideNav = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
