@@ -1,51 +1,145 @@
 "use client";
-import { FEATURES } from "@/styles/constants";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
+import { useRef } from "react";
+import { Link } from "react-scroll/modules";
+
+const heroContent = {
+  intro: {
+    title: "Ingin menjual atau menyewakan hartanah anda?",
+    subtitle: "Selamat datang",
+    description:
+      "Hubungi kami untuk khidmat ejen hartanah di Kuala Lumpur dan Selangor atau ikuti panduan jual/sewa rumah.",
+    btn: {
+      href: "contact",
+      label: "Hubungi kami",
+    },
+  },
+};
 
 const HeroSection = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const imageScroll1 = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
+  const imageScroll2 = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);
+
   return (
-    <section
-      id="home"
-      className="w-full text-center items-center justify-center"
-    >
-      <div className="bg-gradient-to-b from-cyan-900 from-90% w-full px-5 pt-32 md:pt-40 pb-80">
-        <h1 className="max-w-7xl mx-auto text-start font-poppins font-bold text-3xl sm:text-5xl md:text-7xl">
-          <span className="text-neutral-300 leading-tight">
-            Kami menyediakan khidmat konsultasi berkaitan{" "}
-          </span>
-          <span className="font-playfair text-teal-400 underline underline-offset-[12px]">
-            HARTANAH
-          </span>
-        </h1>
+    <section id="home" className="pt-32 pb-0 lg:pb-10" ref={ref}>
+      <div className="container px-4 mx-auto">
+        <div className="lg:flex w-full lg:w-10/12 mx-auto h-auto lg:h-[80vh] items-center justify-between">
+          <div className="lg:w-4/12 z-[3] relative font-poppins font-bold">
+            {heroContent.intro.subtitle && (
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 0.1, duration: 0.5 },
+                }}
+                viewport={{ once: true }}
+                className="uppercase tracking-[3px] text-[13.5px] mb-5 inline-block text-teal-600"
+              >
+                {heroContent.intro.subtitle}
+              </motion.span>
+            )}
+            {heroContent.intro.title && (
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 0.2, duration: 0.5 },
+                }}
+                viewport={{ once: true }}
+                className="text-gray-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl w-auto lg:w-screen max-w-xl mb-4 md:mb-8"
+              >
+                {heroContent.intro.title}
+              </motion.h1>
+            )}
+            {heroContent.intro.description && (
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 0.3, duration: 0.5 },
+                }}
+                viewport={{ once: true }}
+                className="tracking-wide leading-relaxed text-gray-500 w-auto lg:w-screen max-w-xl text-base lg:text-lg mb-5 lg:mb-16"
+              >
+                {heroContent.intro.description}
+              </motion.p>
+            )}
+            {heroContent.intro.btn.label && (
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 0.3, duration: 0.5 },
+                }}
+                viewport={{ once: true }}
+              >
+                <Link
+                  to={heroContent.intro.btn.href}
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={2000}
+                  className="transition-all duration-300 ease-in-out cursor-default text-[11.5px] tracking-[2px] font-bold uppercase rounded-md mb-10 lg:mb-0 bg-teal-600 py-4 px-5 text-white inline-block hover:bg-white hover:text-teal-600 hover:shadow-2xl"
+                >
+                  {heroContent.intro.btn.label}
+                </Link>
+              </motion.p>
+            )}
+          </div>
+          <div className="lg:w-7/12 relative">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  delay: 0.4,
+                  duration: 0.5,
+                },
+              }}
+              viewport={{ once: true }}
+              style={{ y: imageScroll1 }}
+              className="z-[2] relative bg-cover bg-center"
+            >
+              <Image
+                src="/hero-img.jpg"
+                width={744}
+                height={885}
+                alt=""
+                className="rounded-md"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  delay: 0.4,
+                  duration: 0.5,
+                },
+              }}
+              viewport={{ once: true }}
+              style={{ y: imageScroll2 }}
+              className="hidden lg:flex absolute bottom-0 lg:bottom-[200px] -left-[100px] z-[1]"
+            >
+              <img src="/dots.svg" alt="" className="w-64" />
+            </motion.div>
+          </div>
+        </div>
       </div>
-      <ul className="max-w-7xl mx-auto px-4 xl:px-0 font-inter -mt-56 grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-5">
-        {FEATURES.map((feature) => (
-          <FeatureItem
-            key={feature.title}
-            title={feature.title}
-            icon={feature.icon}
-            description={feature.description}
-          />
-        ))}
-      </ul>
     </section>
-  );
-};
-
-type FeatureItem = {
-  title: string;
-  icon?: JSX.Element;
-  description: string;
-};
-
-const FeatureItem = ({ title, icon, description }: FeatureItem) => {
-  return (
-    <li className="font-poppins tracking-wide rounded-lg w-full flex flex-col bg-teal-700 px-2 md:px-5 py-8 md:py-10">
-      <div className="mx-auto">{icon}</div>
-      <h2 className="text-lg md:text-xl text-yellow-400 mt-5">{title}</h2>
-      <p className="text-sm md:text-base mt-5 text-neutral-200">
-        {description}
-      </p>
-    </li>
   );
 };
 
