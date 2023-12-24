@@ -3,6 +3,7 @@ import { SIDENAV_ITEMS } from "@/styles/constants";
 import { MenuItemWithSubMenuProps } from "@/styles/types";
 import { Icon } from "@iconify/react";
 import { motion, useCycle } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { ReactNode, useEffect, useRef, useState } from "react";
@@ -58,14 +59,12 @@ const HeaderMobile = () => {
   return (
     <header
       className={`${
-        header ? "shadow-lg" : ""
-      } w-full bg-cyan-900 fixed top-0 z-30 transition-all`}
+        header ? "shadow-md" : ""
+      } w-full bg-white fixed top-0 z-30 transition-all`}
     >
-      <div className="md:hidden flex items-center pl-5 py-3">
+      <div className="md:hidden flex items-center pl-4 py-2">
         <Link href="/">
-          <h2 className="font-inter text-2xl font-bold text-neutral-300">
-            Fikry<span className="text-teal-600">Zulkifly</span>
-          </h2>
+          <Image src="/fz.svg" alt="" width={185} height={39} />
         </Link>
       </div>
       <motion.nav
