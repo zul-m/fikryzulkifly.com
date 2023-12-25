@@ -60,11 +60,11 @@ const HeaderMobile = () => {
     <header
       className={`${
         header ? "shadow-md" : ""
-      } w-full bg-white fixed top-0 z-30 transition-all`}
+      } w-full bg-white fixed top-0 z-50 transition-all`}
     >
       <div className="md:hidden flex items-center pl-4 py-2">
         <Link href="/">
-          <Image src="/fz.svg" alt="" width={185} height={39} />
+          <Image src="/logo-2.svg" alt="" width={181} height={37} />
         </Link>
       </div>
       <motion.nav
@@ -77,7 +77,7 @@ const HeaderMobile = () => {
         ref={containerRef}
       >
         <motion.div
-          className="absolute inset-0 right-0 w-full bg-teal-50"
+          className="absolute inset-0 right-0 w-full bg-teal-100"
           variants={sidebar}
         />
         <motion.ul
@@ -98,8 +98,8 @@ const HeaderMobile = () => {
                       onClick={() => toggleOpen()}
                       className={`flex w-full text-xl font-inter tracking-wide ${
                         item.path === pathname
-                          ? "text-teal-600 font-semibold"
-                          : "font-semibold"
+                          ? "text-teal-600 font-medium"
+                          : "font-medium"
                       }`}
                     >
                       {item.title}
@@ -175,7 +175,7 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
           className="flex w-full text-xl font-inter tracking-wide"
           onClick={() => setSubMenuOpen(!subMenuOpen)}
         >
-          <div className="flex flex-row justify-between w-full items-center font-semibold">
+          <div className="flex flex-row justify-between w-full items-center font-medium">
             <span className={`${pathname.includes(item.path) ? "" : ""}`}>
               {item.title}
             </span>
