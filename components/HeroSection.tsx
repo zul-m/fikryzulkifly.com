@@ -27,7 +27,7 @@ const HeroSection = () => {
   const imageScroll2 = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);
 
   return (
-    <section id="home" className="pt-32 pb-0 lg:pb-10" ref={ref}>
+    <section id="home" className="pt-24 lg:pt-32 pb-0 lg:pb-10" ref={ref}>
       <div className="container px-4 mx-auto">
         <div className="lg:flex w-full lg:w-10/12 mx-auto h-auto lg:h-[80vh] items-center justify-between">
           <div className="lg:w-4/12 z-[3] relative font-poppins font-bold">

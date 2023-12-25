@@ -23,7 +23,7 @@ export default async function ProjectsSection() {
   const data: simplifiedProject = await getData();
 
   return (
-    <section id="projects">
+    <section id="projects" className="bg-neutral-100">
       <div className="pt-10 mx-auto max-w-max">
         <div className="flex flex-col space-y-1 sm:flex-row justify-between px-5">
           <h3 className="font-playfair font-bold text-3xl md:text-4xl">
