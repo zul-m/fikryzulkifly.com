@@ -64,7 +64,7 @@ const HeaderMobile = () => {
     >
       <div className="md:hidden flex items-center pl-4 py-2">
         <Link href="/">
-          <Image src="/logo-2.svg" alt="" width={181} height={37} />
+          <Image src="/logo-700.svg" alt="" width={191} height={39} />
         </Link>
       </div>
       <motion.nav
@@ -77,7 +77,7 @@ const HeaderMobile = () => {
         ref={containerRef}
       >
         <motion.div
-          className="absolute inset-0 right-0 w-full bg-teal-100"
+          className="absolute inset-0 right-0 w-full bg-teal-50"
           variants={sidebar}
         />
         <motion.ul
