@@ -31,7 +31,7 @@ export default async function ProjectsSection() {
           </h3>
           <Link
             className="font-inter flex items-center font-medium gap-x-1 text-l md:text-xl text-teal-600 hover:text-teal-700"
-            href="/beli"
+            href="/pelanggan/beli"
           >
             Lihat semua &gt;
           </Link>
@@ -42,7 +42,7 @@ export default async function ProjectsSection() {
               key={project._id}
               className="flex-shrink-0 group relative border rounded-md shadow-lg hover:shadow-xl"
             >
-              <Link href={`/beli/${project.slug}`}>
+              <Link href={`/pelanggan/beli/${project.slug}`}>
                 <div className="aspect-square w-72 h-72 overflow-hidden rounded-t-md">
                   <Image
                     src={project.imageUrl}

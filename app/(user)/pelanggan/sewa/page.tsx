@@ -51,7 +51,7 @@ export default async function RentList({
             key={rental._id}
             className="group relative border rounded-md shadow-lg hover:shadow-xl"
           >
-            <Link href={`/sewa/${rental.slug}`}>
+            <Link href={`/pelanggan/sewa/${rental.slug}`}>
               <div className="aspect-square w-full overflow-hidden rounded-t-md lg:h-80">
                 <Image
                   src={rental.imageUrl}

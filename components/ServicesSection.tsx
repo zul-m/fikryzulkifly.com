@@ -7,7 +7,7 @@ import { Tb360View, TbKey, TbTransferIn } from "react-icons/tb";
 const servicesContent = {
   heading: {
     title: "Bagaimana kami boleh bantu anda?",
-    subtitle: "Khidmat kami",
+    subtitle: "Servis kami",
     description:
       "Kami akan bantu anda menguruskan hartanah dengan cara yang betul dan pantas serta selamat.",
   },
@@ -19,7 +19,7 @@ const servicesContent = {
       description:
         "Kami membantu menentukan harga yang sesuai bagi rumah anda, serta mempromosikan secara meluas melalui pelbagai platform.",
       btn: {
-        href: "/beli",
+        href: "/pemilik/jual-rumah",
         label: "Lebih Lanjut",
       },
     },
@@ -30,7 +30,7 @@ const servicesContent = {
       description:
         "Kami menyusun perjanjian sewaan yang jelas dan adil bagi proses penyewaan yang teliti untuk ketenangan fikiran anda.",
       btn: {
-        href: "/sewa",
+        href: "/pelanggan/sewa",
         label: "Lebih Lanjut",
       },
     },

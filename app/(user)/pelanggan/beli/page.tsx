@@ -51,7 +51,7 @@ export default async function BuyList({
             key={project._id}
             className="group relative border rounded-md shadow-lg hover:shadow-xl"
           >
-            <Link href={`/beli/${project.slug}`}>
+            <Link href={`/pelanggan/beli/${project.slug}`}>
               <div className="aspect-square w-full overflow-hidden rounded-t-md lg:h-80">
                 <Image
                   src={project.imageUrl}

@@ -4,35 +4,42 @@ import { Icon } from "@iconify/react";
 /* HeaderMobile and SideNav sections */
 export const SIDENAV_ITEMS: SideNavItem[] = [
   {
-    title: "Beli",
-    path: "/beli",
+    title: "Pemilik",
+    path: "/pemilik",
+    submenu: true,
+    subMenuItems: [{ title: "Jual Rumah", path: "/pemilik/jual-rumah" }],
   },
   {
-    title: "Sewa",
-    path: "/sewa",
+    title: "Pelanggan",
+    path: "/pelanggan",
+    submenu: true,
+    subMenuItems: [
+      { title: "Beli", path: "/pelanggan/beli" },
+      { title: "Sewa", path: "/pelanggan/sewa" },
+      { title: "Semak Kelayakan", path: "/pelanggan/semak-kelayakan" },
+    ],
   },
   {
     title: "360",
     path: "/360",
   },
   {
-    title: "Semak Kelayakan",
-    path: "/semak-kelayakan",
-  },
-  {
-    title: "Panduan",
-    path: "/panduan",
+    title: "Artikel",
+    path: "/artikel",
     submenu: true,
     subMenuItems: [
-      { title: "Sewa Rumah", path: "/panduan/sewa-rumah" },
-      { title: "Jual Rumah", path: "/panduan/jual-rumah" },
-      { title: "Jual Rumah Guna Ejen", path: "/panduan/jual-rumah-guna-ejen" },
+      { title: "Panduan Sewa Rumah", path: "/artikel/panduan-sewa-rumah" },
+      { title: "Panduan Jual Rumah", path: "/artikel/panduan-jual-rumah" },
+      {
+        title: "Panduan Jual Rumah Guna Ejen",
+        path: "/artikel/panduan-jual-rumah-guna-ejen",
+      },
     ],
   },
 ];
 
 /* HelpSection */
-export const FEATURES = [
+/* export const FEATURES = [
   {
     title: "Semak Harga",
     icon: (
@@ -75,4 +82,4 @@ export const FEATURES = [
     description:
       "Kami akan bimbing anda dalam rundingan harga, dan bekerjasama dengan pihak-pihak berkaitan bagi melancarkan proses.",
   },
-];
+]; */

@@ -31,7 +31,7 @@ export default async function RentalSection() {
           </h3>
           <Link
             className="font-inter flex items-center font-medium gap-x-1 text-l md:text-xl text-teal-600 hover:text-teal-700"
-            href="/sewa"
+            href="/pelanggan/sewa"
           >
             Lihat semua &gt;
           </Link>
@@ -42,7 +42,7 @@ export default async function RentalSection() {
               key={rental._id}
               className="flex-shrink-0 group relative border rounded-md shadow-lg hover:shadow-xl"
             >
-              <Link href={`/sewa/${rental.slug}`}>
+              <Link href={`/pelanggan/sewa/${rental.slug}`}>
                 <div className="aspect-square w-72 h-72 overflow-hidden rounded-t-md">
                   <Image
                     src={rental.imageUrl}

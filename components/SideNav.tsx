@@ -31,7 +31,7 @@ const SideNav = () => {
     >
       <div className="font-inter tracking-wide w-full justify-around top-0 py-3 items-center hidden md:flex">
         <Link href="/">
-          <Image src="/logo-2.svg" alt="" width={200} height={41} />
+          <Image src="/logo-700.svg" alt="" width={200} height={41} />
         </Link>
         <div className="flex flex-row space-x-10">
           {SIDENAV_ITEMS.map((item, idx) => {
@@ -42,7 +42,7 @@ const SideNav = () => {
           <p className="text-neutral-600 tracking-wider">+60 17-651 5784</p>
           <Link
             href="https://api.whatsapp.com/send?phone=60176515784"
-            className="items-center font-semibold text-white bg-gradient-to-r from-sky-700 to-teal-700 hover:from-stone-900 hover:to-stone-900 px-6 py-3 rounded-full"
+            className="items-center font-semibold text-white bg-teal-600 hover:bg-stone-700 px-6 py-3 rounded-full"
           >
             Hubungi kami
           </Link>
