@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "email": "email dev --dir app/(admin)/emails --port 4000"
+    "email": "email dev --dir src/emails --port 4000"
   },
   "dependencies": {
     "@iconify/react": "^4.1.1",
