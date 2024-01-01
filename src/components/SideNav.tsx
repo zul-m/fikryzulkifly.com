@@ -31,7 +31,13 @@ const SideNav = () => {
     >
       <div className="top-0 items-center justify-around hidden w-full py-3 tracking-wide font-inter md:flex">
         <Link href="/">
-          <Image src="/logo-700.svg" alt="" width={200} height={41} />
+          <Image
+            src="/logo-700.svg"
+            alt=""
+            width={200}
+            height={41}
+            className="cursor-pointer"
+          />
         </Link>
         <div className="flex flex-row space-x-10">
           {SIDENAV_ITEMS.map((item, idx) => {
