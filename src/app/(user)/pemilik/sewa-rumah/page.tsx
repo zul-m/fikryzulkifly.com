@@ -10,14 +10,14 @@ function isInputNamedElement(
   return "value" in e && "name" in e;
 }
 
-const jualRumahContent = {
+const sewaRumahContent = {
   heading: {
-    title: "Jual Rumah Anda",
+    title: "Sewa Rumah Anda",
     subtitle: "Servis kami",
   },
 };
 
-const JualRumah = () => {
+const SewaRumah = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -66,7 +66,7 @@ const JualRumah = () => {
         formData[field.name] = field.value;
       });
 
-    await fetch("/api/email", {
+    await fetch("/api/sewa", {
       method: "POST",
       body: JSON.stringify({
         firstName: formData.firstName,
@@ -91,7 +91,7 @@ const JualRumah = () => {
         <div className="container px-4 mx-auto">
           <div className="items-center justify-between w-full mx-auto lg:flex lg:w-10/12">
             <div className="mx-auto font-bold text-center font-poppins lg:max-w-3xl">
-              {jualRumahContent.heading.subtitle && (
+              {sewaRumahContent.heading.subtitle && (
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{
@@ -105,10 +105,10 @@ const JualRumah = () => {
                   viewport={{ once: true }}
                   className="uppercase tracking-[3px] text-[12.5px] mb-5 inline-block text-teal-600"
                 >
-                  {jualRumahContent.heading.subtitle}
+                  {sewaRumahContent.heading.subtitle}
                 </motion.span>
               )}
-              {jualRumahContent.heading.title && (
+              {sewaRumahContent.heading.title && (
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{
@@ -122,7 +122,7 @@ const JualRumah = () => {
                   viewport={{ once: true }}
                   className="text-3xl sm:text-4xl md:text-5xl"
                 >
-                  {jualRumahContent.heading.title}
+                  {sewaRumahContent.heading.title}
                 </motion.h1>
               )}
             </div>
@@ -146,7 +146,7 @@ const JualRumah = () => {
           <div className="lg:flex items-stretch mb-32 border-[0.5px] shadow-md">
             <div className="flex-1 lg:w-6/12">
               <Image
-                src="/project-4-min.jpg"
+                src="/project-2-min.jpg"
                 width={1000}
                 height={100}
                 alt=""
@@ -160,8 +160,8 @@ const JualRumah = () => {
               >
                 <h2 className="mb-4 text-3xl text-gray-800">Hubungi Kami</h2>
                 <p className="mb-6 text-gray-500">
-                  Dapatkan khidmat ejen yang terbaik untuk menjual hartanah di
-                  kawasan Selangor dan Kuala Lumpur.
+                  Dapatkan khidmat ejen yang terbaik untuk menyewakan hartanah
+                  di kawasan Selangor dan Kuala Lumpur.
                 </p>
                 <div className="block px-0 mb-6">
                   <label
@@ -213,7 +213,7 @@ const JualRumah = () => {
                     name="phoneNo"
                     placeholder="0123456789"
                     className="rounded-none appearance-none !text-base p-2 outline-1 mt-1 px-3 py-2 bg-white border shadow border-slate-300 placeholder-slate-400 focus:outline-none focus:border-teal-600 focus:ring-teal-600 block w-full sm:text-sm focus:ring-1 outline-gray-300"
-                  ></input>
+                  />
                 </div>
                 <div className="block px-0 mb-6">
                   <label
@@ -229,7 +229,7 @@ const JualRumah = () => {
                     name="address"
                     placeholder="No. 8, Bandar Sri Damansara, Kuala ..."
                     className="rounded-none appearance-none !text-base p-2 outline-1 mt-1 px-3 py-2 bg-white border shadow border-slate-300 placeholder-slate-400 focus:outline-none focus:border-teal-600 focus:ring-teal-600 block w-full sm:text-sm focus:ring-1 outline-gray-300"
-                  ></input>
+                  />
                 </div>
                 <div className="block px-0 mb-6">
                   <label
@@ -247,7 +247,7 @@ const JualRumah = () => {
                     rows={7}
                     placeholder="Mesej atau pesanan jika ada ..."
                     className="rounded-none appearance-none !text-base p-2 outline-1 mt-1 px-3 py-2 bg-white border shadow border-slate-300 placeholder-slate-400 focus:outline-none focus:border-teal-600 focus:ring-teal-600 block w-full sm:text-sm focus:ring-1 outline-gray-300"
-                  ></textarea>
+                  />
                 </div>
                 <div className="block px-0 mb-6">
                   <Toaster richColors />
@@ -267,4 +267,4 @@ const JualRumah = () => {
   );
 };
 
-export default JualRumah;
+export default SewaRumah;
