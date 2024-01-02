@@ -30,7 +30,7 @@ const servicesContent = {
       description:
         "Kami menyusun perjanjian sewaan yang jelas dan adil bagi proses penyewaan yang teliti untuk ketenangan fikiran anda.",
       btn: {
-        href: "/pelanggan/sewa",
+        href: "/pemilik/sewa-rumah",
         label: "Lebih Lanjut",
       },
     },
