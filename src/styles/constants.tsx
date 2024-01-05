@@ -16,6 +16,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     path: "/pelanggan",
     submenu: true,
     subMenuItems: [
+      { title: "Projek Baru", path: "/pelanggan/projek-baru" },
       { title: "Beli", path: "/pelanggan/beli" },
       { title: "Sewa", path: "/pelanggan/sewa" },
       { title: "Semak Kelayakan", path: "/pelanggan/semak-kelayakan" },
