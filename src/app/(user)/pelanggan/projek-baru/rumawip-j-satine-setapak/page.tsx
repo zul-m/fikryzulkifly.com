@@ -10,10 +10,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { SiGoogleforms } from "react-icons/si";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import { SiGoogleforms } from "react-icons/si";
+import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const pageContent = {
   project: {
@@ -21,7 +21,8 @@ const pageContent = {
     date: "2024-01-03",
     image: "/project/j-satine/hero.jpg",
     category: "Projek Baru",
-    location: "Setapak, Wangsa Maju, Kuala Lumpur",
+    location: "Setapak, Wangsa Maju, KL",
+    map: "https://www.google.com/maps/@3.202162,101.726097,14z?hl=en-US&entry=ttu",
     year: "2027",
     developer: "Platinum Victory Sdn. Bhd.",
     price: "RM 300,000",
@@ -90,8 +91,8 @@ const page = () => {
         className="container px-4 pt-32 pb-20 mx-auto lg:py-44"
       >
         <div className="max-w-4xl mx-auto font-poppins">
-          <div className="max-w-4xl mx-auto mb-16 text-center">
-            <h1 className="font-medium text-center text-slate-900 text-4xl/none lg:text-6xl/none">
+          <div className="max-w-4xl mx-auto mb-16 font-bold text-center">
+            <h1 className="text-center text-slate-900 text-4xl/none lg:text-6xl/none">
               {pageContent.project.title}
             </h1>
             <p className="mt-10 text-slate-500">
@@ -269,11 +270,9 @@ const page = () => {
                     </tr>
                     <tr>
                       <td className="p-2 font-medium bg-gray-200 border border-slate-400">
-                        LIF
+                        JUMLAH LIF
                       </td>
-                      <td className="p-2 border border-slate-400">
-                        6 penumpang
-                      </td>
+                      <td className="p-2 border border-slate-400">6</td>
                     </tr>
                     <tr>
                       <td className="p-2 font-medium bg-gray-200 border border-slate-400">
@@ -489,6 +488,14 @@ const page = () => {
                     </Map>
                   </div>
                 </APIProvider>
+                <p className="mt-8 text-center">
+                  <Link
+                    href={pageContent.project.map}
+                    className="hover:bg-slate-800 text-[12px] tracking-[1px] uppercase bg-teal-600 rounded-md px-4 py-2 inline-block text-white"
+                  >
+                    Ke Google Maps
+                  </Link>
+                </p>
               </motion.div>
             </div>
           </article>
@@ -497,7 +504,7 @@ const page = () => {
       <section id="form" className="py-16 bg-teal-700 lg:py-32">
         <div className="container px-4 mx-auto font-poppins">
           <div className="flex justify-center">
-            <div className="flex items-center w-8/12 gap-0">
+            <div className="flex items-center w-10/12 gap-0">
               <div className="w-screen max-w-2xl mx-auto mb-10 text-center">
                 {pageContent.contact.subtitle && (
                   <motion.span
