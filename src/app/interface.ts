@@ -66,5 +66,6 @@ export interface fullRental {
 export interface viewing {
   _id: string;
   name: string;
+  image: string;
   file: string;
 }

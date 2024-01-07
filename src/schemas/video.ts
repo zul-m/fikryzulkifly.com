@@ -9,6 +9,11 @@ export default {
       title: "Nama Projek",
     },
     {
+      name: "thumbnail",
+      type: "image",
+      title: "Gambar Depan",
+    },
+    {
       name: "video",
       type: "file",
       title: "Video",
