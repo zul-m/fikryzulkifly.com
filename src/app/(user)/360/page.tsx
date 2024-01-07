@@ -5,6 +5,7 @@ async function getData() {
   const query = `*[_type == "video"] | order(_createdAt desc) {
     _id,
       name,
+      "imageurl": thumbnail.asset->url,
       "videourl": video.asset->url
   }`;
 
@@ -44,6 +45,7 @@ export default async function ViewingList() {
             <div className="w-auto overflow-hidden h-96 rounded-t-md">
               <video
                 className="object-cover object-center w-full h-full"
+                poster={video.imageurl}
                 muted
                 width={300}
                 height={300}
