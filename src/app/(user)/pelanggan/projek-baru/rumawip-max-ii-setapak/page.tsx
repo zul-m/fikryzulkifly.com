@@ -1,10 +1,4 @@
 "use client";
-import {
-  APIProvider,
-  AdvancedMarker,
-  InfoWindow,
-  Map,
-} from "@vis.gl/react-google-maps";
 import { format, parseISO } from "date-fns";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -17,26 +11,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const pageContent = {
   project: {
-    title: "RUMAWIP J Satine",
-    date: "2024-01-03",
-    image: "/project/j-satine/hero.jpg",
+    title: "RUMAWIP Max II",
+    date: "2023-10-28",
+    image: "/project/max-ii/Hero.jpeg",
     category: "Projek Baru",
-    location: "Setapak, Wangsa Maju, KL",
-    map: "https://www.google.com/maps/@3.202162,101.726097,14z?hl=en-US&entry=ttu",
+    location: "Jalan Teratai, Setapak, KL",
+    map: "",
     year: "2027",
-    developer: "Platinum Victory Sdn. Bhd.",
+    developer: "Prominent Maxim Sdn. Bhd.",
     price: "RM 300,000",
   },
   gallery: [
-    {
-      img: "/project/j-satine/gallery/games-room.PNG",
-      name: "Games room",
-    },
-    { img: "/project/j-satine/gallery/Gym.PNG", name: "Gym" },
-    { img: "/project/j-satine/gallery/Kolam.PNG", name: "Kolam" },
-    { img: "/project/j-satine/gallery/Laman.PNG", name: "Laman" },
-    { img: "/project/j-satine/gallery/Lobby.PNG", name: "Lobby" },
-    { img: "/project/j-satine/gallery/shoplot.PNG", name: "Shoplot" },
+    { img: "/project/max-ii/gallery/max-ii-1.jpg", name: "Max II 1" },
+    { img: "/project/max-ii/gallery/max-ii-2.jpg", name: "Max II 2" },
+    { img: "/project/max-ii/gallery/max-ii-3.jpg", name: "Max II 3" },
+    { img: "/project/max-ii/gallery/max-ii-4.jpg", name: "Max II 4" },
+    { img: "/project/max-ii/gallery/max-ii-5.jpg", name: "Max II 5" },
+    { img: "/project/max-ii/gallery/max-ii-6.jpg", name: "Max II 6" },
+    { img: "/project/max-ii/gallery/max-ii-7.jpg", name: "Max II 7" },
+    { img: "/project/max-ii/gallery/max-ii-8.jpg", name: "Max II 8" },
+    { img: "/project/max-ii/gallery/max-ii-9.jpg", name: "Max II 9" },
+    { img: "/project/max-ii/gallery/max-ii-10.jpg", name: "Max II 10" },
+    { img: "/project/max-ii/gallery/max-ii-11.jpg", name: "Max II 11" },
+    { img: "/project/max-ii/gallery/max-ii-12.jpg", name: "Max II 12" },
   ],
   contact: {
     title: "Miliki Rumah Impian, Hari Ini",
@@ -70,9 +67,6 @@ const page = () => {
       sliderRef.current.swiper.slideNext();
     }
   }, [sliderRef]);
-
-  const position = { lat: 3.202162027359009, lng: 101.7260971069336 };
-  const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -108,8 +102,8 @@ const page = () => {
           <div className="mb-16">
             <Image
               src={pageContent.project.image}
-              width={1065}
-              height={644}
+              width={1080}
+              height={607}
               className="object-cover object-top"
               alt={pageContent.project.title}
             />
@@ -157,20 +151,18 @@ const page = () => {
                 viewport={{ once: true }}
               >
                 <p className="mb-10">
-                  Sebuah kondominium 44 tingkat dengan 4 blok (A, B, C, D) dan
-                  jumlah unit sebanyak 3600 unit. Setiap tingkat memiliki 22
-                  hingga 30 unit dengan 7 hingga 10 lif untuk setiap blok.
-                  Kemudahan kondominium ini meliputi unit seluas 800 kaki
-                  persegi, dilengkapi dengan 3 bilik tidur, 2 bilik air, dan 1
-                  tempat letak kereta.
+                  Residensi MAX II adalah projek perumahan mampu milik yang
+                  dilancarkan oleh kerajaan Malaysia melalui program Residensi
+                  Wilayah (RUMAWIP). Projek ini dibangunkan di Setapak, Kuala
+                  Lumpur, oleh Prominent Maxim Sdn. Bhd., pemaju hartanah yang
+                  terkenal di Kuala Lumpur.
                 </p>
                 <p className="mb-16">
-                  Projek ini merupakan projek pembangunan yang digabung dengan
-                  kedai di bahagian bawah, dan berkategori komersial di bawah
-                  Akta Pembangunan Perumahan, atau Housing Development Act
-                  (HDA). RUMAWIP J Satine ini terletak di Wangsa Maju,
-                  berdekatan dengan NSK dan Giant Hypermarket, serta mudah
-                  diakses melalui Jalan Genting Klang.
+                  Projek Residensi MAX II terdiri daripada dua blok apartmen,
+                  dengan jumlah 302 unit yang bersaiz 801 kaki persegi. Setiap
+                  unit mempunyai 3 bilik tidur dan 2 bilik air, serta tempat
+                  letak kereta percuma. Harga jualan rumah ini adalah RM
+                  300,000.
                 </p>
               </motion.div>
               <motion.div
@@ -205,7 +197,7 @@ const page = () => {
                         PEMAJU
                       </td>
                       <td className="p-2 border border-slate-400">
-                        Platinum Victory Sdn. Bhd.
+                        {pageContent.project.developer}
                       </td>
                     </tr>
                     <tr>
@@ -221,7 +213,7 @@ const page = () => {
                         JUMLAH UNIT
                       </td>
                       <td className="p-2 border border-slate-400">
-                        3600 unit (4 blok)
+                        604 unit (2 blok)
                       </td>
                     </tr>
                     <tr>
@@ -229,7 +221,15 @@ const page = () => {
                         SAIZ
                       </td>
                       <td className="p-2 border border-slate-400">
-                        800 kps (3 bilik • 2 bilik air)
+                        801 kps (3 bilik • 2 bilik air)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2 font-medium bg-gray-200 border border-slate-400">
+                        JENIS
+                      </td>
+                      <td className="p-2 border border-slate-400">
+                        Kondominium
                       </td>
                     </tr>
                     <tr>
@@ -237,7 +237,7 @@ const page = () => {
                         LOKASI
                       </td>
                       <td className="p-2 border border-slate-400">
-                        Setapak, Kuala Lumpur
+                        {pageContent.project.location}
                       </td>
                     </tr>
                     <tr>
@@ -262,26 +262,6 @@ const page = () => {
                       </td>
                       <td className="p-2 border border-slate-400">Q4 2027</td>
                     </tr>
-                    <tr>
-                      <td className="p-2 font-medium bg-gray-200 border border-slate-400">
-                        JUMLAH ARAS
-                      </td>
-                      <td className="p-2 border border-slate-400">44 aras</td>
-                    </tr>
-                    <tr>
-                      <td className="p-2 font-medium bg-gray-200 border border-slate-400">
-                        JUMLAH LIF
-                      </td>
-                      <td className="p-2 border border-slate-400">6 lif</td>
-                    </tr>
-                    <tr>
-                      <td className="p-2 font-medium bg-gray-200 border border-slate-400">
-                        KOS PENYELENGGARAAN
-                      </td>
-                      <td className="p-2 border border-slate-400">
-                        RM0.33/kps
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </motion.div>
@@ -302,7 +282,7 @@ const page = () => {
                 </h2>
                 <div className="mb-10">
                   <Image
-                    src="/project/j-satine/facilities.png"
+                    src="/project/max-ii/facilities.jpg"
                     width={1440}
                     height={240}
                     className="object-cover object-top"
@@ -341,9 +321,9 @@ const page = () => {
                               <Image
                                 src={images.img}
                                 alt={images.name}
-                                width={1000}
-                                height={800}
-                                className="object-contain object-center mx-auto aspect-video"
+                                width={4608}
+                                height={3456}
+                                className="object-contain object-center mx-auto"
                               />
                             </div>
                           </SwiperSlide>
@@ -407,27 +387,6 @@ const page = () => {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    delay: 0.8,
-                    duration: 0.5,
-                  },
-                }}
-                viewport={{ once: true }}
-                className="mb-16"
-              >
-                <Image
-                  src="/project/j-satine/facilities-m.PNG"
-                  width={912}
-                  height={572}
-                  className="object-cover object-top"
-                  alt="kemudahan"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
                     delay: 0.9,
                     duration: 0.5,
                   },
@@ -439,113 +398,13 @@ const page = () => {
                 </h2>
                 <div className="mb-16">
                   <Image
-                    src="/project/j-satine/layout.PNG"
-                    width={912}
-                    height={572}
+                    src="/project/max-ii/Unit-Dimension.jpg"
+                    width={1045}
+                    height={600}
                     className="object-cover object-top"
-                    alt="layout"
+                    alt="Max II unit dimension"
                   />
                 </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    delay: 1.0,
-                    duration: 0.5,
-                  },
-                }}
-                viewport={{ once: true }}
-              >
-                <h2 className="mb-10 text-2xl font-medium tracking-wide">
-                  Lokasi dan Aplikasi JAGA
-                </h2>
-                <APIProvider
-                  apiKey={String(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)}
-                >
-                  <div style={{ height: "50vh", width: "100%" }}>
-                    <Map
-                      zoom={14}
-                      center={position}
-                      mapId={process.env.NEXT_PUBLIC_MAP_ID}
-                    >
-                      <AdvancedMarker
-                        position={position}
-                        onClick={() => setOpen(true)}
-                      ></AdvancedMarker>
-                      {open && (
-                        <InfoWindow
-                          position={position}
-                          onCloseClick={() => setOpen(false)}
-                        >
-                          <p className="font-bold">
-                            {pageContent.project.title}
-                          </p>
-                        </InfoWindow>
-                      )}
-                    </Map>
-                  </div>
-                </APIProvider>
-                <p className="mt-8 mb-10 text-center">
-                  <Link
-                    href={pageContent.project.map}
-                    className="hover:bg-slate-800 text-[12px] tracking-[1px] uppercase bg-teal-600 rounded-md px-4 py-2 inline-block text-white"
-                  >
-                    Ke Google Maps
-                  </Link>
-                </p>
-                <div className="mb-16">
-                  <Image
-                    src="/project/j-satine/jarak-anggaran.PNG"
-                    width={1002}
-                    height={525}
-                    className="object-cover object-top"
-                    alt="Distance"
-                  />
-                </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    delay: 0.5,
-                    duration: 0.5,
-                  },
-                }}
-                viewport={{ once: true }}
-                className="mb-16"
-              >
-                <Image
-                  src="/project/j-satine/jaga-community.png"
-                  width={1920}
-                  height={1700}
-                  className="object-cover object-top"
-                  alt="jaga komuniti"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    delay: 0.6,
-                    duration: 0.5,
-                  },
-                }}
-                viewport={{ once: true }}
-              >
-                <Image
-                  src="/project/j-satine/jaga-apps.PNG"
-                  width={845}
-                  height={490}
-                  className="object-cover object-top"
-                  alt="Aplikasi JAGA"
-                />
               </motion.div>
             </div>
           </article>
@@ -607,7 +466,7 @@ const page = () => {
               viewport={{ once: true }}
               className="relative flex items-center justify-center w-auto max-w-xl gap-5 mx-auto cursor-pointer"
             >
-              <p className="text-slate-500 appearance-none bg-white py-4 px-7 w-auto !pr-16 max-w-md shadow-md rounded-full outline outline-none">
+              <p className="w-auto py-4 bg-white appearance-none text-slate-500 px-7 !pr-16 max-w-md shadow-md rounded-full outline outline-none">
                 Semak Kelayakan
               </p>
               <Link
