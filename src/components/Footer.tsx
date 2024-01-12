@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="flex flex-col p-4 mx-auto mt-5 text-center text-neutral-900 md:flex-row md:justify-between">
         {/* <div className="my-auto text-neutral-500 dark:text-neutral-100"> */}
         <div className="my-auto font-inter text-neutral-500">
-          © 2023 Fikry Zulkifly
+          © 2024 Fikry Zulkifly
         </div>
         <div className="flex flex-row items-center justify-center space-x-2">
           <a
