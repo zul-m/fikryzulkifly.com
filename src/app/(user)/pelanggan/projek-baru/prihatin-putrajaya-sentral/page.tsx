@@ -1,42 +1,53 @@
 "use client";
+import { format, parseISO } from "date-fns";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from "react";
+import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import {
   APIProvider,
   AdvancedMarker,
   InfoWindow,
   Map,
 } from "@vis.gl/react-google-maps";
-import { format, parseISO } from "date-fns";
-import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { SiGoogleforms } from "react-icons/si";
-import "swiper/css";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 const pageContent = {
   project: {
-    title: "RUMAWIP J Satine",
-    date: "2024-01-03",
-    image: "/project/j-satine/hero.jpg",
+    title: "PRIHATIN Putrajaya Sentral",
+    date: "2023-09-21",
+    image: "/project/prihatin-putrajaya/hero.jpg",
     category: "Projek Baru",
-    location: "Setapak, Wangsa Maju, KL",
-    map: "https://maps.app.goo.gl/4x1xtjqrBPuWrjTn9",
+    location: "Presint 7, Putrajaya",
+    map: "https://maps.app.goo.gl/fLLgd9yiny53meBM8",
     year: "2027",
-    developer: "Platinum Victory Sdn. Bhd.",
-    price: "RM 300,000",
+    developer: "Pan Sejati Development (M) Sdn. Bhd.",
+    price: "RM 200,000",
   },
   gallery: [
     {
-      img: "/project/j-satine/gallery/games-room.PNG",
-      name: "Games room",
+      img: "/project/prihatin-putrajaya/gallery/ilustrasi.png",
+      name: "Ilustrasi Projek",
     },
-    { img: "/project/j-satine/gallery/Gym.PNG", name: "Gym" },
-    { img: "/project/j-satine/gallery/Kolam.PNG", name: "Kolam" },
-    { img: "/project/j-satine/gallery/Laman.PNG", name: "Laman" },
-    { img: "/project/j-satine/gallery/Lobby.PNG", name: "Lobby" },
-    { img: "/project/j-satine/gallery/shoplot.PNG", name: "Shoplot" },
+    {
+      img: "/project/prihatin-putrajaya/gallery/putrajaya-sentral.jpg",
+      name: "Putrajaya Sentral",
+    },
+    {
+      img: "/project/prihatin-putrajaya/gallery/syarat.png",
+      name: "Syarat Permohonan",
+    },
+    {
+      img: "/project/prihatin-putrajaya/gallery/kemudahan.png",
+      name: "Kemudahan",
+    },
+    {
+      img: "/project/prihatin-putrajaya/gallery/pendaftaran.png",
+      name: "Pendaftaran",
+    },
   ],
   contact: {
     title: "Miliki Rumah Impian, Hari Ini",
@@ -71,7 +82,7 @@ const page = () => {
     }
   }, [sliderRef]);
 
-  const position = { lat: 3.2023763295823553, lng: 101.7260943 };
+  const position = { lat: 2.9378210094661754, lng: 101.66968354232947 };
   const [open, setOpen] = useState(false);
 
   return (
@@ -98,7 +109,7 @@ const page = () => {
             <p className="mt-10 text-slate-500">
               <span className="inline-flex space-x-3">
                 <span>
-                  {format(parseISO(pageContent.project.date), "d LLL, yyyy")}
+                  {format(parseISO(pageContent.project.date), "d LLL, yyy")}
                 </span>
                 <span>•</span>
                 <span>{pageContent.project.category}</span>
@@ -108,8 +119,8 @@ const page = () => {
           <div className="mb-16">
             <Image
               src={pageContent.project.image}
-              width={1065}
-              height={644}
+              width={898}
+              height={590}
               className="object-cover object-top"
               alt={pageContent.project.title}
             />
@@ -157,20 +168,16 @@ const page = () => {
                 viewport={{ once: true }}
               >
                 <p className="mb-10">
-                  Sebuah kondominium 44 tingkat dengan 4 blok (A, B, C, D) dan
-                  jumlah unit sebanyak 3600 unit. Setiap tingkat memiliki 22
-                  hingga 30 unit dengan 7 hingga 10 lif untuk setiap blok.
-                  Kemudahan kondominium ini meliputi unit seluas 800 kaki
-                  persegi, dilengkapi dengan 3 bilik tidur, 2 bilik air, dan 1
-                  tempat letak kereta.
+                  Projek ini dilancarkan di Presint 7, Putrajaya pada Ogos 2023.
+                  Ianya dibangunkan berdekatan dengan Stesen MRT Putrajaya
+                  Sentral, sekaligus memberikan akses yang mudah kepada bakal
+                  pemilik. Ia juga berhampiran dengan pelbagai perkhidmatan
+                  kesihatan, pusat beli-belah, dan pengangkutan awam yang lain.
                 </p>
                 <p className="mb-16">
-                  Projek ini merupakan projek pembangunan yang digabung dengan
-                  kedai di bahagian bawah, dan berkategori komersial di bawah
-                  Akta Pembangunan Perumahan, atau Housing Development Act
-                  (HDA). RUMAWIP J Satine ini terletak di Wangsa Maju,
-                  berdekatan dengan NSK dan Giant Hypermarket, serta mudah
-                  diakses melalui Jalan Genting Klang.
+                  Pemohon perlu mematuhi syarat permohonan yang telah ditetapkan
+                  oleh Jabatan Wilayah Persekutuan(JWP) untuk melayakkan mereka
+                  memiliki rumah mampu milik ini.
                 </p>
               </motion.div>
               <motion.div
@@ -205,7 +212,7 @@ const page = () => {
                         PEMAJU
                       </td>
                       <td className="p-2 border border-slate-400">
-                        Platinum Victory Sdn. Bhd.
+                        {pageContent.project.developer}
                       </td>
                     </tr>
                     <tr>
@@ -213,31 +220,35 @@ const page = () => {
                         HAK MILIK
                       </td>
                       <td className="p-2 border border-slate-400">
-                        Pegangan Pajakan
+                        Pegangan Bebas
                       </td>
                     </tr>
                     <tr>
                       <td className="p-2 font-medium bg-gray-200 border border-slate-400">
                         JUMLAH UNIT
                       </td>
-                      <td className="p-2 border border-slate-400">
-                        3600 unit (4 blok)
-                      </td>
+                      <td className="p-2 border border-slate-400">1336 unit</td>
                     </tr>
                     <tr>
                       <td className="p-2 font-medium bg-gray-200 border border-slate-400">
                         SAIZ
                       </td>
                       <td className="p-2 border border-slate-400">
-                        800 kps (3 bilik • 2 bilik air)
+                        750 kps (3 bilik • 2 bilik air)
                       </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2 font-medium bg-gray-200 border border-slate-400">
+                        JENIS
+                      </td>
+                      <td className="p-2 border border-slate-400">Apartmen</td>
                     </tr>
                     <tr>
                       <td className="p-2 font-medium bg-gray-200 border border-slate-400">
                         LOKASI
                       </td>
                       <td className="p-2 border border-slate-400">
-                        Setapak, Kuala Lumpur
+                        {pageContent.project.location}
                       </td>
                     </tr>
                     <tr>
@@ -245,7 +256,7 @@ const page = () => {
                         HARGA
                       </td>
                       <td className="p-2 border border-slate-400">
-                        RM 300,000
+                        RM 200,000
                       </td>
                     </tr>
                     <tr>
@@ -261,26 +272,6 @@ const page = () => {
                         TAHUN SIAP
                       </td>
                       <td className="p-2 border border-slate-400">Q4 2027</td>
-                    </tr>
-                    <tr>
-                      <td className="p-2 font-medium bg-gray-200 border border-slate-400">
-                        JUMLAH ARAS
-                      </td>
-                      <td className="p-2 border border-slate-400">44 aras</td>
-                    </tr>
-                    <tr>
-                      <td className="p-2 font-medium bg-gray-200 border border-slate-400">
-                        JUMLAH LIF
-                      </td>
-                      <td className="p-2 border border-slate-400">6 lif</td>
-                    </tr>
-                    <tr>
-                      <td className="p-2 font-medium bg-gray-200 border border-slate-400">
-                        KOS PENYELENGGARAAN
-                      </td>
-                      <td className="p-2 border border-slate-400">
-                        RM0.33/kps
-                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -300,13 +291,22 @@ const page = () => {
                 <h2 className="mb-10 text-2xl font-medium tracking-wide">
                   Kemudahan dan Galeri
                 </h2>
-                <div className="mb-10">
+                <div className="mb-16">
                   <Image
-                    src="/project/j-satine/facilities.png"
+                    src="/project/prihatin-putrajaya/facilities.jpg"
                     width={1440}
                     height={240}
                     className="object-cover object-top"
                     alt="facilities"
+                  />
+                </div>
+                <div className="mb-16">
+                  <Image
+                    src="/project/prihatin-putrajaya/facility.png"
+                    width={1080}
+                    height={478}
+                    className="object-cover object-top"
+                    alt="facility"
                   />
                 </div>
               </motion.div>
@@ -341,9 +341,9 @@ const page = () => {
                               <Image
                                 src={images.img}
                                 alt={images.name}
-                                width={1000}
-                                height={800}
-                                className="object-contain object-center mx-auto aspect-video"
+                                width={754}
+                                height={710}
+                                className="object-contain object-center mx-auto"
                               />
                             </div>
                           </SwiperSlide>
@@ -407,27 +407,6 @@ const page = () => {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    delay: 0.8,
-                    duration: 0.5,
-                  },
-                }}
-                viewport={{ once: true }}
-                className="mb-16"
-              >
-                <Image
-                  src="/project/j-satine/facilities-m.PNG"
-                  width={912}
-                  height={572}
-                  className="object-cover object-top"
-                  alt="kemudahan"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
                     delay: 0.9,
                     duration: 0.5,
                   },
@@ -439,11 +418,20 @@ const page = () => {
                 </h2>
                 <div className="mb-16">
                   <Image
-                    src="/project/j-satine/layout.PNG"
-                    width={912}
-                    height={572}
+                    src="/project/prihatin-putrajaya/layout.png"
+                    width={1080}
+                    height={591}
                     className="object-cover object-top"
                     alt="layout"
+                  />
+                </div>
+                <div className="mb-16">
+                  <Image
+                    src="/project/prihatin-putrajaya/layout-2.PNG"
+                    width={749}
+                    height={706}
+                    className="object-cover object-top"
+                    alt="layout 2"
                   />
                 </div>
               </motion.div>
@@ -460,7 +448,7 @@ const page = () => {
                 viewport={{ once: true }}
               >
                 <h2 className="mb-10 text-2xl font-medium tracking-wide">
-                  Lokasi dan Aplikasi JAGA
+                  Lokasi
                 </h2>
                 <APIProvider
                   apiKey={String(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)}
@@ -498,54 +486,13 @@ const page = () => {
                 </p>
                 <div className="mb-16">
                   <Image
-                    src="/project/j-satine/jarak-anggaran.PNG"
-                    width={1002}
-                    height={525}
+                    src="/project/prihatin-putrajaya/location.png"
+                    width={1080}
+                    height={1080}
                     className="object-cover object-top"
-                    alt="Distance"
+                    alt="Lokasi"
                   />
                 </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    delay: 0.5,
-                    duration: 0.5,
-                  },
-                }}
-                viewport={{ once: true }}
-                className="mb-16"
-              >
-                <Image
-                  src="/project/j-satine/jaga-community.png"
-                  width={1920}
-                  height={1700}
-                  className="object-cover object-top"
-                  alt="jaga komuniti"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    delay: 0.6,
-                    duration: 0.5,
-                  },
-                }}
-                viewport={{ once: true }}
-              >
-                <Image
-                  src="/project/j-satine/jaga-apps.PNG"
-                  width={845}
-                  height={490}
-                  className="object-cover object-top"
-                  alt="Aplikasi JAGA"
-                />
               </motion.div>
             </div>
           </article>

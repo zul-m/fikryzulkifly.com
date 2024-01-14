@@ -15,7 +15,7 @@ const pageContent = {
     date: "2023-10-28",
     image: "/project/max-ii/Hero.jpeg",
     category: "Projek Baru",
-    location: "Jalan Teratai, Setapak, KL",
+    location: "Setapak, Kuala Lumpur",
     map: "",
     year: "2027",
     developer: "Prominent Maxim Sdn. Bhd.",
@@ -39,7 +39,7 @@ const pageContent = {
     title: "Miliki Rumah Impian, Hari Ini",
     subtitle: "Semak Kelayakan",
     description:
-      "Berminat dengan projek ini? Biar kami bantu anda miliki rumah impian!",
+      "Berminat dengan projek ini? Buat semakan kelayakan dan hantar dokumen yang diperlukan. Yuran tempahan adalah PERCUMA!",
   },
 };
 
@@ -282,7 +282,7 @@ const page = () => {
                 </h2>
                 <div className="mb-10">
                   <Image
-                    src="/project/max-ii/facilities.jpg"
+                    src="/project/max-ii/Facilities.png"
                     width={1440}
                     height={240}
                     className="object-cover object-top"
@@ -348,14 +348,14 @@ const page = () => {
                       <div
                         onClick={prevHandler}
                         className={`${
-                          isBeginning == true
+                          isBeginning === true
                             ? "opacity-30 bg-gray-300 text-gray-600 !cursor-pointer"
                             : "opacity-100 bg-teal-600 text-white"
                         } relative top-0 group transition-all duration-300 ease-in-out w-8 h-8 cursor-pointer rounded-full inline-flex justify-center items-center`}
                       >
                         <BiChevronLeft
                           className={`text-3xl transition-all duration-300 ease-in-out group-hover:text-white ${
-                            isBeginning == true
+                            isBeginning === true
                               ? "group-hover:!text-gray-600"
                               : "group-hover:text-white"
                           }`}
@@ -488,7 +488,7 @@ const page = () => {
                   },
                 }}
                 viewport={{ once: true }}
-                className="w-auto max-w-md mx-auto mt-10 text-center text-white text-opacity-60"
+                className="w-auto max-w-xl mx-auto mt-10 text-center text-white text-opacity-60"
               >
                 {pageContent.contact.description}
               </motion.p>

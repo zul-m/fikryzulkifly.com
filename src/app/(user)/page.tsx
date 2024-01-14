@@ -1,8 +1,6 @@
 import CalculatorSection from "@/src/components/CalculatorSection";
 import ContactSection from "@/src/components/ContactSection";
 import HeroSection from "@/src/components/HeroSection";
-import ProjectsSection from "@/src/components/ProjectsSection";
-import RentalSection from "@/src/components/RentalSection";
 import ServicesSection from "@/src/components/ServicesSection";
 import ViewingSection from "@/src/components/ViewingSection";
 
@@ -14,8 +12,6 @@ export default function Home() {
     <main>
       <HeroSection />
       <ServicesSection />
-      <ProjectsSection />
-      <RentalSection />
       <ViewingSection />
       <CalculatorSection />
       <ContactSection />

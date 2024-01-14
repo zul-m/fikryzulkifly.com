@@ -6,23 +6,30 @@ import Link from "next/link";
 
 const pageContent = {
   heading: {
-    title: "Miliki Rumah Impian Hari Ini",
+    title: "Miliki Rumah Impian, Hari Ini",
     subtitle: "Projek Baru",
   },
   projects: [
+    {
+      title: "PRIHATIN Putrajaya Sentral",
+      location: "Presint 7, Putrajaya",
+      url: "/pelanggan/projek-baru/prihatin-putrajaya-sentral",
+      img: "/project/prihatin-putrajaya/hero.jpg",
+      date: "2023-09-21",
+    },
+    {
+      title: "RUMAWIP Max II",
+      location: "Setapak, Kuala Lumpur",
+      url: "/pelanggan/projek-baru/rumawip-max-ii-setapak",
+      img: "/project/max-ii/Hero.jpeg",
+      date: "2023-10-28",
+    },
     {
       title: "RUMAWIP J Satine",
       location: "Setapak, Kuala Lumpur",
       url: "/pelanggan/projek-baru/rumawip-j-satine-setapak",
       img: "/project/j-satine/hero.jpg",
       date: "2024-01-03",
-    },
-    {
-      title: "RUMAWIP Max II",
-      location: "Jalan Teratai, Setapak, KL",
-      url: "/pelanggan/projek-baru/rumawip-max-ii-setapak",
-      img: "/project/max-ii/Hero.jpeg",
-      date: "2023-10-28",
     },
   ],
 };
@@ -35,10 +42,10 @@ const page = () => {
 
   return (
     <>
-      <section id="hero" className="py-24 md:pt-32 lg:pt-44">
+      <section id="hero" className="pt-32 pb-24 lg:pt-52">
         <div className="container px-5 mx-auto">
           <div className="items-center justify-between w-full mx-auto lg:flex lg:w-10/12">
-            <div className="mx-auto font-bold text-center lg:max-w-3xl">
+            <div className="mx-auto font-bold text-center font-poppins lg:max-w-3xl">
               {pageContent.heading.subtitle && (
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
