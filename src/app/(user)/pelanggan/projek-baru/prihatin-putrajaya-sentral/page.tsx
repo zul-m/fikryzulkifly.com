@@ -24,7 +24,7 @@ const pageContent = {
     location: "Presint 7, Putrajaya",
     map: "https://maps.app.goo.gl/fLLgd9yiny53meBM8",
     year: "2027",
-    developer: "Pan Sejati Development (M) Sdn. Bhd.",
+    developer: "Pan Sejati Development Sdn. Bhd.",
     price: "RM 200,000",
   },
   gallery: [
