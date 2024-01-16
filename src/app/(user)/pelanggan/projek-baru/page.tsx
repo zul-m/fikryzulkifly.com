@@ -18,6 +18,13 @@ const pageContent = {
       date: "2023-09-21",
     },
     {
+      title: "RUMAWIP Putrajaya Sentral",
+      location: "Presint 7, Putrajaya",
+      url: "/pelanggan/projek-baru/rumawip-putrajaya-sentral",
+      img: "/project/rumawip-putrajaya/Hero.jpg",
+      date: "2023-10-27",
+    },
+    {
       title: "RUMAWIP Max II",
       location: "Setapak, Kuala Lumpur",
       url: "/pelanggan/projek-baru/rumawip-max-ii-setapak",
