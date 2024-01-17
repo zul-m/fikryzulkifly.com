@@ -245,7 +245,7 @@ const page = () => {
           <p className="text-base font-medium font-inter sm:text-lg text-neutral-200">
             Atau{" "}
             <Link
-              href="/panduan/jual-rumah-guna-ejen"
+              href="/artikel/panduan-jual-rumah-guna-ejen"
               className="underline hover:no-underline hover:text-sky-600"
             >
               lihat info lanjut
