@@ -33,7 +33,29 @@ const page = () => {
       <div className="flex flex-col max-w-6xl py-16 mx-auto md:flex-row sm:py-20">
         <div className="md:w-3/5">
           <article className="px-4 font-inter sm:px-8 lg:px-12">
-            <p className="mb-6">
+            <table className="w-full mb-6">
+              <tbody>
+                <tr className="font-medium text-center bg-gray-200">
+                  <td className="p-4 border border-slate-400">TEMPOH SEWAAN</td>
+                  <td className="p-4 border border-slate-400">KADAR YURAN</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border border-slate-400">1 tahun</td>
+                  <td className="p-4 border border-slate-400">
+                    <span className="text-teal-600">×1</span> bulan sewaan
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-4 border border-slate-400">
+                    Tahun berikutnya
+                  </td>
+                  <td className="p-4 border border-slate-400">
+                    <span className="text-teal-600">×0.25</span> bulan sewaan
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="my-6">
               Sebelum melibatkan diri dalam urusan sewaan, baik tuan rumah atau
               penyewa perlu memahami perkara-perkara penting yang terlibat.
               Panduan ini menyajikan pandangan komprehensif mengenai perjanjian
@@ -348,14 +370,14 @@ const page = () => {
               </summary>
               <ul className="mt-4 font-inter">
                 <Link
-                  href="/panduan/sewa-rumah/#perkara-utama-dalam-perjanjian-sewaan"
+                  href="/artikel/panduan-sewa-rumah/#perkara-utama-dalam-perjanjian-sewaan"
                   className="flex items-center justify-start py-4 font-medium border-t hover:underline"
                 >
                   Perkara utama dalam perjanjian sewaan
                 </Link>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#surat-perjanjian-sewaan-yang-dimatikan-setem-duti"
+                    href="/artikel/panduan-sewa-rumah/#surat-perjanjian-sewaan-yang-dimatikan-setem-duti"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Surat perjanjian sewaan yang dimatikan setem duti
@@ -363,7 +385,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#deposit-sekuriti-dan-utiliti"
+                    href="/artikel/panduan-sewa-rumah/#deposit-sekuriti-dan-utiliti"
                     className="flex items-center justify-start mb-4 hover:underline"
                   >
                     Deposit sekuriti dan utiliti
@@ -372,14 +394,14 @@ const page = () => {
               </ul>
               <ul className="mt-4 font-inter">
                 <Link
-                  href="/panduan/sewa-rumah/#langkah-langkah-sewa-rumah"
+                  href="/artikel/panduan-sewa-rumah/#langkah-langkah-sewa-rumah"
                   className="flex items-center justify-start py-4 font-medium border-t hover:underline"
                 >
                   Langkah-langkah sewa rumah
                 </Link>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#sediakan-maklumat-dan-salinan-mykad-penyewa-dan-saksi"
+                    href="/artikel/panduan-sewa-rumah/#sediakan-maklumat-dan-salinan-mykad-penyewa-dan-saksi"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Sediakan maklumat dan salinan Mykad penyewa dan saksi
@@ -387,7 +409,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#draf-perjanjian-sewaan"
+                    href="/artikel/panduan-sewa-rumah/#draf-perjanjian-sewaan"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Draf perjanjian sewaan
@@ -395,7 +417,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#mematikan-setem-duti"
+                    href="/artikel/panduan-sewa-rumah/#mematikan-setem-duti"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Mematikan setem duti
@@ -403,7 +425,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#ambil-kunci-dan-buat-semakan"
+                    href="/artikel/panduan-sewa-rumah/#ambil-kunci-dan-buat-semakan"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Ambil kunci dan buat semakan
@@ -411,7 +433,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#tanggungjawab-utiliti"
+                    href="/artikel/panduan-sewa-rumah/#tanggungjawab-utiliti"
                     className="flex items-center justify-start mb-4 hover:underline"
                   >
                     Tanggungjawab utiliti
@@ -420,14 +442,14 @@ const page = () => {
               </ul>
               <ul className="mt-4 font-inter">
                 <Link
-                  href="/panduan/sewa-rumah/#menggunakan-khidmat-ejen-hartanah"
+                  href="/artikel/panduan-sewa-rumah/#menggunakan-khidmat-ejen-hartanah"
                   className="flex items-center justify-start py-4 font-medium border-t hover:underline"
                 >
                   Menggunakan khidmat ejen hartanah
                 </Link>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#rangkaian-yang-luas"
+                    href="/artikel/panduan-sewa-rumah/#rangkaian-yang-luas"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Rangkaian yang luas
@@ -435,7 +457,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#keahlian-dan-pengetahuan"
+                    href="/artikel/panduan-sewa-rumah/#keahlian-dan-pengetahuan"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Keahlian dan pengetahuan
@@ -443,7 +465,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#penyaringan-penyewa"
+                    href="/artikel/panduan-sewa-rumah/#penyaringan-penyewa"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Penyaringan penyewa
@@ -451,7 +473,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#pengurusan-pemasaran-dan-perundingan"
+                    href="/artikel/panduan-sewa-rumah/#pengurusan-pemasaran-dan-perundingan"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Pengurusan pemasaran dan perundingan
@@ -459,7 +481,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#mengurangkan-beban-anda"
+                    href="/artikel/panduan-sewa-rumah/#mengurangkan-beban-anda"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Mengurangkan beban anda
@@ -467,7 +489,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/sewa-rumah/#memberikan-nasihat-dan-menetapkan-harga-yang-sesuai"
+                    href="/artikel/panduan-sewa-rumah/#memberikan-nasihat-dan-menetapkan-harga-yang-sesuai"
                     className="flex items-center justify-start mb-4 hover:underline"
                   >
                     Memberikan nasihat dan menetapkan harga yang sesuai
@@ -495,7 +517,7 @@ const page = () => {
           <p className="text-base font-medium font-inter sm:text-lg text-neutral-200">
             Atau{" "}
             <Link
-              href="/panduan/jual-rumah-guna-ejen"
+              href="/artikel/panduan-jual-rumah-guna-ejen"
               className="underline hover:no-underline hover:text-sky-600"
             >
               lihat info lanjut

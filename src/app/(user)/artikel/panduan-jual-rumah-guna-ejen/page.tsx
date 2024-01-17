@@ -353,14 +353,14 @@ const page = () => {
               </summary>
               <ul className="mt-4 font-inter">
                 <Link
-                  href="/panduan/jual-rumah-guna-ejen/#kelebihan-menggunakan-khidmat-ejen-untuk-menjual-rumah"
+                  href="/artikel/panduan-jual-rumah-guna-ejen/#kelebihan-menggunakan-khidmat-ejen-untuk-menjual-rumah"
                   className="flex items-center justify-start py-4 font-medium border-t hover:underline"
                 >
                   Kelebihan menggunakan khidmat ejen untuk menjual rumah
                 </Link>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#aktiviti-pemasaran-yang-berterusan"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#aktiviti-pemasaran-yang-berterusan"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Aktiviti pemasaran yang berterusan
@@ -368,7 +368,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#jimat-masa-dengan-pengurusan-yang-profesional"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#jimat-masa-dengan-pengurusan-yang-profesional"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Jimat masa dengan pengurusan yang profesional
@@ -376,7 +376,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#kepakaran-dalam-pasaran-hartanah-tempatan"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#kepakaran-dalam-pasaran-hartanah-tempatan"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Kepakaran dalam pasaran hartanah tempatan
@@ -384,7 +384,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#lindungi-kepentingan-penjual-dengan-terma-yang-bersesuaian"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#lindungi-kepentingan-penjual-dengan-terma-yang-bersesuaian"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Lindungi kepentingan penjual dengan terma yang bersesuaian
@@ -392,7 +392,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#jaringan-yang-luas-dan-hubungan-profesional"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#jaringan-yang-luas-dan-hubungan-profesional"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Jaringan yang luas dan hubungan profesional
@@ -400,7 +400,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#perbelanjaan-iklan-yang-efektif"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#perbelanjaan-iklan-yang-efektif"
                     className="flex items-center justify-start mb-4 hover:underline"
                   >
                     Perbelanjaan iklan yang efektif
@@ -409,14 +409,14 @@ const page = () => {
               </ul>
               <ul className="mt-4 font-inter">
                 <Link
-                  href="/panduan/jual-rumah-guna-ejen/#tugas-ejen-hartanah-dalam-penjualan-rumah"
+                  href="/artikel/panduan-jual-rumah-guna-ejen/#tugas-ejen-hartanah-dalam-penjualan-rumah"
                   className="flex items-center justify-start py-4 font-medium border-t hover:underline"
                 >
                   Tugas ejen hartanah dalam penjualan rumah
                 </Link>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#buat-kajian-pasaran-semasa"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#buat-kajian-pasaran-semasa"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Buat kajian pasaran semasa
@@ -424,7 +424,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#janji-temu-untuk-memeriksa-rumah"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#janji-temu-untuk-memeriksa-rumah"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Janji temu untuk memeriksa rumah
@@ -432,7 +432,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#pemasaran"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#pemasaran"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Pemasaran
@@ -440,7 +440,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#menguruskan-proses-rundingan"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#menguruskan-proses-rundingan"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Menguruskan proses rundingan
@@ -448,7 +448,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#bantu-pembeli-mendapatkan-pinjaman-dan-peguam"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#bantu-pembeli-mendapatkan-pinjaman-dan-peguam"
                     className="flex items-center justify-start mb-2 hover:underline"
                   >
                     Bantu pembeli mendapatkan pinjaman dan peguam
@@ -456,7 +456,7 @@ const page = () => {
                 </li>
                 <li className="ml-6 list-decimal text-neutral-600">
                   <Link
-                    href="/panduan/jual-rumah-guna-ejen/#proses-pindah-milik"
+                    href="/artikel/panduan-jual-rumah-guna-ejen/#proses-pindah-milik"
                     className="flex items-center justify-start mb-4 hover:underline"
                   >
                     Proses pindah milik
@@ -484,7 +484,7 @@ const page = () => {
           <p className="text-base font-medium font-inter sm:text-lg text-neutral-200">
             Atau{" "}
             <Link
-              href="/panduan/jual-rumah"
+              href="/artikel/panduan-jual-rumah"
               className="underline hover:no-underline hover:text-sky-600"
             >
               lihat info lanjut
