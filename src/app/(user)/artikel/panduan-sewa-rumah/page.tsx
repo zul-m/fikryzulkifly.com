@@ -36,20 +36,20 @@ const page = () => {
             <table className="w-full mb-6">
               <tbody>
                 <tr className="font-medium text-center bg-gray-200">
-                  <td className="p-4 border border-slate-400">TEMPOH SEWAAN</td>
-                  <td className="p-4 border border-slate-400">KADAR YURAN</td>
+                  <td className="p-2 border border-slate-400">TEMPOH SEWAAN</td>
+                  <td className="p-2 border border-slate-400">KADAR YURAN</td>
                 </tr>
                 <tr>
-                  <td className="p-4 border border-slate-400">1 tahun</td>
-                  <td className="p-4 border border-slate-400">
+                  <td className="p-2 border border-slate-400">1 tahun</td>
+                  <td className="p-2 border border-slate-400">
                     <span className="text-teal-600">×1</span> bulan sewaan
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 border border-slate-400">
+                  <td className="p-2 border border-slate-400">
                     Tahun berikutnya
                   </td>
-                  <td className="p-4 border border-slate-400">
+                  <td className="p-2 border border-slate-400">
                     <span className="text-teal-600">×0.25</span> bulan sewaan
                   </td>
                 </tr>
