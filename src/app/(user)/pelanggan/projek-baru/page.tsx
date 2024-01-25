@@ -21,7 +21,7 @@ const pageContent = {
       title: "RUMAWIP Putrajaya Sentral",
       location: "Presint 7, Putrajaya",
       url: "/pelanggan/projek-baru/rumawip-putrajaya-sentral",
-      img: "/project/rumawip-putrajaya/Hero.jpg",
+      img: "/project/rumawip-putrajaya/hero.png",
       date: "2023-10-27",
     },
     {

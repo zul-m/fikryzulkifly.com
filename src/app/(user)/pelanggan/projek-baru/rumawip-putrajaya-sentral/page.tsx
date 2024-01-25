@@ -13,7 +13,7 @@ const pageContent = {
   project: {
     title: "RUMAWIP Putrajaya Sentral",
     date: "2023-10-27",
-    image: "/project/rumawip-putrajaya/Hero.jpg",
+    image: "/project/rumawip-putrajaya/hero.png",
     category: "Projek Baru",
     location: "Presint 7, Putrajaya",
     map: "",
@@ -110,8 +110,8 @@ const page = () => {
           <div className="mb-16">
             <Image
               src={pageContent.project.image}
-              width={897}
-              height={410}
+              width={1080}
+              height={1080}
               className="object-cover object-top"
               alt={pageContent.project.title}
             />

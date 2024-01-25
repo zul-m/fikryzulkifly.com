@@ -69,3 +69,10 @@ export interface viewing {
   image: string;
   file: string;
 }
+
+export interface listing {
+  _id: string;
+  imageurl: string;
+  installment: number;
+  link: string;
+}
