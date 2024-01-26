@@ -72,7 +72,11 @@ export interface viewing {
 
 export interface listing {
   _id: string;
+  bathroom: number;
+  bedroom: number;
+  furnish: string;
   imageurl: string;
   installment: number;
   link: string;
+  parking: number;
 }
