@@ -33,5 +33,30 @@ export default {
       title: "Installment bulanan",
       type: "number",
     },
+    {
+      name: "furnish",
+      title: "Perabot",
+      type: "reference",
+      to: [
+        {
+          type: "furnish",
+        },
+      ],
+    },
+    {
+      name: "bedroom",
+      type: "number",
+      title: "Jumlah bilik tidur",
+    },
+    {
+      name: "bathroom",
+      type: "number",
+      title: "Jumlah bilik air",
+    },
+    {
+      name: "parking",
+      type: "number",
+      title: "Jumlah parkir",
+    },
   ],
 };

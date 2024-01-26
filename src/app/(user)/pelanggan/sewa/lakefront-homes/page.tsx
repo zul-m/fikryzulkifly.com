@@ -3,6 +3,7 @@ import { listing } from "@/src/app/interface";
 import { client } from "@/src/app/lib/sanity";
 import { formatCurrency } from "@/src/utils";
 import { motion } from "framer-motion";
+import { Bath, BedDouble, CarFront } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import SwiperCore from "swiper";
@@ -16,7 +17,7 @@ const pageContent = {
     location: "Cyberjaya, Selangor",
     bedroom: "3",
     bathroom: "2",
-    parking: "2",
+    parking: "2 ~ 3",
     size: "1010",
   },
   facilities: [
@@ -48,9 +49,13 @@ const pageContent = {
 async function getData() {
   const query = `*[_type == "listing" && project -> name == "Lakefront Homes"] | order(_createdAt desc) {
   _id,
+    bathroom,
+    bedroom,
+    "furnish": furnish -> name,
     "imageurl": hero.asset -> url,
     installment,
-    link
+    link,
+    parking
 }`;
 
   const data = await client.fetch(query);
@@ -230,9 +235,26 @@ export default async function page() {
                       />
                     </div>
                     <div className="px-2 py-4 text-center">
-                      <span className="block text-gray-700">
-                        {formatCurrency(listing.installment)} /bulan
+                      <span className="absolute left-0 px-3 bg-teal-700 rounded-r-md top-3 py-1.5 text-xs tracking-wider text-white">
+                        {listing.furnish}
                       </span>
+                      <h3 className="block mb-1 text-gray-700">
+                        {formatCurrency(listing.installment)} /bulan
+                      </h3>
+                      <div className="flex justify-center gap-3 text-gray-500">
+                        <div className="flex items-center gap-1 text-sm">
+                          <BedDouble className="w-4 h-4" />
+                          {listing.bedroom}
+                        </div>
+                        <div className="flex items-center gap-1 text-sm">
+                          <Bath className="w-4 h-4" />
+                          {listing.bathroom}
+                        </div>
+                        <div className="flex items-center gap-1 text-sm">
+                          <CarFront className="w-4 h-4" />
+                          {listing.parking}
+                        </div>
+                      </div>
                     </div>
                   </Link>
                 </motion.div>
