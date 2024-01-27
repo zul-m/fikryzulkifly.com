@@ -91,7 +91,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section id="Projects" className="pt-0 pb-52">
+      <section id="projects" className="pt-0 pb-52">
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap mx-auto mb-10 lg:w-10/12 font-poppins">
             {sortedProjects &&
