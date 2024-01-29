@@ -29,7 +29,7 @@ const SideNav = () => {
         header ? "shadow-md" : ""
       } w-full bg-white fixed top-0 z-50 transition-all`}
     >
-      <div className="top-0 items-center justify-around hidden w-full py-3 tracking-wide font-inter md:flex">
+      <div className="top-0 items-center justify-around hidden w-full py-3 tracking-wide font-poppins md:flex">
         <Link href="/">
           <Image
             src="/logo-700.svg"
