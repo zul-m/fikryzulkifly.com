@@ -2,6 +2,7 @@ import CalculatorSection from "@/src/components/CalculatorSection";
 import ContactSection from "@/src/components/ContactSection";
 import HeroSection from "@/src/components/HeroSection";
 import ServicesSection from "@/src/components/ServicesSection";
+import TestimonialSection from "@/src/components/TestimonialSection";
 import ViewingSection from "@/src/components/ViewingSection";
 
 // Opt out of caching for all data requests in the route segment
@@ -12,6 +13,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <ServicesSection />
+      <TestimonialSection />
       <ViewingSection />
       <CalculatorSection />
       <ContactSection />

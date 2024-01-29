@@ -96,7 +96,7 @@ const HeaderMobile = () => {
                     <Link
                       href={item.path}
                       onClick={() => toggleOpen()}
-                      className={`flex w-full text-xl font-inter tracking-wide ${
+                      className={`flex w-full text-xl font-poppins tracking-wide ${
                         item.path === pathname
                           ? "text-teal-600 font-medium"
                           : "font-medium"
