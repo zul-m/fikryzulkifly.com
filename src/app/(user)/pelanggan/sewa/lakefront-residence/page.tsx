@@ -1,5 +1,265 @@
-const page = () => {
-  return <div>page</div>;
+"use client";
+import { listing } from "@/src/app/interface";
+import { client } from "@/src/app/lib/sanity";
+import { formatCurrency } from "@/src/utils";
+import { motion } from "framer-motion";
+import { Bath, BedDouble, CarFront } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import SwiperCore from "swiper";
+import "swiper/css/bundle";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+const pageContent = {
+  project: {
+    title: "Lakefront Residence",
+    location: "Cyberjaya, Selangor",
+    bedroom: "3 ~ 4",
+    bathroom: "2 ~ 3",
+    parking: "2 ~ 3",
+    size: "960 ~ 1540",
+  },
+  facilities: [
+    { name: "Dewan serbaguna" },
+    { name: "Gelanggang badminton" },
+    { name: "Gelanggang bola keranjang" },
+    { name: "Gimnasium" },
+    { name: "Kawasan barbeku" },
+    { name: "Kedai makan" },
+    { name: "Kolam renang" },
+    { name: "Mini Mart" },
+    { name: "Taman permainan" },
+    { name: "Trek joging" },
+  ],
+  gallery: [
+    { img: "/sewa/lakefront-residence/1.PNG", name: "Lakefront Residence 1" },
+    { img: "/sewa/lakefront-residence/3.jpg", name: "Lakefront Residence 3" },
+    { img: "/sewa/lakefront-residence/4.jpg", name: "Lakefront Residence 4" },
+    { img: "/sewa/lakefront-residence/5.jpg", name: "Lakefront Residence 5" },
+    { img: "/sewa/lakefront-residence/6.jpeg", name: "Lakefront Residence 6" },
+    { img: "/sewa/lakefront-residence/7.jpeg", name: "Lakefront Residence 7" },
+    { img: "/sewa/lakefront-residence/8.jpeg", name: "Lakefront Residence 8" },
+  ],
 };
 
-export default page;
+async function getData() {
+  const query = `*[_type == "listing" && project -> name == "Lakefront Residence"] | order(_createdAt desc) {
+    _id,
+    bathroom,
+    bedroom,
+    "furnish": furnish -> name,
+    "imageurl": hero.asset -> url,
+    installment,
+    link,
+    parking
+  }`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}
+
+// Opt out of caching for all data requests in the route segment
+export const dynamic = "force-dynamic";
+
+export default async function page() {
+  const data: listing[] = await getData();
+
+  SwiperCore.use([Autoplay, Pagination]);
+
+  return (
+    <>
+      <motion.section
+        id="project"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: 0.2,
+            duration: 0.5,
+          },
+        }}
+        viewport={{ once: true }}
+        className="container pt-32 pb-20 mx-auto lg:py-44"
+      >
+        <div className="max-w-4xl mx-auto font-poppins">
+          <div className="max-w-4xl px-4 mx-auto mb-16 font-bold text-center lg:mb-28">
+            <h1 className="text-center text-slate-900 text-4xl/none lg:text-6xl/none">
+              {pageContent.project.title}
+            </h1>
+            <p className="mt-10 text-slate-500">
+              <span className="inline-flex space-x-3">
+                <span>{pageContent.project.location}</span>
+                <span>•</span>
+                <span>Sewa</span>
+              </span>
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-x-10 lg:grid-cols-2">
+            <div className="mb-16">
+              <Swiper
+                {...{
+                  autoplay: { pauseOnMouseEnter: true },
+                  pagination: { clickable: true, dynamicBullets: true },
+                  style: {
+                    "--swiper-pagination-color": "#0f766e",
+                  },
+                }}
+              >
+                {pageContent.gallery.map((images, idx) => (
+                  <SwiperSlide className="w-full" key={idx}>
+                    <div className="w-full">
+                      <Image
+                        src={images.img}
+                        alt={images.name}
+                        width={720}
+                        height={810}
+                        className="object-cover object-center mx-auto aspect-[3/4]"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.5,
+                },
+              }}
+              viewport={{ once: true }}
+              className="px-4 mb-16 lg:px-0 text-slate-900"
+            >
+              <h2 className="mb-10 font-medium tracking-wide text-2xl/none">
+                Butiran Hartanah
+              </h2>
+              <table className="w-full">
+                <tbody>
+                  <tr>
+                    <td className="p-2 font-medium bg-gray-200 border border-slate-400">
+                      BILIK TIDUR
+                    </td>
+                    <td className="p-2 border border-slate-400">
+                      {pageContent.project.bedroom}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 font-medium bg-gray-200 border border-slate-400">
+                      BILIK AIR
+                    </td>
+                    <td className="p-2 border border-slate-400">
+                      {pageContent.project.bathroom}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 font-medium bg-gray-200 border border-slate-400">
+                      PARKIR
+                    </td>
+                    <td className="p-2 border border-slate-400">
+                      {pageContent.project.parking}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 font-medium bg-gray-200 border border-slate-400">
+                      SAIZ
+                    </td>
+                    <td className="p-2 border border-slate-400">
+                      {pageContent.project.size} kps
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 font-medium bg-gray-200 border border-slate-400">
+                      KEMUDAHAN
+                    </td>
+                    <td className="p-2 border border-slate-400">
+                      {pageContent.facilities.map((facility, idx) => (
+                        <ul key={idx} className="list-disc">
+                          <li className="my-2 ml-5">{facility.name}</li>
+                        </ul>
+                      ))}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </motion.div>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 0.4,
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true }}
+            className="px-5 lg:px-0"
+          >
+            <h2 className="mb-10 text-2xl font-medium tracking-wide">
+              Untuk Disewa
+            </h2>
+            <div className="grid grid-cols-1 mb-16 gap-x-6 gap-y-10 xl:gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+              {data.map((listing) => (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      delay: 0.5,
+                      duration: 0.5,
+                    },
+                  }}
+                  viewport={{ once: true }}
+                  key={listing._id}
+                  className="relative border rounded-md shadow-lg group hover:shadow-xl"
+                >
+                  <Link href={listing.link}>
+                    <div className="overflow-hidden rounded-t-md">
+                      <Image
+                        src={listing.imageurl}
+                        alt="fikryzulkilfy.com"
+                        width={300}
+                        height={300}
+                        className="object-cover object-center h-[300px] w-full duration-300 transition-all ease-in-out group-hover:scale-[1.05]"
+                      />
+                    </div>
+                    <div className="px-2 py-4 text-center">
+                      <span className="absolute left-0 px-3 bg-teal-700 rounded-r-md top-3 py-1.5 text-xs tracking-wider text-white">
+                        {listing.furnish}
+                      </span>
+                      <h3 className="block mb-1 text-gray-700">
+                        {formatCurrency(listing.installment)} /bulan
+                      </h3>
+                      <div className="flex justify-center gap-3 text-gray-500">
+                        <div className="flex items-center gap-1 text-sm">
+                          <BedDouble className="w-4 h-4" />
+                          {listing.bedroom}
+                        </div>
+                        <div className="flex items-center gap-1 text-sm">
+                          <Bath className="w-4 h-4" />
+                          {listing.bathroom}
+                        </div>
+                        <div className="flex items-center gap-1 text-sm">
+                          <CarFront className="w-4 h-4" />
+                          {listing.parking}
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </motion.section>
+    </>
+  );
+}

@@ -53,7 +53,7 @@ const pageContent = {
     title: "Miliki Rumah Impian, Hari Ini",
     subtitle: "Semak Kelayakan",
     description:
-      "Berminat dengan projek ini? Buat semakan kelayakan dan hantar dokumen yang diperlukan. Yuran tempahan adalah PERCUMA!",
+      "Ingin melihat projek lain yang ada? Buat semakan kelayakan dan hantar dokumen yang diperlukan. Yuran tempahan adalah PERCUMA!",
   },
 };
 
@@ -202,8 +202,8 @@ const page = () => {
                         STATUS
                       </td>
                       <td className="p-2 border border-slate-400">
-                        <span className="px-2 py-1 bg-teal-600 rounded text-neutral-100">
-                          Dibuka untuk Tempahan
+                        <span className="px-2 py-1 bg-red-600 rounded text-neutral-100">
+                          Pendaftaran Ditutup
                         </span>
                       </td>
                     </tr>
