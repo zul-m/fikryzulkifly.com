@@ -15,7 +15,7 @@ const pageContent = {
   project: {
     title: "Lakefront Homes",
     location: "Cyberjaya, Selangor",
-    bedroom: "3",
+    bedroom: "1 ~ 3",
     bathroom: "2",
     parking: "2 ~ 3",
     size: "1010",
@@ -48,7 +48,7 @@ const pageContent = {
 
 async function getData() {
   const query = `*[_type == "listing" && project -> name == "Lakefront Homes"] | order(_createdAt desc) {
-  _id,
+    _id,
     bathroom,
     bedroom,
     "furnish": furnish -> name,
@@ -56,7 +56,7 @@ async function getData() {
     installment,
     link,
     parking
-}`;
+  }`;
 
   const data = await client.fetch(query);
 
@@ -182,9 +182,9 @@ export default async function page() {
                     </td>
                     <td className="p-2 border border-slate-400">
                       {pageContent.facilities.map((facility, idx) => (
-                        <li key={idx}>
-                          <ul className="my-2">{facility.name}</ul>
-                        </li>
+                        <ul key={idx} className="list-disc">
+                          <li className="my-2 ml-5">{facility.name}</li>
+                        </ul>
                       ))}
                     </td>
                   </tr>

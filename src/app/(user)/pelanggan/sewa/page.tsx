@@ -14,16 +14,16 @@ const pageContent = {
       title: "Lakefront Homes",
       location: "Cyberjaya, Selangor",
       url: "/pelanggan/sewa/lakefront-homes",
-      img: "/sewa/lakefront-homes/01.png",
+      img: "/sewa/lakefront-homes/cover.png",
       date: "2024-01-26",
     },
-    /* {
+    {
       title: "Lakefront Residence",
       location: "Cyberjaya, Selangor",
       url: "/pelanggan/sewa/lakefront-residence",
       img: "/sewa/lakefront-residence/Cover.PNG",
       date: "2024-01-27",
-    }, */
+    },
   ],
 };
 

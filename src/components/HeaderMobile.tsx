@@ -172,7 +172,7 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
     <>
       <MenuItem>
         <button
-          className="flex w-full text-xl tracking-wide font-inter"
+          className="flex w-full text-xl tracking-wide font-poppins"
           onClick={() => setSubMenuOpen(!subMenuOpen)}
         >
           <div className="flex flex-row items-center justify-between w-full font-medium">
