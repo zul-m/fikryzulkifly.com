@@ -65,10 +65,10 @@ const page = () => {
               },
             }}
             viewport={{ once: true }}
-            className="flex flex-col max-w-6xl py-16 mx-auto md:flex-row sm:py-20"
+            className="flex flex-col max-w-6xl mx-auto space-x-8 md:flex-row"
           >
             <div className="md:w-4/6">
-              <article className="px-4 sm:px-8 lg:px-12">
+              <article>
                 <h3
                   id="langkah-langkah-menjual-rumah"
                   className="text-2xl font-semibold sm:text-3xl"
@@ -213,7 +213,7 @@ const page = () => {
                 </ul>
               </article>
             </div>
-            <div className="hidden px-5 md:w-2/6 md:grid gap-y-8 lg:gap-8 xl:gap-16 md:px-10">
+            <div className="hidden md:w-2/6 md:grid gap-y-8 lg:gap-8 xl:gap-16">
               <div className="col-span-12 lg:col-span-4">
                 <details
                   className="sticky p-4 overflow-hidden overflow-y-auto text-sm border rounded-lg shadow-md top-24"
