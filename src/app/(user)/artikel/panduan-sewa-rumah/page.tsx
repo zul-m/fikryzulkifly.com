@@ -153,18 +153,20 @@ const page = () => {
                 <h5 className="mb-6 text-lg font-medium">Deposit sekuriti</h5>
                 <p className="mb-6">
                   Kebiasaannya, penyewa dikehendaki membayar deposit sekuriti
-                  sewa 2 + 1; deposit 2 bulan sewa dan 1 bulan sewa semasa.
-                  Deposit ini perlu dibayar walaupun penyewa memutuskan untuk
-                  berpindah sebelum tempoh sewa tamat. Perlu untuk penyewa sedar
-                  bahawa deposit sewa tidak boleh digunakan sebagai pembayaran
-                  untuk 2 bulan terakhir sewaan. Deposit ini harus dipulangkan
-                  kepada penyewa selepas diperiksa keadaan rumah dan pembayaran
-                  bil terkini tiada tunggakan kurang daripada 30 hari.
+                  sewa 2 + 1 + 0.5; deposit 2 bulan sewa dan 1 bulan sewa
+                  semasa. Deposit ini perlu dibayar walaupun penyewa memutuskan
+                  untuk berpindah sebelum tempoh sewa tamat. Perlu untuk penyewa
+                  sedar bahawa deposit sewa tidak boleh digunakan sebagai
+                  pembayaran untuk 2 bulan terakhir sewaan. Deposit ini harus
+                  dipulangkan kepada penyewa selepas diperiksa keadaan rumah dan
+                  pembayaran bil terkini tiada tunggakan kurang daripada 30
+                  hari.
                 </p>
                 <h5 className="mb-6 text-lg font-medium">Deposit utiliti</h5>
                 <p className="mb-6">
                   Deposit utiliti merangkumi deposit bil elektrik, deposit bil
-                  air, dan deposit Indah Water Konsortium (IWK).
+                  air, dan deposit Indah Water Konsortium (IWK) (0.5 bulan dari
+                  harga sewa).
                 </p>
                 <ul className="list-decimal">
                   <li className="mb-6 ml-6">
